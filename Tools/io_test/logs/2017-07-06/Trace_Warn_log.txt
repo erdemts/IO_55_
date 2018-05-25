@@ -1,0 +1,596 @@
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Connected 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.BqTek Periodic Control Started 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Io Management Starting 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Periodic Control: 30000 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>sendOutputMaxRetryCount: 3 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>receiveOkInputMaxRetryCount: 50 
+2017-07-06 15:41:08.7861    1  INFO BQTEK_IO.BQTEK.InstanceFactory.IoFactory New Instance<192.168.1.10:1001> 
+2017-07-06 15:41:08.7861    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Send Output Management Starting 
+2017-07-06 15:41:08.7861    7  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Listen Input Management Starting 
+2017-07-06 15:41:08.7861    6  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Process Input Management Starting 
+2017-07-06 15:41:39.6354    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:41:39.6354    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:42:09.6376    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:42:09.6376    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:42:39.6336    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:42:39.6336    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:42:49.6183    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:43:11.4837    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:43:11.4837    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:43:39.6481    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:43:39.6481    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:44:09.6533    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:44:09.6533    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:44:29.5195    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:44:29.5231    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:44:39.6785    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:01.5183    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:01.5183    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:45:39.7214    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:39.7214    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:45:40.5684    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:40.5684    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:45:41.4071    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:41.4071    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:45:42.2375    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:45:42.2375    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:46:39.7226    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:46:39.7226    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:47:09.7351    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:47:09.7351    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:47:39.7399    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:47:39.7399    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:48:23.6566    1  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Connected 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.BqTek Periodic Control Started 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Io Management Starting 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Periodic Control: 30000 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>sendOutputMaxRetryCount: 3 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>receiveOkInputMaxRetryCount: 50 
+2017-07-06 15:48:23.6723    1  INFO BQTEK_IO.BQTEK.InstanceFactory.IoFactory New Instance<192.168.1.10:1001> 
+2017-07-06 15:48:23.6723    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Send Output Management Starting 
+2017-07-06 15:48:23.6723    5  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Listen Input Management Starting 
+2017-07-06 15:48:23.6723    6  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Process Input Management Starting 
+2017-07-06 15:49:26.7420    1  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Connected 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.BqTek Periodic Control Started 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Io Management Starting 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Periodic Control: 30000 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>sendOutputMaxRetryCount: 3 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>receiveOkInputMaxRetryCount: 50 
+2017-07-06 15:49:26.7732    1  INFO BQTEK_IO.BQTEK.InstanceFactory.IoFactory New Instance<192.168.1.10:1001> 
+2017-07-06 15:49:26.7732    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Send Output Management Starting 
+2017-07-06 15:49:26.7732    5  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Listen Input Management Starting 
+2017-07-06 15:49:26.7732    6  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Process Input Management Starting 
+2017-07-06 15:49:57.6245    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:49:57.6245    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:50:27.6180    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:50:27.6180    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:50:57.6306    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:50:57.6306    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:50:58.4831    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:50:58.4831    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:50:59.3141    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:50:59.3141    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:00.1450    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:00.1450    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:51:07.6092    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:07.6092    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:08.4565    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:08.4565    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:09.2942    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:09.2942    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:10.1410    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:10.1410    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:51:27.6394    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:27.6394    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:28.4928    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:28.4928    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:29.3394    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:29.3394    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:51:30.1710    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:51:30.1710    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:54:57.7388    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:54:57.7388    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:54:58.6497    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:54:58.6497    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:54:59.4995    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:54:59.4995    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:00.3359    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:00.3359    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:55:27.7468    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:27.7468    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:28.5838    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:28.5838    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:29.4146    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:29.4146    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:30.2614    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:30.2614    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:55:57.8168    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:57.8168    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:58.6646    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:58.6646    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:55:59.5028    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:55:59.5028    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:00.3495    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:00.3495    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:56:07.6747    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:07.6747    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:08.5283    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:08.5283    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:09.3595    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:09.3595    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:10.2141    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:10.2141    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - ThreeRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:56:27.7933    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:27.7933    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:28.6298    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:28.6298    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:29.4607    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:29.4607    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:30.3075    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:30.3075    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:56:57.7855    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:57.7855    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:58.6230    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:58.6230    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:56:59.4697    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:56:59.4697    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:00.3235    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:00.3235    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:57:27.7917    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:27.7917    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:28.6453    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:28.6453    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:29.4768    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:29.4768    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:30.3297    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:30.3297    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:57:47.6568    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:47.6568    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:48.5031    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:48.5092    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:49.3406    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:49.3406    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:50.1726    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:50.1726    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - ThreeRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:57:57.8010    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:57.8076    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:58.6384    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:58.6384    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:57:59.4691    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:57:59.4691    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:00.3004    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:00.3004    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:58:27.8148    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:27.8148    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:28.6461    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:28.6461    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:29.4769    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:29.4769    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:30.3143    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:30.3143    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:58:57.8248    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:57.8248    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:58.6557    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:58.6557    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:58:59.4880    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:58:59.4900    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:00.3247    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:00.3247    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:59:27.6727    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:27.6727    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:28.5097    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:28.5097    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:29.3405    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:29.3405    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:30.1878    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:30.1878    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - FourRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:59:31.0413    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:31.0413    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:31.8881    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:31.8881    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:32.7255    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:32.7255    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:33.5571    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:33.5571    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 15:59:57.8359    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:57.8359    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:58.6671    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:58.6671    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 15:59:59.5198    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 15:59:59.5198    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:00.3516    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:00.3516    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:00:27.8446    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:27.8603    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:28.6971    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:28.6971    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:29.5439    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:29.5439    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:30.3965    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:30.3965    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:00:57.8604    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:57.8604    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:58.7137    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:58.7137    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:00:59.5602    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:00:59.5602    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:00.3978    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:00.3978    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:01:07.6743    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:07.6808    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:08.5115    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:08.5115    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:09.3431    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:09.3431    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:10.1963    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:10.1963    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - FourRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:01:27.8595    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:27.8656    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:28.6965    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:28.6965    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:29.5434    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:29.5434    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:30.3967    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:30.3967    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:01:57.5791    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:57.5861    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:58.1217    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:58.1217    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:58.6552    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:58.6552    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:01:59.1956    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:01:59.1956    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:02:27.5901    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:27.5901    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:28.1285    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:28.1310    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:28.6617    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:28.6617    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:29.1963    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:29.1963    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:02:47.6841    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:47.6841    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:48.5153    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:48.5153    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:49.3465    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:49.3495    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:50.1843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:50.1843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - FiveRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:02:57.8968    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:57.8968    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:58.7283    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:58.7283    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:02:59.5807    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:02:59.5807    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:00.4118    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:00.4118    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:03:27.9052    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:27.9052    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:28.7369    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:28.7404    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:29.5736    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:29.5736    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:30.4204    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:30.4204    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:03:57.9136    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:57.9136    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:58.7514    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:58.7514    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:03:59.5979    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:03:59.5979    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:00.4292    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:00.4292    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:04:27.6833    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:27.6833    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:28.5293    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:28.5293    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:29.3676    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:29.3676    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:30.1989    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:30.1989    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - FiveRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:04:31.0524    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:31.0524    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:31.8835    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:31.8835    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:32.7148    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:32.7148    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:33.5524    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:33.5524    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:04:57.9304    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:57.9304    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:58.7829    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:58.7829    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:04:59.6296    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:04:59.6321    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:05:00.4667    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:05:00.4667    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:05:27.9521    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:05:27.9521    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:05:28.7832    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:05:28.7832    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:05:29.6142    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:05:29.6142    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:05:30.4526    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:05:30.4526    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:09:28.0157    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:28.0157    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:09:28.8465    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:28.8465    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:09:29.6841    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:29.6841    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:09:30.5151    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:30.5151    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:09:58.0189    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:58.0189    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:09:58.8661    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:58.8661    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:09:59.7039    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:09:59.7039    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:10:00.5353    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:10:00.5353    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:10:28.0340    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:10:28.0340    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:10:28.8652    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:10:28.8652    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:10:29.6963    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:10:29.6963    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 16:10:30.5337    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:10:30.5337    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:10:47.2108    5  WARN BQTEK_IO.BQTEK.Managements.IoManagement Unexpected Split Delimiter: 000000 
+2017-07-06 16:12:28.0762    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:12:49.9707    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:13:11.8506    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:13:33.7127    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:13:33.7127    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:13:34.5654    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:13:56.4467    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:14:18.3280    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:14:40.2071    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:14:40.2071    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - TwoRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:14:41.0537    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:15:02.9228    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:15:24.7830    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:15:46.3345    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:15:46.3345    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:15:46.8706    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:16:08.4030    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:16:29.9321    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:16:51.7971    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:16:51.7971    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:16:52.6439    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:17:14.4987    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:17:36.3757    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:17:58.2498    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:17:58.2498    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:17:59.1026    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:18:20.9507    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:18:42.8290    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:19:04.6813    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:19:04.6813    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - TwoRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:19:05.5287    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:19:27.3958    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:19:49.2751    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:20:11.1584    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:20:11.1584    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:20:12.0060    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:20:33.8855    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:20:55.7740    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:21:17.6230    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:21:17.6230    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:21:18.4758    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:21:40.3591    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:22:02.2201    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:22:24.1013    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:22:24.1013    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:22:24.9538    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:22:46.5080    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:23:08.0407    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:23:29.5773    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:23:29.5773    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:23:30.1139    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:23:51.9686    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:24:13.8321    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:24:35.3940    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:24:35.3940    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - ThreeRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:24:35.9298    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:24:57.4570    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:25:18.9932    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:25:40.5299    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:25:40.5299    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:25:41.0638    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:26:02.5998    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:26:24.1299    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:26:45.6612    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:26:45.6612    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:26:46.2012    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:27:07.7289    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:27:29.2730    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:27:51.1282    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:27:51.1282    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:27:51.9809    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:28:13.8435    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:28:35.7205    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:28:57.6016    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:28:57.6016    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - ThreeRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:28:58.4548    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:29:20.3266    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:29:41.8903    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:30:03.4318    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:30:03.4318    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:30:03.9636    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:30:25.4986    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:30:47.3653    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:31:09.2109    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:31:09.2109    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:31:10.0645    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:31:31.9415    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:31:53.8214    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:32:15.6901    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:32:15.6901    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:32:16.5380    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:32:38.0996    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:32:59.6327    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:33:21.1747    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:33:21.1747    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - FourRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:33:21.7090    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:33:43.5483    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:34:05.4213    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:34:27.2736    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:34:27.2736    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:34:28.1205    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:34:50.0012    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:35:11.8484    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:35:33.4154    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:35:33.4154    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:35:33.9448    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:35:55.4747    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:36:17.0023    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:36:38.8439    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:36:38.8439    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:36:39.6904    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:37:01.5598    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:37:23.4301    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:37:45.3089    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:37:45.3089    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:37:46.1560    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:38:08.0210    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:38:29.9028    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:38:51.4345    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:38:51.4345    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - FourRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:38:51.9705    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:39:13.5076    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:39:35.3407    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:39:57.2225    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:39:57.2225    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:39:58.0692    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:40:19.9182    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:40:41.7764    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:41:03.6449    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:41:03.6449    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:41:04.4980    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:41:26.3473    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:41:48.2184    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:42:10.0795    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:42:10.0795    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:42:10.9268    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:42:32.8075    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:42:54.6616    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:43:16.5351    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:43:16.5351    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - FiveRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:43:17.3880    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:43:39.2702    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:44:01.1491    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:44:23.0080    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:44:23.0080    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:44:23.8664    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:44:45.7247    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:45:07.5808    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:45:29.4483    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:45:29.4483    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:45:30.2954    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:45:52.1639    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:46:14.0386    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:46:35.9053    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:46:35.9053    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:46:36.7519    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:46:58.6330    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:47:20.5151    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:47:42.3942    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:47:42.3942    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - FiveRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:47:43.2406    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:48:05.1058    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:48:26.9791    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:48:48.8518    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:48:48.8518    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:48:49.7051    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:49:11.5849    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:49:33.4443    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:49:55.2843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:49:55.2843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:49:56.1311    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:50:18.0131    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:50:39.8913    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:51:01.7715    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:51:01.7715    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:51:02.6185    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:51:24.4993    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:51:46.0455    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:56:53.8780    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:56:53.8780    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:56:54.4084    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:57:15.9425    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:57:37.7891    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:57:59.6481    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:57:59.6481    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - SixRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:58:00.5034    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:58:22.3690    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:58:44.2133    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:59:06.0704    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:59:06.0704    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 16:59:06.9244    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:59:28.7858    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 16:59:50.6498    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:00:12.5225    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:00:12.5225    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:00:13.3718    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:00:35.2161    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:00:57.0543    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:01:18.9350    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:01:18.9350    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:01:19.7821    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:01:41.6500    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:02:03.5115    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:02:25.3751    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:02:25.3751    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - SixRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:02:26.2217    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:02:48.1007    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:03:09.9806    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:03:47.5475    1  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Connected 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.BqTek Periodic Control Started 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Io Management Starting 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>Periodic Control: 30000 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>sendOutputMaxRetryCount: 3 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.BqTek <192.168.1.10:1001>receiveOkInputMaxRetryCount: 50 
+2017-07-06 17:03:47.5632    1  INFO BQTEK_IO.BQTEK.InstanceFactory.IoFactory New Instance<192.168.1.10:1001> 
+2017-07-06 17:03:47.5632    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Send Output Management Starting 
+2017-07-06 17:03:47.5632    5  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Listen Input Management Starting 
+2017-07-06 17:03:47.5632    6  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Io Process Input Management Starting 
+2017-07-06 17:05:28.1025    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:05:49.6562    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:06:11.1926    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:06:33.0351    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:06:33.0351    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Close Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:06:33.8881    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:06:55.7493    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:07:17.6304    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:07:39.4961    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:07:39.4961    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:07:40.3428    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:08:02.1820    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:08:24.0450    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:08:45.8843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:08:45.8843    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:08:46.7369    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:09:08.6175    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:09:30.4900    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:09:52.3585    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:09:52.3585    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:09:53.1834    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:10:15.0442    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:10:36.9254    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:10:58.7698    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:10:58.7698    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>Open Ýþlemi - TwoRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:10:59.6247    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:11:21.4571    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:11:43.3151    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:12:05.1716    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:12:05.1716    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:12:06.0270    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:12:27.5862    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:12:49.1179    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:13:10.6509    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:13:10.6509    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>PeriodicControl Ýþlemi - OneRole Ýçin Yapýlamadý. _sendOutputMaxRetryCount=3 
+2017-07-06 17:13:11.1844    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:13:11.1844    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 
+2017-07-06 17:13:48.4600    4  WARN BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> OK Response Could'nt Receive! OkReceivedFlag Result= <False>RetryCount=50 
+2017-07-06 17:13:48.4600    4  INFO BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001> Io Reconnected 

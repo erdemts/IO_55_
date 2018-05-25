@@ -1,0 +1,592 @@
+2017-07-06 15:43:10.6218    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 15:45:00.6864    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:12:49.1180    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:13:11.0137    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:13:32.8820    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:13:55.6157    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:14:17.4910    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:14:39.3698    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:15:02.0858    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:15:23.9516    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:15:45.8039    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:16:07.8738    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:16:29.4052    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:16:50.9598    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:17:13.6613    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:17:35.5385    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:17:57.4190    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:18:20.1039    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:18:41.9980    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:19:03.8447    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:19:26.5647    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:19:48.4379    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:20:10.3212    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:20:33.0544    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:20:54.9201    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:21:16.7917    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:21:39.5218    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:22:01.3877    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:22:23.2697    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:22:45.9727    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:23:07.5097    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:23:29.0435    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:23:51.1318    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:24:13.0008    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:24:34.8694    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:24:56.9318    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:25:18.4583    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:25:39.9958    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:26:02.0664    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:26:23.6007    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:26:45.1304    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:27:07.2016    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:27:28.7390    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:27:50.2967    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:28:13.0061    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:28:34.8740    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:28:56.7705    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:29:19.4958    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:29:41.3577    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:30:02.8928    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:30:24.9638    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:30:46.5336    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:31:08.3803    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:31:31.1046    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:31:52.9838    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:32:14.8542    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:32:37.5687    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:32:59.1022    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:33:20.6349    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:33:42.7166    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:34:04.5882    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:34:26.4363    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:34:49.1703    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:35:11.0166    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:35:32.8839    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:35:54.9472    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:36:16.4760    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:36:38.0065    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:37:00.7285    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:37:22.5983    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:37:44.4781    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:38:07.1901    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:38:29.0717    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:38:50.9053    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:39:12.9726    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:39:34.5097    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:39:56.3853    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:40:19.1025    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:40:40.9505    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:41:02.8140    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:41:25.5307    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:41:47.3812    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:42:09.2394    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:42:31.9770    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:42:53.8240    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:43:15.7038    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:43:38.4328    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:44:00.3123    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:44:22.1778    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:44:44.8936    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:45:06.7499    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:45:28.6104    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:45:51.3292    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:46:13.2076    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:46:35.0684    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:46:57.8021    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:47:19.6846    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:47:41.5573    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:48:04.2745    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:48:26.1417    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:48:48.0204    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:49:10.7469    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:49:32.6117    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:49:54.4469    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:50:17.1818    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:50:39.0546    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:51:00.9342    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:51:23.6681    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:51:45.5162    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:56:53.3456    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:57:15.4084    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:57:36.9557    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:57:58.8153    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:58:21.5366    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:58:43.3963    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:59:05.2376    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:59:27.9467    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 16:59:49.8167    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:00:11.6828    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:00:34.4020    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:00:56.2633    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:01:18.0973    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:01:40.8132    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:02:02.6807    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:02:24.5440    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:02:47.2698    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:03:09.1500    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:05:49.1074    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:06:10.6570    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:06:32.2043    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:06:54.9185    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:07:16.7986    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:07:38.6650    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:08:01.3505    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:08:23.2138    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:08:45.0527    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:09:07.7803    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:09:29.6580    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:09:51.5279    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:10:14.2133    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:10:36.0878    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:10:57.9364    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:11:20.6307    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:11:42.4822    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:12:04.3384    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:12:27.0554    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:12:48.5882    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293
+2017-07-06 17:13:10.1203    4 ERROR BQTEK_IO.BQTEK.Managements.IoManagement <192.168.1.10:1001>IoReConnect() Error:  System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.10:1001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at BQTEK_IO.BQTEK.Managements.IoManagement.IoReConnect() in E:\0)TFS\6)BQTEK_IO_2017\BQTEK_IO\BQTEK_IO.BQTEK\Managements\IoManagement.cs:line 293

@@ -1,0 +1,2825 @@
+
+
+HI-TECH Software PIC PRO Macro Assembler V9.83 build 10920 
+                                                                                               Mon May 14 16:10:36 2018
+
+HI-TECH Software Omniscient Code Generator (PRO mode) build 10920
+     1                           	processor	16F887
+     2                           	opt	pw 120
+     3                           	opt	pm
+     4                           	psect	config,global,class=CONFIG,delta=2
+     5                           	psect	eeprom_data,global,class=EEDATA,space=2,delta=2
+     6                           	psect	idataBANK0,global,class=CODE,delta=2
+     7                           	psect	nvBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cinit,global,class=CODE,delta=2
+     9                           	psect	bitbssCOMMON,global,bit,class=COMMON,space=1,delta=1
+    10                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+    11                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    12                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+    13                           	psect	bssBANK1,global,class=BANK1,space=1,delta=1
+    14                           	psect	bssBANK3,global,class=BANK3,space=1,delta=1
+    15                           	psect	clrtext,global,class=CODE,delta=2
+    16                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    17                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    18                           	psect	maintext,global,class=CODE,delta=2
+    19                           	psect	text342,local,class=CODE,delta=2
+    20                           	psect	text343,local,class=CODE,delta=2
+    21                           	psect	text344,local,class=CODE,delta=2
+    22                           	psect	text345,local,class=CODE,delta=2
+    23                           	psect	text346,local,class=CODE,delta=2
+    24                           	psect	text347,local,class=CODE,delta=2
+    25                           	psect	text348,local,class=CODE,delta=2
+    26                           	psect	text349,local,class=CODE,delta=2
+    27                           	psect	text350,local,class=CODE,delta=2
+    28                           	psect	text351,local,class=CODE,delta=2
+    29                           	psect	intentry,global,class=CODE,delta=2
+    30                           	psect	text357,local,class=CODE,delta=2
+    31                           	psect	pa_nodes,global,class=CODE,delta=2
+    32                           	dabs	1,0x7E,2
+    33  000A                     	;#
+    34                           
+    35                           	psect	config
+    36  2007  E02C               	dw	57388	;#
+    37                           
+    38                           	psect	eeprom_data
+    39  0000  0031 0030 0000     	db	49,48,0,0,0,0,0,0	;#
+      +       0000 0000 0000     
+      +       0000 0000          
+    40                           
+    41                           	psect	idataBANK0
+    42  0000                     __pidataBANK0:	
+    43                           
+    44                           	psect	nvBANK0
+    45  003D                     __pnvBANK0:	
+    46  003D                     _tim10Hz:	
+    47  003D                     	ds	1
+    48  003E                     _tim1sec:	
+    49  003E                     	ds	1
+    50  003F                     _tim2Hz:	
+    51  003F                     	ds	1
+    52  000B                     _INTCON	set	11
+    53  0005                     _PORTA	set	5
+    54  0006                     _PORTB	set	6
+    55  0006                     _PORTBbits	set	6
+    56  0007                     _PORTC	set	7
+    57  0007                     _PORTCbits	set	7
+    58  0008                     _PORTD	set	8
+    59  0008                     _PORTDbits	set	8
+    60  0009                     _PORTE	set	9
+    61  001A                     _RCREG	set	26
+    62  0001                     _TMR0	set	1
+    63  0019                     _TXREG	set	25
+    64  00C3                     _ADDEN	set	195
+    65  00C4                     _CREN	set	196
+    66  00C2                     _FERR	set	194
+    67  005F                     _GIE	set	95
+    68  00C1                     _OERR	set	193
+    69  005E                     _PEIE	set	94
+    70  0065                     _RCIF	set	101
+    71  00C6                     _RX9	set	198
+    72  00C7                     _SPEN	set	199
+    73  005D                     _T0IE	set	93
+    74  005A                     _T0IF	set	90
+    75  0064                     _TXIF	set	100
+    76  0081                     _OPTION_REG	set	129
+    77  008F                     _OSCCON	set	143
+    78  008C                     _PIE1	set	140
+    79  008D                     _PIE2	set	141
+    80  0099                     _SPBRG	set	153
+    81  0085                     _TRISA	set	133
+    82  0086                     _TRISB	set	134
+    83  0087                     _TRISC	set	135
+    84  0087                     _TRISCbits	set	135
+    85  0088                     _TRISD	set	136
+    86  0089                     _TRISE	set	137
+    87  0095                     _WPUB	set	149
+    88  04C2                     _BRGH	set	1218
+    89  0465                     _RCIE	set	1125
+    90  04C4                     _SYNC	set	1220
+    91  04C6                     _TX9	set	1222
+    92  04C5                     _TXEN	set	1221
+    93  0464                     _TXIE	set	1124
+    94  0107                     _CM1CON0	set	263
+    95  0108                     _CM2CON0	set	264
+    96  0105                     _WDTCON	set	261
+    97  083F                     _C1ON	set	2111
+    98  0847                     _C2ON	set	2119
+    99  0188                     _ANSEL	set	392
+   100  0189                     _ANSELH	set	393
+   101  0C3B                     _BRG16	set	3131
+   102                           
+   103                           	psect	cinit
+   104  034A                     start_initialization:	
+   105  034A  3020               	movlw	low __pbssBANK0
+   106                           
+   107                           ; Clear objects allocated to BITCOMMON
+   108  034B  01F8               	clrf	(__pbitbssCOMMON/(0+8))& (0+127)
+   109                           
+   110                           ; Clear objects allocated to COMMON
+   111  034C  01F9               	clrf	__pbssCOMMON& (0+127)
+   112  034D  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   113  034E  01FB               	clrf	(__pbssCOMMON+2)& (0+127)
+   114  034F  01FC               	clrf	(__pbssCOMMON+3)& (0+127)
+   115                           
+   116                           ; Clear objects allocated to BANK0
+   117  0350  1383               	bcf	3,7	;select IRP bank0
+   118  0351  0084               	movwf	4
+   119  0352  3035               	movlw	low (__pbssBANK0+21)
+   120  0353  120A  118A  23AE   	fcall	clear_ram
+      +       120A  118A         
+   121                           
+   122                           ; Clear objects allocated to BANK1
+   123  0358  30A0               	movlw	low __pbssBANK1
+   124  0359  0084               	movwf	4
+   125  035A  30DC               	movlw	low (__pbssBANK1+60)
+   126  035B  120A  118A  23AE   	fcall	clear_ram
+      +       120A  118A         
+   127  0360  3090               	movlw	low __pbssBANK3
+   128                           
+   129                           ; Clear objects allocated to BANK3
+   130  0361  1783               	bsf	3,7	;select IRP bank2
+   131  0362  0084               	movwf	4
+   132  0363  30EA               	movlw	low (__pbssBANK3+90)
+   133  0364  120A  118A  23AE   	fcall	clear_ram
+   134                           
+   135                           ;initializer for _buffer_SM
+   136  0367  3001               	movlw	1
+   137  0368  00C0               	movwf	__pdataBANK0& (0+127)
+   138  0369                     end_of_initialization:	
+   139                           ;End of C runtime variable initialization code
+   140                           
+   141  0369  0183               	clrf	3
+   142  036A  120A  118A  2811   	ljmp	_main	;jump to C main() function
+   143                           
+   144                           	psect	bitbssCOMMON
+   145  03C0                     __pbitbssCOMMON:	
+   146  03C0                     _RELAY_1_Timer_En:	
+   147  03C0                     	ds	1
+   148  03C1                     _RELAY_2_Timer_En:	
+   149  03C1                     	ds	1
+   150  03C2                     _RELAY_3_Timer_En:	
+   151  03C2                     	ds	1
+   152  03C3                     _RELAY_4_Timer_En:	
+   153  03C3                     	ds	1
+   154  03C4                     _RELAY_5_Timer_En:	
+   155  03C4                     	ds	1
+   156  03C5                     _communicationControlTimer_En:	
+   157  03C5                     	ds	1
+   158                           
+   159                           	psect	bssCOMMON
+   160  0079                     __pbssCOMMON:	
+   161  0079                     _RELAY_1_Timer:	
+   162  0079                     	ds	1
+   163  007A                     _RELAY_2_Timer:	
+   164  007A                     	ds	1
+   165  007B                     _uartTransmitBufferR:	
+   166  007B                     	ds	1
+   167  007C                     _uartTransmitBufferW:	
+   168  007C                     	ds	1
+   169                           
+   170                           	psect	bssBANK0
+   171  0020                     __pbssBANK0:	
+   172  0020                     _communicationControlTimer:	
+   173  0020                     	ds	2
+   174  0022                     _RELAY_3_Timer:	
+   175  0022                     	ds	1
+   176  0023                     _RELAY_4_Timer:	
+   177  0023                     	ds	1
+   178  0024                     _RELAY_5_Timer:	
+   179  0024                     	ds	1
+   180  0025                     _bufferValue:	
+   181  0025                     	ds	1
+   182  0026                     _inputPort:	
+   183  0026                     	ds	1
+   184  0027                     _tim1min:	
+   185  0027                     	ds	1
+   186  0028                     _timer:	
+   187  0028                     	ds	1
+   188  0029                     _uartReceiveBufferR:	
+   189  0029                     	ds	1
+   190  002A                     _uartReceiveBufferW:	
+   191  002A                     	ds	1
+   192  002B                     _dataBuffer:	
+   193  002B                     	ds	10
+   194                           
+   195                           	psect	dataBANK0
+   196  0040                     __pdataBANK0:	
+   197  0040                     _buffer_SM:	
+   198  0040                     	ds	1
+   199                           
+   200                           	psect	bssBANK1
+   201  00A0                     __pbssBANK1:	
+   202  00A0                     _uartTransmitBuffer:	
+   203  00A0                     	ds	60
+   204                           
+   205                           	psect	bssBANK3
+   206  0190                     __pbssBANK3:	
+   207  0190                     _uartReceiveBuffer:	
+   208  0190                     	ds	90
+   209                           
+   210                           	psect	clrtext
+   211  03AE                     clear_ram:	
+   212                           ;	Called with FSR containing the base address, and
+   213                           ;	W with the last address+1
+   214                           
+   215  03AE  0064               	clrwdt	;clear the watchdog before getting into this loop
+   216  03AF                     clrloop:	
+   217  03AF  0180               	clrf	0	;clear RAM location pointed to by FSR
+   218  03B0  0A84               	incf	4,f	;increment pointer
+   219  03B1  0604               	xorwf	4,w	;XOR with final address
+   220  03B2  1903               	btfsc	3,2	;have we reached the end yet?
+   221  03B3  3400               	retlw	0	;all done for this memory range, return
+   222  03B4  0604               	xorwf	4,w	;XOR again to restore value
+   223  03B5  2BAF               	goto	clrloop	;do the next byte
+   224                           
+   225                           	psect	cstackCOMMON
+   226  0070                     __pcstackCOMMON:	
+   227  0070                     ?_vInitializeBoard:	
+   228  0070                     ?_vInitializeUart:	
+   229                           ; 0 bytes @ 0x0
+   230                           
+   231  0070                     ?_vAddToUartTransmitBuffer:	
+   232                           ; 0 bytes @ 0x0
+   233                           
+   234  0070                     ?_vSendDataToUart:	
+   235                           ; 0 bytes @ 0x0
+   236                           
+   237  0070                     ?_restartUSR_K2:	
+   238                           ; 0 bytes @ 0x0
+   239                           
+   240  0070                     ?_vCheckError:	
+   241                           ; 0 bytes @ 0x0
+   242                           
+   243  0070                     ??_vCheckError:	
+   244                           ; 0 bytes @ 0x0
+   245                           
+   246  0070                     ?_vAddToUartReceiveBuffer:	
+   247                           ; 0 bytes @ 0x0
+   248                           
+   249  0070                     ??_vAddToUartReceiveBuffer:	
+   250                           ; 0 bytes @ 0x0
+   251                           
+   252  0070                     ??_cGetFromTxBuffer:	
+   253                           ; 0 bytes @ 0x0
+   254                           
+   255  0070                     ?_erdem:	
+   256                           ; 0 bytes @ 0x0
+   257                           
+   258  0070                     ?i1_setCommunicationTimeOut:	
+   259                           ; 0 bytes @ 0x0
+   260                           
+   261  0070                     ?_cGetFromReceiveBuffer:	
+   262                           ; 0 bytes @ 0x0
+   263                           
+   264  0070                     ?_cGetFromTxBuffer:	
+   265                           ; 1 bytes @ 0x0
+   266                           
+   267  0070                     ?_main:	
+   268                           ; 1 bytes @ 0x0
+   269                           
+   270  0070                     vAddToUartReceiveBuffer@data:	
+   271                           ; 2 bytes @ 0x0
+   272                           
+   273  0070                     cGetFromTxBuffer@value:	
+   274                           ; 1 bytes @ 0x0
+   275                           
+   276  0070                     i1setCommunicationTimeOut@value:	
+   277                           ; 1 bytes @ 0x0
+   278                           
+   279                           
+   280                           ; 2 bytes @ 0x0
+   281  0070                     	ds	2
+   282  0072                     ??_restartUSR_K2:	
+   283  0072                     ??i1_setCommunicationTimeOut:	
+   284                           ; 0 bytes @ 0x2
+   285                           
+   286                           
+   287                           ; 0 bytes @ 0x2
+   288  0072                     	ds	2
+   289  0074                     ??_erdem:	
+   290                           
+   291                           ; 0 bytes @ 0x4
+   292  0074                     	ds	3
+   293  0077                     erdem@temp:	
+   294                           
+   295                           ; 1 bytes @ 0x7
+   296  0077                     	ds	1
+   297                           
+   298                           	psect	cstackBANK0
+   299  0035                     __pcstackBANK0:	
+   300  0035                     ??_vInitializeBoard:	
+   301  0035                     ??_vInitializeUart:	
+   302                           ; 0 bytes @ 0x0
+   303                           
+   304  0035                     ?_setCommunicationTimeOut:	
+   305                           ; 0 bytes @ 0x0
+   306                           
+   307  0035                     ??_vAddToUartTransmitBuffer:	
+   308                           ; 0 bytes @ 0x0
+   309                           
+   310  0035                     ??_vSendDataToUart:	
+   311                           ; 0 bytes @ 0x0
+   312                           
+   313  0035                     ??_cGetFromReceiveBuffer:	
+   314                           ; 0 bytes @ 0x0
+   315                           
+   316  0035                     ?_vSetRelay:	
+   317                           ; 0 bytes @ 0x0
+   318                           
+   319  0035                     ?___bmul:	
+   320                           ; 0 bytes @ 0x0
+   321                           
+   322  0035                     vSetRelay@value:	
+   323                           ; 1 bytes @ 0x0
+   324                           
+   325  0035                     cGetFromReceiveBuffer@value:	
+   326                           ; 1 bytes @ 0x0
+   327                           
+   328  0035                     vAddToUartTransmitBuffer@data:	
+   329                           ; 1 bytes @ 0x0
+   330                           
+   331  0035                     ___bmul@multiplicand:	
+   332                           ; 1 bytes @ 0x0
+   333                           
+   334  0035                     setCommunicationTimeOut@value:	
+   335                           ; 1 bytes @ 0x0
+   336                           
+   337                           
+   338                           ; 2 bytes @ 0x0
+   339  0035                     	ds	1
+   340  0036                     ??_vSetRelay:	
+   341  0036                     ??___bmul:	
+   342                           ; 0 bytes @ 0x1
+   343                           
+   344  0036                     vSetRelay@relay:	
+   345                           ; 0 bytes @ 0x1
+   346                           
+   347  0036                     ___bmul@product:	
+   348                           ; 1 bytes @ 0x1
+   349                           
+   350                           
+   351                           ; 1 bytes @ 0x1
+   352  0036                     	ds	1
+   353  0037                     ??_setCommunicationTimeOut:	
+   354  0037                     ___bmul@multiplier:	
+   355                           ; 0 bytes @ 0x2
+   356                           
+   357                           
+   358                           ; 1 bytes @ 0x2
+   359  0037                     	ds	1
+   360  0038                     ?_vPulseRelay:	
+   361  0038                     vPulseRelay@timerValue:	
+   362                           ; 0 bytes @ 0x3
+   363                           
+   364                           
+   365                           ; 1 bytes @ 0x3
+   366  0038                     	ds	1
+   367  0039                     ??_vPulseRelay:	
+   368  0039                     vPulseRelay@relay:	
+   369                           ; 0 bytes @ 0x4
+   370                           
+   371                           
+   372                           ; 1 bytes @ 0x4
+   373  0039                     	ds	1
+   374  003A                     ??_main:	
+   375                           
+   376                           ; 0 bytes @ 0x5
+   377  003A                     	ds	2
+   378  003C                     main@i:	
+   379                           
+   380                           ; 1 bytes @ 0x7
+   381  003C                     	ds	1
+   382                           
+   383                           	psect	maintext
+   384  0011                     __pmaintext:	
+   385 ;;Data sizes: Strings 0, constant 0, data 1, bss 175, persistent 3 stack 0
+   386 ;;Auto spaces:   Size  Autos    Used
+   387 ;; COMMON          14      8      13
+   388 ;; BANK0           80      8      33
+   389 ;; BANK1           80      0      60
+   390 ;; BANK3           96      0      90
+   391 ;; BANK2           96      0       0
+   392 ;;
+   393 ;; Pointer list with targets:
+   394 ;;
+   395 ;; Critical Paths under _main in COMMON
+   396 ;;
+   397 ;;   None.
+   398 ;;
+   399 ;; Critical Paths under _erdem in COMMON
+   400 ;;
+   401 ;;   _erdem->_restartUSR_K2
+   402 ;;   _restartUSR_K2->i1_setCommunicationTimeOut
+   403 ;;
+   404 ;; Critical Paths under _main in BANK0
+   405 ;;
+   406 ;;   _main->_vPulseRelay
+   407 ;;   _vPulseRelay->___bmul
+   408 ;;
+   409 ;; Critical Paths under _erdem in BANK0
+   410 ;;
+   411 ;;   None.
+   412 ;;
+   413 ;; Critical Paths under _main in BANK1
+   414 ;;
+   415 ;;   None.
+   416 ;;
+   417 ;; Critical Paths under _erdem in BANK1
+   418 ;;
+   419 ;;   None.
+   420 ;;
+   421 ;; Critical Paths under _main in BANK3
+   422 ;;
+   423 ;;   None.
+   424 ;;
+   425 ;; Critical Paths under _erdem in BANK3
+   426 ;;
+   427 ;;   None.
+   428 ;;
+   429 ;; Critical Paths under _main in BANK2
+   430 ;;
+   431 ;;   None.
+   432 ;;
+   433 ;; Critical Paths under _erdem in BANK2
+   434 ;;
+   435 ;;   None.
+   436 ;;
+   437 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   438 ;;
+   439 ;;
+   440 ;;Call Graph Tables:
+   441 ;;
+   442 ;; ---------------------------------------------------------------------------------
+   443 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   444 ;; ---------------------------------------------------------------------------------
+   445 ;; (0) _main                                                 3     3      0     890
+   446 ;;                                              5 BANK0      3     3      0
+   447 ;;                   _vInitializeBoard
+   448 ;;                    _vInitializeUart
+   449 ;;            _setCommunicationTimeOut
+   450 ;;           _vAddToUartTransmitBuffer
+   451 ;;                    _vSendDataToUart
+   452 ;;              _cGetFromReceiveBuffer
+   453 ;;                          _vSetRelay
+   454 ;;                        _vPulseRelay
+   455 ;;                             ___bmul
+   456 ;; ---------------------------------------------------------------------------------
+   457 ;; (1) ___bmul                                               3     2      1      92
+   458 ;;                                              0 BANK0      3     2      1
+   459 ;; ---------------------------------------------------------------------------------
+   460 ;; (1) _vPulseRelay                                          2     1      1     132
+   461 ;;                                              3 BANK0      2     1      1
+   462 ;;                             ___bmul (ARG)
+   463 ;; ---------------------------------------------------------------------------------
+   464 ;; (1) _vSetRelay                                            2     1      1     132
+   465 ;;                                              0 BANK0      2     1      1
+   466 ;; ---------------------------------------------------------------------------------
+   467 ;; (1) _cGetFromReceiveBuffer                                1     1      0      23
+   468 ;;                                              0 BANK0      1     1      0
+   469 ;; ---------------------------------------------------------------------------------
+   470 ;; (1) _vSendDataToUart                                      0     0      0       0
+   471 ;; ---------------------------------------------------------------------------------
+   472 ;; (1) _vAddToUartTransmitBuffer                             1     1      0      22
+   473 ;;                                              0 BANK0      1     1      0
+   474 ;; ---------------------------------------------------------------------------------
+   475 ;; (1) _setCommunicationTimeOut                              2     0      2      22
+   476 ;;                                              0 BANK0      2     0      2
+   477 ;; ---------------------------------------------------------------------------------
+   478 ;; (1) _vInitializeUart                                      1     1      0      89
+   479 ;;                                              0 BANK0      1     1      0
+   480 ;; ---------------------------------------------------------------------------------
+   481 ;; (1) _vInitializeBoard                                     0     0      0       0
+   482 ;; ---------------------------------------------------------------------------------
+   483 ;; Estimated maximum stack depth 1
+   484 ;; ---------------------------------------------------------------------------------
+   485 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   486 ;; ---------------------------------------------------------------------------------
+   487 ;; (2) _erdem                                                4     4      0     165
+   488 ;;                                              4 COMMON     4     4      0
+   489 ;;                      _restartUSR_K2
+   490 ;;                        _vCheckError
+   491 ;;            _vAddToUartReceiveBuffer
+   492 ;;                   _cGetFromTxBuffer
+   493 ;; ---------------------------------------------------------------------------------
+   494 ;; (3) _restartUSR_K2                                        2     2      0      73
+   495 ;;                                              2 COMMON     2     2      0
+   496 ;;          i1_setCommunicationTimeOut
+   497 ;; ---------------------------------------------------------------------------------
+   498 ;; (4) i1_setCommunicationTimeOut                            2     0      2      73
+   499 ;;                                              0 COMMON     2     0      2
+   500 ;; ---------------------------------------------------------------------------------
+   501 ;; (3) _cGetFromTxBuffer                                     1     1      0      23
+   502 ;;                                              0 COMMON     1     1      0
+   503 ;; ---------------------------------------------------------------------------------
+   504 ;; (3) _vAddToUartReceiveBuffer                              1     1      0      22
+   505 ;;                                              0 COMMON     1     1      0
+   506 ;; ---------------------------------------------------------------------------------
+   507 ;; (3) _vCheckError                                          1     1      0       0
+   508 ;; ---------------------------------------------------------------------------------
+   509 ;; Estimated maximum stack depth 4
+   510 ;; ---------------------------------------------------------------------------------
+   511 ;; Call Graph Graphs:
+   512 ;; _main (ROOT)
+   513 ;;   _vInitializeBoard
+   514 ;;   _vInitializeUart
+   515 ;;   _setCommunicationTimeOut
+   516 ;;   _vAddToUartTransmitBuffer
+   517 ;;   _vSendDataToUart
+   518 ;;   _cGetFromReceiveBuffer
+   519 ;;   _vSetRelay
+   520 ;;   _vPulseRelay
+   521 ;;     ___bmul (ARG)
+   522 ;;   ___bmul
+   523 ;;
+   524 ;; _erdem (ROOT)
+   525 ;;   _restartUSR_K2
+   526 ;;     i1_setCommunicationTimeOut
+   527 ;;   _vCheckError
+   528 ;;   _vAddToUartReceiveBuffer
+   529 ;;   _cGetFromTxBuffer
+   530 ;;
+   531 ;; Address spaces:
+   532 ;;Name               Size   Autos  Total    Cost      Usage
+   533 ;;BANK3               60      0      5A       9       93.8%
+   534 ;;BITBANK3            60      0       0       8        0.0%
+   535 ;;SFR3                 0      0       0       4        0.0%
+   536 ;;BITSFR3              0      0       0       4        0.0%
+   537 ;;BANK2               60      0       0      11        0.0%
+   538 ;;BITBANK2            60      0       0      10        0.0%
+   539 ;;SFR2                 0      0       0       5        0.0%
+   540 ;;BITSFR2              0      0       0       5        0.0%
+   541 ;;SFR1                 0      0       0       2        0.0%
+   542 ;;BITSFR1              0      0       0       2        0.0%
+   543 ;;BANK1               50      0      3C       7       75.0%
+   544 ;;BITBANK1            50      0       0       6        0.0%
+   545 ;;CODE                 0      0       0       0        0.0%
+   546 ;;DATA                 0      0      CB      12        0.0%
+   547 ;;ABS                  0      0      C4       3        0.0%
+   548 ;;NULL                 0      0       0       0        0.0%
+   549 ;;STACK                0      0       7       2        0.0%
+   550 ;;BANK0               50      8      21       5       41.3%
+   551 ;;BITBANK0            50      0       0       4        0.0%
+   552 ;;SFR0                 0      0       0       1        0.0%
+   553 ;;BITSFR0              0      0       0       1        0.0%
+   554 ;;COMMON               E      8       D       1       92.9%
+   555 ;;BITCOMMON            E      0       1       0        7.1%
+   556 ;;EEDATA             100      0       0       0        0.0%
+   557                           
+   558                           
+   559 ;; *************** function _main *****************
+   560 ;; Defined at:
+   561 ;;		line 116 in file "../src/main.c"
+   562 ;; Parameters:    Size  Location     Type
+   563 ;;		None
+   564 ;; Auto vars:     Size  Location     Type
+   565 ;;  i               1    7[BANK0 ] unsigned char 
+   566 ;; Return value:  Size  Location     Type
+   567 ;;                  2  1104[COMMON] int 
+   568 ;; Registers used:
+   569 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   570 ;; Tracked objects:
+   571 ;;		On entry : 17F/0
+   572 ;;		On exit  : 160/100
+   573 ;;		Unchanged: 0/0
+   574 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   575 ;;      Params:         0       0       0       0       0
+   576 ;;      Locals:         0       1       0       0       0
+   577 ;;      Temps:          0       2       0       0       0
+   578 ;;      Totals:         0       3       0       0       0
+   579 ;;Total ram usage:        3 bytes
+   580 ;; Hardware stack levels required when called:    4
+   581 ;; This function calls:
+   582 ;;		_vInitializeBoard
+   583 ;;		_vInitializeUart
+   584 ;;		_setCommunicationTimeOut
+   585 ;;		_vAddToUartTransmitBuffer
+   586 ;;		_vSendDataToUart
+   587 ;;		_cGetFromReceiveBuffer
+   588 ;;		_vSetRelay
+   589 ;;		_vPulseRelay
+   590 ;;		___bmul
+   591 ;; This function is called by:
+   592 ;;		Startup code after reset
+   593 ;; This function uses a non-reentrant model
+   594 ;;
+   595  0011                     _main:	
+   596                           
+   597                           ;main.c: 117: unsigned char i;
+   598                           ;main.c: 118: vInitializeBoard();
+   599                           
+   600                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   601  0011  120A  118A  22B8   	fcall	_vInitializeBoard
+      +       120A  118A         
+   602                           
+   603                           ;main.c: 119: vInitializeUart();
+   604  0016  120A  118A  236D   	fcall	_vInitializeUart
+      +       120A  118A         
+   605                           
+   606                           ;main.c: 120: PEIE = 1;
+   607  001B  170B               	bsf	11,6
+   608                           
+   609                           ;main.c: 121: GIE = 1;
+   610  001C  178B               	bsf	11,7
+   611                           
+   612                           ;main.c: 122: (GIE = 1);
+   613  001D  178B               	bsf	11,7
+   614                           
+   615                           ;main.c: 123: uartReceiveBufferW = 0;
+   616  001E  1283               	bcf	3,5	;RP0=0, select bank0
+   617  001F  01AA               	clrf	_uartReceiveBufferW	;volatile
+   618                           
+   619                           ;main.c: 124: uartReceiveBufferR = 0;
+   620  0020  01A9               	clrf	_uartReceiveBufferR	;volatile
+   621                           
+   622                           ;main.c: 125: inputPort = (PORTB & 0b00110111);
+   623  0021  0806               	movf	6,w
+   624  0022  00A6               	movwf	_inputPort
+   625  0023  3037               	movlw	55
+   626  0024  05A6               	andwf	_inputPort,f
+   627  0025                     l4447:	
+   628                           
+   629                           ;main.c: 126: setCommunicationTimeOut(3000);
+   630  0025  30B8               	movlw	184
+   631  0026  1283               	bcf	3,5	;RP0=0, select bank0
+   632  0027  00B5               	movwf	?_setCommunicationTimeOut
+   633  0028  300B               	movlw	11
+   634  0029  00B6               	movwf	?_setCommunicationTimeOut+1
+   635  002A  120A  118A  23B6   	fcall	_setCommunicationTimeOut
+      +       120A  118A         
+   636  002F                     l4449:	
+   637  002F  0064               	clrwdt	;#
+   638                           
+   639                           ;main.c: 131: if (inputPort != (PORTB & 0b00110111)) {
+   640  0030  1283               	bcf	3,5	;RP0=0, select bank0
+   641  0031  1303               	bcf	3,6	;RP1=0, select bank0
+   642  0032  0806               	movf	6,w
+   643  0033  3937               	andlw	55
+   644  0034  0626               	xorwf	_inputPort,w
+   645  0035  1903               	skipnz
+   646  0036  28B2               	goto	l4491
+   647                           
+   648                           ;main.c: 132: _delay((unsigned long)((40)*(8000000/4000.0)));
+   649  0037  3068               	movlw	104
+   650  0038  00BB               	movwf	??_main+1
+   651  0039  30E4               	movlw	228
+   652  003A  00BA               	movwf	??_main
+   653  003B                     u1217:	
+   654  003B  0BBA               	decfsz	??_main,f
+   655  003C  283B               	goto	u1217
+   656  003D  0BBB               	decfsz	??_main+1,f
+   657  003E  283B               	goto	u1217
+   658  003F  0064               	clrwdt
+   659                           
+   660                           ;main.c: 133: if (inputPort != (PORTB & 0b00110111)) {
+   661  0040  1283               	bcf	3,5	;RP0=0, select bank0
+   662  0041  1303               	bcf	3,6	;RP1=0, select bank0
+   663  0042  0806               	movf	6,w
+   664  0043  3937               	andlw	55
+   665  0044  0626               	xorwf	_inputPort,w
+   666  0045  1903               	skipnz
+   667  0046  28B2               	goto	l4491
+   668                           
+   669                           ;main.c: 134: inputPort = (PORTB & 0b00110111);
+   670  0047  0806               	movf	6,w
+   671  0048  00A6               	movwf	_inputPort
+   672  0049  3037               	movlw	55
+   673  004A  05A6               	andwf	_inputPort,f
+   674                           
+   675                           ;main.c: 136: vAddToUartTransmitBuffer('<');
+   676  004B  303C               	movlw	60
+   677  004C  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   678                           
+   679                           ;main.c: 137: vAddToUartTransmitBuffer('D');
+   680  0051  3044               	movlw	68
+   681  0052  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   682                           
+   683                           ;main.c: 138: vAddToUartTransmitBuffer('U');
+   684  0057  3055               	movlw	85
+   685  0058  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   686                           
+   687                           ;main.c: 139: vAddToUartTransmitBuffer('R');
+   688  005D  3052               	movlw	82
+   689  005E  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   690                           
+   691                           ;main.c: 140: vAddToUartTransmitBuffer('U');
+   692  0063  3055               	movlw	85
+   693  0064  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   694                           
+   695                           ;main.c: 141: vAddToUartTransmitBuffer('M');
+   696  0069  304D               	movlw	77
+   697  006A  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   698                           
+   699                           ;main.c: 142: vAddToUartTransmitBuffer(':');
+   700  006F  303A               	movlw	58
+   701  0070  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   702                           
+   703                           ;main.c: 143: vAddToUartTransmitBuffer((PORTBbits.RB0) + 48);
+   704  0075  0806               	movf	6,w	;volatile
+   705  0076  3901               	andlw	1
+   706  0077  3E30               	addlw	48
+   707  0078  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   708                           
+   709                           ;main.c: 144: vAddToUartTransmitBuffer((PORTBbits.RB1) + 48);
+   710  007D  0C06               	rrf	6,w	;volatile
+   711  007E  3901               	andlw	1
+   712  007F  3E30               	addlw	48
+   713  0080  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   714                           
+   715                           ;main.c: 145: vAddToUartTransmitBuffer((PORTBbits.RB2) + 48);
+   716  0085  0C06               	rrf	6,w	;volatile
+   717  0086  00BA               	movwf	??_main
+   718  0087  0C3A               	rrf	??_main,w
+   719  0088  3901               	andlw	1
+   720  0089  3E30               	addlw	48
+   721  008A  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   722                           
+   723                           ;main.c: 146: vAddToUartTransmitBuffer((PORTBbits.RB4) + 48);
+   724  008F  0E06               	swapf	6,w	;volatile
+   725  0090  3901               	andlw	1
+   726  0091  3E30               	addlw	48
+   727  0092  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   728                           
+   729                           ;main.c: 147: vAddToUartTransmitBuffer((PORTBbits.RB5) + 48);
+   730  0097  0E06               	swapf	6,w	;volatile
+   731  0098  00BA               	movwf	??_main
+   732  0099  0C3A               	rrf	??_main,w
+   733  009A  3901               	andlw	1
+   734  009B  3E30               	addlw	48
+   735  009C  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   736                           
+   737                           ;main.c: 148: vAddToUartTransmitBuffer('0');
+   738  00A1  3030               	movlw	48
+   739  00A2  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   740                           
+   741                           ;main.c: 149: vAddToUartTransmitBuffer('>');
+   742  00A7  303E               	movlw	62
+   743  00A8  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+   744                           
+   745                           ;main.c: 150: vSendDataToUart();
+   746  00AD  120A  118A  23BC   	fcall	_vSendDataToUart
+      +       120A  118A         
+   747  00B2                     l4491:	
+   748                           
+   749                           ;main.c: 151: }
+   750                           ;main.c: 152: }
+   751                           ;main.c: 154: if (uartReceiveBufferW != uartReceiveBufferR) {
+   752  00B2  1283               	bcf	3,5	;RP0=0, select bank0
+   753  00B3  082A               	movf	_uartReceiveBufferW,w	;volatile
+   754  00B4  0629               	xorwf	_uartReceiveBufferR,w	;volatile
+   755  00B5  1903               	skipnz
+   756  00B6  282F               	goto	l4449
+   757                           
+   758                           ;main.c: 155: bufferValue = cGetFromReceiveBuffer();
+   759  00B7  120A  118A  2384   	fcall	_cGetFromReceiveBuffer
+      +       120A  118A         
+   760  00BC  00A5               	movwf	_bufferValue
+   761                           
+   762                           ;main.c: 156: if (buffer_SM == 1) {
+   763  00BD  0B40               	decfsz	_buffer_SM,w	;volatile
+   764  00BE  28C5               	goto	l4501
+   765                           
+   766                           ;main.c: 157: if (bufferValue == '<') {
+   767  00BF  0825               	movf	_bufferValue,w
+   768  00C0  3A3C               	xorlw	60
+   769  00C1  1D03               	skipz
+   770  00C2  282F               	goto	l4449
+   771  00C3                     l4499:	
+   772                           
+   773                           ;main.c: 158: buffer_SM = 2;
+   774  00C3  3002               	movlw	2
+   775  00C4  29C7               	goto	L6
+   776  00C5                     l4501:	
+   777  00C5  0840               	movf	_buffer_SM,w	;volatile
+   778  00C6  3A02               	xorlw	2
+   779  00C7  1D03               	skipz
+   780  00C8  28D2               	goto	l4507
+   781                           
+   782                           ;main.c: 161: if (bufferValue == 'R') {
+   783  00C9  0825               	movf	_bufferValue,w
+   784  00CA  3A52               	xorlw	82
+   785  00CB  1D03               	skipz
+   786  00CC  28CF               	goto	l1113
+   787                           
+   788                           ;main.c: 162: buffer_SM = 3;
+   789  00CD  3003               	movlw	3
+   790  00CE  29C7               	goto	L6
+   791  00CF                     l1113:	
+   792                           ;main.c: 163: } else {
+   793                           
+   794                           
+   795                           ;main.c: 164: buffer_SM = 1;
+   796  00CF  01C0               	clrf	_buffer_SM	;volatile
+   797  00D0  0AC0               	incf	_buffer_SM,f	;volatile
+   798  00D1  282F               	goto	l4449
+   799  00D2                     l4507:	
+   800  00D2  0840               	movf	_buffer_SM,w	;volatile
+   801  00D3  3A03               	xorlw	3
+   802  00D4  1D03               	skipz
+   803  00D5  28DC               	goto	l4513
+   804                           
+   805                           ;main.c: 167: if (bufferValue == 'O') {
+   806  00D6  0825               	movf	_bufferValue,w
+   807  00D7  3A4F               	xorlw	79
+   808  00D8  1D03               	skipz
+   809  00D9  28CF               	goto	l1113
+   810                           
+   811                           ;main.c: 168: buffer_SM = 4;
+   812  00DA  3004               	movlw	4
+   813  00DB  29C7               	goto	L6
+   814  00DC                     l4513:	
+   815                           ;main.c: 169: } else {
+   816                           
+   817  00DC  0840               	movf	_buffer_SM,w	;volatile
+   818  00DD  3A04               	xorlw	4
+   819  00DE  1D03               	skipz
+   820  00DF  28E6               	goto	l4519
+   821                           
+   822                           ;main.c: 173: if (bufferValue == 'L') {
+   823  00E0  0825               	movf	_bufferValue,w
+   824  00E1  3A4C               	xorlw	76
+   825  00E2  1D03               	skipz
+   826  00E3  28CF               	goto	l1113
+   827                           
+   828                           ;main.c: 174: buffer_SM = 5;
+   829  00E4  3005               	movlw	5
+   830  00E5  29C7               	goto	L6
+   831  00E6                     l4519:	
+   832                           ;main.c: 175: } else {
+   833                           
+   834  00E6  0840               	movf	_buffer_SM,w	;volatile
+   835  00E7  3A05               	xorlw	5
+   836  00E8  1D03               	skipz
+   837  00E9  28F0               	goto	l4525
+   838                           
+   839                           ;main.c: 179: if (bufferValue == 'E') {
+   840  00EA  0825               	movf	_bufferValue,w
+   841  00EB  3A45               	xorlw	69
+   842  00EC  1D03               	skipz
+   843  00ED  28CF               	goto	l1113
+   844                           
+   845                           ;main.c: 180: buffer_SM = 6;
+   846  00EE  3006               	movlw	6
+   847  00EF  29C7               	goto	L6
+   848  00F0                     l4525:	
+   849                           ;main.c: 181: } else {
+   850                           
+   851  00F0  0840               	movf	_buffer_SM,w	;volatile
+   852  00F1  3A06               	xorlw	6
+   853  00F2  1D03               	skipz
+   854  00F3  28FA               	goto	l4531
+   855                           
+   856                           ;main.c: 185: if (bufferValue == ':') {
+   857  00F4  0825               	movf	_bufferValue,w
+   858  00F5  3A3A               	xorlw	58
+   859  00F6  1D03               	skipz
+   860  00F7  28CF               	goto	l1113
+   861                           
+   862                           ;main.c: 186: buffer_SM = 7;
+   863  00F8  3007               	movlw	7
+   864  00F9  29C7               	goto	L6
+   865  00FA                     l4531:	
+   866                           ;main.c: 187: } else {
+   867                           
+   868  00FA  0840               	movf	_buffer_SM,w	;volatile
+   869  00FB  3A07               	xorlw	7
+   870  00FC  1D03               	skipz
+   871  00FD  292C               	goto	l4561
+   872                           
+   873                           ;main.c: 191: dataBuffer[0] = bufferValue;
+   874  00FE  0825               	movf	_bufferValue,w
+   875  00FF  00AB               	movwf	_dataBuffer
+   876                           
+   877                           ;main.c: 192: for (i = 0; i < 5; ++i) {
+   878  0100  01BC               	clrf	main@i
+   879  0101                     l4541:	
+   880                           
+   881                           ;main.c: 193: _delay((unsigned long)((1)*(8000000/4000.0)));
+   882  0101  3003               	movlw	3
+   883  0102  00BB               	movwf	??_main+1
+   884  0103  3097               	movlw	151
+   885  0104  00BA               	movwf	??_main
+   886  0105                     u1227:	
+   887  0105  0BBA               	decfsz	??_main,f
+   888  0106  2905               	goto	u1227
+   889  0107  0BBB               	decfsz	??_main+1,f
+   890  0108  2905               	goto	u1227
+   891  0109  290A               	nop2
+   892                           
+   893                           ;main.c: 194: dataBuffer[i + 1] = cGetFromReceiveBuffer();
+   894  010A  120A  118A  2384   	fcall	_cGetFromReceiveBuffer
+      +       120A  118A         
+   895  010F  00BA               	movwf	??_main
+   896  0110  083C               	movf	main@i,w
+   897  0111  3E2C               	addlw	(_dataBuffer+1)& (0+255)
+   898  0112  0084               	movwf	4
+   899  0113  083A               	movf	??_main,w
+   900  0114  1383               	bcf	3,7	;select IRP bank0
+   901  0115  0080               	movwf	0
+   902                           
+   903                           ;main.c: 195: if (dataBuffer[i + 1] == '<') {
+   904  0116  083C               	movf	main@i,w
+   905  0117  3E2C               	addlw	(_dataBuffer+1)& (0+255)
+   906  0118  0084               	movwf	4
+   907  0119  0800               	movf	0,w
+   908  011A  3A3C               	xorlw	60
+   909  011B  1903               	btfsc	3,2
+   910  011C  28C3               	goto	l4499
+   911  011D  083C               	movf	main@i,w
+   912  011E  3E2C               	addlw	(_dataBuffer+1)& (0+255)
+   913  011F  0084               	movwf	4
+   914  0120  0800               	movf	0,w
+   915  0121  3A3E               	xorlw	62
+   916  0122  1903               	btfsc	3,2
+   917  0123  28CF               	goto	l1113
+   918                           
+   919                           ;main.c: 201: }
+   920                           ;main.c: 202: buffer_SM = 8;
+   921  0124  3008               	movlw	8
+   922  0125  00C0               	movwf	_buffer_SM	;volatile
+   923  0126  3005               	movlw	5
+   924  0127  0ABC               	incf	main@i,f
+   925  0128  023C               	subwf	main@i,w
+   926  0129  1803               	btfsc	3,0
+   927  012A  282F               	goto	l4449
+   928  012B  2901               	goto	l4541
+   929  012C                     l4561:	
+   930  012C  0840               	movf	_buffer_SM,w	;volatile
+   931  012D  3A08               	xorlw	8
+   932  012E  1D03               	skipz
+   933  012F  282F               	goto	l4449
+   934                           
+   935                           ;main.c: 205: if (bufferValue == '>') {
+   936  0130  0825               	movf	_bufferValue,w
+   937  0131  3A3E               	xorlw	62
+   938  0132  1D03               	skipz
+   939  0133  29C6               	goto	l4601
+   940                           
+   941                           ;main.c: 206: for (i = 0; i < 6; ++i) {
+   942  0134  01BC               	clrf	main@i
+   943  0135                     l4571:	
+   944                           
+   945                           ;main.c: 207: if (dataBuffer[i] == 'A')
+   946  0135  083C               	movf	main@i,w
+   947  0136  3E2B               	addlw	_dataBuffer& (0+255)
+   948  0137  0084               	movwf	4
+   949  0138  1383               	bcf	3,7	;select IRP bank0
+   950  0139  0800               	movf	0,w
+   951  013A  3A41               	xorlw	65
+   952  013B  1D03               	skipz
+   953  013C  2946               	goto	l4575
+   954                           
+   955                           ;main.c: 208: vSetRelay(i + 1, 1);
+   956  013D  01B5               	clrf	?_vSetRelay
+   957  013E  0AB5               	incf	?_vSetRelay,f
+   958  013F  0A3C               	incf	main@i,w
+   959  0140  120A  118A  22EB   	fcall	_vSetRelay
+      +       120A  118A         
+   960  0145  299F               	goto	l4589
+   961  0146                     l4575:	
+   962                           
+   963                           ;main.c: 209: else if (dataBuffer[i] == 'K')
+   964  0146  083C               	movf	main@i,w
+   965  0147  3E2B               	addlw	_dataBuffer& (0+255)
+   966  0148  0084               	movwf	4
+   967  0149  0800               	movf	0,w
+   968  014A  3A4B               	xorlw	75
+   969  014B  1D03               	skipz
+   970  014C  2955               	goto	l4579
+   971                           
+   972                           ;main.c: 210: vSetRelay(i + 1, 0);
+   973  014D  01B5               	clrf	?_vSetRelay
+   974  014E  0A3C               	incf	main@i,w
+   975  014F  120A  118A  22EB   	fcall	_vSetRelay
+      +       120A  118A         
+   976  0154  299F               	goto	l4589
+   977  0155                     l4579:	
+   978                           
+   979                           ;main.c: 211: else if (dataBuffer[i] == '0') {
+   980  0155  083C               	movf	main@i,w
+   981  0156  3E2B               	addlw	_dataBuffer& (0+255)
+   982  0157  0084               	movwf	4
+   983  0158  0800               	movf	0,w
+   984  0159  3A30               	xorlw	48
+   985  015A  1D03               	skipz
+   986  015B  295E               	goto	l4583
+   987                           
+   988                           ;main.c: 212: vPulseRelay(i + 1, 50);
+   989  015C  3032               	movlw	50
+   990  015D  2998               	goto	L7
+   991  015E                     l4583:	
+   992                           ;main.c: 213: } else if (((dataBuffer[i] - 48) > 0) && ((dataBuffer[i] - 48) <= 9)) {
+   993                           
+   994  015E  083C               	movf	main@i,w
+   995  015F  3E2B               	addlw	_dataBuffer& (0+255)
+   996  0160  0084               	movwf	4
+   997  0161  0800               	movf	0,w
+   998  0162  3ED0               	addlw	208
+   999  0163  00BA               	movwf	??_main
+  1000  0164  30FF               	movlw	255
+  1001  0165  1803               	skipnc
+  1002  0166  3000               	movlw	0
+  1003  0167  00BB               	movwf	??_main+1
+  1004  0168  3A80               	xorlw	128
+  1005  0169  00FF               	movwf	127
+  1006  016A  3080               	movlw	128
+  1007  016B  027F               	subwf	127,w
+  1008  016C  1D03               	skipz
+  1009  016D  2970               	goto	u1185
+  1010  016E  3001               	movlw	1
+  1011  016F  023A               	subwf	??_main,w
+  1012  0170                     u1185:	
+  1013  0170  1C03               	skipc
+  1014  0171  299F               	goto	l4589
+  1015  0172  1283               	bcf	3,5	;RP0=0, select bank0
+  1016  0173  1303               	bcf	3,6	;RP1=0, select bank0
+  1017  0174  083C               	movf	main@i,w
+  1018  0175  3E2B               	addlw	_dataBuffer& (0+255)
+  1019  0176  0084               	movwf	4
+  1020  0177  1383               	bcf	3,7	;select IRP bank0
+  1021  0178  0800               	movf	0,w
+  1022  0179  3ED0               	addlw	208
+  1023  017A  00BA               	movwf	??_main
+  1024  017B  30FF               	movlw	255
+  1025  017C  1803               	skipnc
+  1026  017D  3000               	movlw	0
+  1027  017E  00BB               	movwf	??_main+1
+  1028  017F  3A80               	xorlw	128
+  1029  0180  00FF               	movwf	127
+  1030  0181  3080               	movlw	128
+  1031  0182  027F               	subwf	127,w
+  1032  0183  1D03               	skipz
+  1033  0184  2987               	goto	u1195
+  1034  0185  300A               	movlw	10
+  1035  0186  023A               	subwf	??_main,w
+  1036  0187                     u1195:	
+  1037  0187  1803               	skipnc
+  1038  0188  299F               	goto	l4589
+  1039                           
+  1040                           ;main.c: 214: vPulseRelay(i + 1, (dataBuffer[i] - 48)*5);
+  1041  0189  3005               	movlw	5
+  1042  018A  1283               	bcf	3,5	;RP0=0, select bank0
+  1043  018B  1303               	bcf	3,6	;RP1=0, select bank0
+  1044  018C  00B5               	movwf	?___bmul
+  1045  018D  083C               	movf	main@i,w
+  1046  018E  3E2B               	addlw	_dataBuffer& (0+255)
+  1047  018F  0084               	movwf	4
+  1048  0190  1383               	bcf	3,7	;select IRP bank0
+  1049  0191  0800               	movf	0,w
+  1050  0192  3ED0               	addlw	208
+  1051  0193  120A  118A  2393   	fcall	___bmul
+      +       120A  118A         
+  1052  0198                     L7:	
+  1053  0198  00B8               	movwf	?_vPulseRelay
+  1054  0199  0A3C               	incf	main@i,w
+  1055  019A  120A  118A  231D   	fcall	_vPulseRelay
+      +       120A  118A         
+  1056  019F                     l4589:	
+  1057  019F  1283               	bcf	3,5	;RP0=0, select bank0
+  1058  01A0  1303               	bcf	3,6	;RP1=0, select bank0
+  1059  01A1  3006               	movlw	6
+  1060  01A2  0ABC               	incf	main@i,f
+  1061  01A3  023C               	subwf	main@i,w
+  1062  01A4  1C03               	skipc
+  1063  01A5  2935               	goto	l4571
+  1064                           
+  1065                           ;main.c: 215: }
+  1066                           ;main.c: 216: }
+  1067                           ;main.c: 217: vAddToUartTransmitBuffer('<');
+  1068  01A6  303C               	movlw	60
+  1069  01A7  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+  1070                           
+  1071                           ;main.c: 218: vAddToUartTransmitBuffer('O');
+  1072  01AC  304F               	movlw	79
+  1073  01AD  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+  1074                           
+  1075                           ;main.c: 219: vAddToUartTransmitBuffer('K');
+  1076  01B2  304B               	movlw	75
+  1077  01B3  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+  1078                           
+  1079                           ;main.c: 220: vAddToUartTransmitBuffer('>');
+  1080  01B8  303E               	movlw	62
+  1081  01B9  120A  118A  23A1   	fcall	_vAddToUartTransmitBuffer
+      +       120A  118A         
+  1082                           
+  1083                           ;main.c: 221: buffer_SM = 1;
+  1084  01BE  01C0               	clrf	_buffer_SM	;volatile
+  1085  01BF  0AC0               	incf	_buffer_SM,f	;volatile
+  1086                           
+  1087                           ;main.c: 222: vSendDataToUart();
+  1088  01C0  120A  118A  23BC   	fcall	_vSendDataToUart
+      +       120A  118A         
+  1089  01C5  2825               	goto	l4447
+  1090  01C6                     l4601:	
+  1091                           
+  1092                           ;main.c: 225: buffer_SM = 8;
+  1093  01C6  3008               	movlw	8
+  1094  01C7                     L6:	
+  1095  01C7  00C0               	movwf	_buffer_SM	;volatile
+  1096  01C8  282F               	goto	l4449
+  1097  01C9                     __end_of_main:	
+  1098                           
+  1099                           	psect	text342
+  1100  0393                     __ptext342:	
+  1101 ;; =============== function _main ends ============
+  1102                           
+  1103                           
+  1104 ;; *************** function ___bmul *****************
+  1105 ;; Defined at:
+  1106 ;;		line 3 in file "C:\Program Files (x86)\HI-TECH Software\PICC\9.83\sources\bmul.c"
+  1107 ;; Parameters:    Size  Location     Type
+  1108 ;;  multiplier      1    wreg     unsigned char 
+  1109 ;;  multiplicand    1    0[BANK0 ] unsigned char 
+  1110 ;; Auto vars:     Size  Location     Type
+  1111 ;;  multiplier      1    2[BANK0 ] unsigned char 
+  1112 ;;  product         1    1[BANK0 ] unsigned char 
+  1113 ;; Return value:  Size  Location     Type
+  1114 ;;                  1    wreg      unsigned char 
+  1115 ;; Registers used:
+  1116 ;;		wreg, status,2, status,0
+  1117 ;; Tracked objects:
+  1118 ;;		On entry : 160/0
+  1119 ;;		On exit  : 160/0
+  1120 ;;		Unchanged: FFE9F/0
+  1121 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1122 ;;      Params:         0       1       0       0       0
+  1123 ;;      Locals:         0       2       0       0       0
+  1124 ;;      Temps:          0       0       0       0       0
+  1125 ;;      Totals:         0       3       0       0       0
+  1126 ;;Total ram usage:        3 bytes
+  1127 ;; Hardware stack levels used:    1
+  1128 ;; Hardware stack levels required when called:    3
+  1129 ;; This function calls:
+  1130 ;;		Nothing
+  1131 ;; This function is called by:
+  1132 ;;		_main
+  1133 ;; This function uses a non-reentrant model
+  1134 ;;
+  1135  0393                     ___bmul:	
+  1136                           
+  1137                           ; Regs used in ___bmul: [wreg+status,2+status,0]
+  1138                           ;___bmul@multiplier stored from wreg
+  1139  0393  00B7               	movwf	___bmul@multiplier
+  1140  0394  01B6               	clrf	___bmul@product
+  1141  0395                     l4413:	
+  1142  0395  0835               	movf	___bmul@multiplicand,w
+  1143  0396  1837               	btfsc	___bmul@multiplier,0
+  1144  0397  07B6               	addwf	___bmul@product,f
+  1145  0398  1003               	clrc
+  1146  0399  0DB5               	rlf	___bmul@multiplicand,f
+  1147  039A  1003               	clrc
+  1148  039B  0CB7               	rrf	___bmul@multiplier,f
+  1149  039C  08B7               	movf	___bmul@multiplier,f
+  1150  039D  1D03               	skipz
+  1151  039E  2B95               	goto	l4413
+  1152  039F  0836               	movf	___bmul@product,w
+  1153  03A0  0008               	return
+  1154  03A1                     __end_of___bmul:	
+  1155                           
+  1156                           	psect	text343
+  1157  031D                     __ptext343:	
+  1158 ;; =============== function ___bmul ends ============
+  1159                           
+  1160                           
+  1161 ;; *************** function _vPulseRelay *****************
+  1162 ;; Defined at:
+  1163 ;;		line 325 in file "../src/main.c"
+  1164 ;; Parameters:    Size  Location     Type
+  1165 ;;  relay           1    wreg     unsigned char 
+  1166 ;;  timerValue      1    3[BANK0 ] unsigned char 
+  1167 ;; Auto vars:     Size  Location     Type
+  1168 ;;  relay           1    4[BANK0 ] unsigned char 
+  1169 ;; Return value:  Size  Location     Type
+  1170 ;;		None               void
+  1171 ;; Registers used:
+  1172 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1173 ;; Tracked objects:
+  1174 ;;		On entry : 160/0
+  1175 ;;		On exit  : 160/0
+  1176 ;;		Unchanged: FFE9F/0
+  1177 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1178 ;;      Params:         0       1       0       0       0
+  1179 ;;      Locals:         0       1       0       0       0
+  1180 ;;      Temps:          0       0       0       0       0
+  1181 ;;      Totals:         0       2       0       0       0
+  1182 ;;Total ram usage:        2 bytes
+  1183 ;; Hardware stack levels used:    1
+  1184 ;; Hardware stack levels required when called:    3
+  1185 ;; This function calls:
+  1186 ;;		Nothing
+  1187 ;; This function is called by:
+  1188 ;;		_main
+  1189 ;; This function uses a non-reentrant model
+  1190 ;;
+  1191  031D                     _vPulseRelay:	
+  1192                           
+  1193                           ; Regs used in _vPulseRelay: [wreg-fsr0h+status,2+status,0]
+  1194                           ;vPulseRelay@relay stored from wreg
+  1195  031D  00B9               	movwf	vPulseRelay@relay
+  1196                           
+  1197                           ;main.c: 326: switch (relay) {
+  1198  031E  2B38               	goto	l4297
+  1199  031F                     l1179:	
+  1200                           ;main.c: 327: case 1:
+  1201                           
+  1202                           
+  1203                           ;main.c: 328: (PORTDbits.RD1) = 1;
+  1204  031F  1488               	bsf	8,1	;volatile
+  1205                           
+  1206                           ;main.c: 329: RELAY_1_Timer = timerValue;
+  1207  0320  0838               	movf	vPulseRelay@timerValue,w
+  1208  0321  00F9               	movwf	_RELAY_1_Timer	;volatile
+  1209                           
+  1210                           ;main.c: 330: RELAY_1_Timer_En = 1;
+  1211  0322  1478               	bsf	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  1212                           
+  1213                           ;main.c: 331: break;
+  1214  0323  0008               	return
+  1215  0324                     l1181:	
+  1216                           ;main.c: 332: case 2:
+  1217                           
+  1218                           
+  1219                           ;main.c: 333: (PORTDbits.RD2) = 1;
+  1220  0324  1508               	bsf	8,2	;volatile
+  1221                           
+  1222                           ;main.c: 334: RELAY_2_Timer = timerValue;
+  1223  0325  0838               	movf	vPulseRelay@timerValue,w
+  1224  0326  00FA               	movwf	_RELAY_2_Timer	;volatile
+  1225                           
+  1226                           ;main.c: 335: RELAY_2_Timer_En = 1;
+  1227  0327  14F8               	bsf	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  1228                           
+  1229                           ;main.c: 336: break;
+  1230  0328  0008               	return
+  1231  0329                     l1182:	
+  1232                           ;main.c: 337: case 3:
+  1233                           
+  1234                           
+  1235                           ;main.c: 338: (PORTDbits.RD3) = 1;
+  1236  0329  1588               	bsf	8,3	;volatile
+  1237                           
+  1238                           ;main.c: 339: RELAY_3_Timer = timerValue;
+  1239  032A  0838               	movf	vPulseRelay@timerValue,w
+  1240  032B  00A2               	movwf	_RELAY_3_Timer	;volatile
+  1241                           
+  1242                           ;main.c: 340: RELAY_3_Timer_En = 1;
+  1243  032C  1578               	bsf	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  1244                           
+  1245                           ;main.c: 341: break;
+  1246  032D  0008               	return
+  1247  032E                     l1183:	
+  1248                           ;main.c: 342: case 4:
+  1249                           
+  1250                           
+  1251                           ;main.c: 343: (PORTCbits.RC4) = 1;
+  1252  032E  1607               	bsf	7,4	;volatile
+  1253                           
+  1254                           ;main.c: 344: RELAY_4_Timer = timerValue;
+  1255  032F  0838               	movf	vPulseRelay@timerValue,w
+  1256  0330  00A3               	movwf	_RELAY_4_Timer	;volatile
+  1257                           
+  1258                           ;main.c: 345: RELAY_4_Timer_En = 1;
+  1259  0331  15F8               	bsf	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  1260                           
+  1261                           ;main.c: 346: break;
+  1262  0332  0008               	return
+  1263  0333                     l1184:	
+  1264                           ;main.c: 347: case 5:
+  1265                           
+  1266                           
+  1267                           ;main.c: 348: (PORTCbits.RC5) = 1;
+  1268  0333  1687               	bsf	7,5	;volatile
+  1269                           
+  1270                           ;main.c: 349: RELAY_5_Timer = timerValue;
+  1271  0334  0838               	movf	vPulseRelay@timerValue,w
+  1272  0335  00A4               	movwf	_RELAY_5_Timer	;volatile
+  1273                           
+  1274                           ;main.c: 350: RELAY_5_Timer_En = 1;
+  1275  0336  1678               	bsf	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  1276                           
+  1277                           ;main.c: 351: break;
+  1278  0337  0008               	return
+  1279  0338                     l4297:	
+  1280  0338  0839               	movf	vPulseRelay@relay,w
+  1281                           
+  1282                           ; Switch size 1, requested type "space"
+  1283                           ; Number of cases is 5, Range of values is 1 to 5
+  1284                           ; switch strategies available:
+  1285                           ; Name         Instructions Cycles
+  1286                           ; simple_byte           16     9 (average)
+  1287                           ; direct_byte           26    11 (fixed)
+  1288                           ; jumptable            263     9 (fixed)
+  1289                           ;	Chosen strategy is simple_byte
+  1290  0339  3A01               	xorlw	1	; case 1
+  1291  033A  1903               	skipnz
+  1292  033B  2B1F               	goto	l1179
+  1293  033C  3A03               	xorlw	3	; case 2
+  1294  033D  1903               	skipnz
+  1295  033E  2B24               	goto	l1181
+  1296  033F  3A01               	xorlw	1	; case 3
+  1297  0340  1903               	skipnz
+  1298  0341  2B29               	goto	l1182
+  1299  0342  3A07               	xorlw	7	; case 4
+  1300  0343  1903               	skipnz
+  1301  0344  2B2E               	goto	l1183
+  1302  0345  3A01               	xorlw	1	; case 5
+  1303  0346  1903               	skipnz
+  1304  0347  2B33               	goto	l1184
+  1305  0348  2B49               	goto	l1186
+  1306  0349                     l1186:	
+  1307  0349  0008               	return
+  1308  034A                     __end_of_vPulseRelay:	
+  1309                           
+  1310                           	psect	text344
+  1311  02EB                     __ptext344:	
+  1312 ;; =============== function _vPulseRelay ends ============
+  1313                           
+  1314                           
+  1315 ;; *************** function _vSetRelay *****************
+  1316 ;; Defined at:
+  1317 ;;		line 369 in file "../src/main.c"
+  1318 ;; Parameters:    Size  Location     Type
+  1319 ;;  relay           1    wreg     unsigned char 
+  1320 ;;  value           1    0[BANK0 ] unsigned char 
+  1321 ;; Auto vars:     Size  Location     Type
+  1322 ;;  relay           1    1[BANK0 ] unsigned char 
+  1323 ;; Return value:  Size  Location     Type
+  1324 ;;		None               void
+  1325 ;; Registers used:
+  1326 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1327 ;; Tracked objects:
+  1328 ;;		On entry : 160/0
+  1329 ;;		On exit  : 160/0
+  1330 ;;		Unchanged: FFE9F/0
+  1331 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1332 ;;      Params:         0       1       0       0       0
+  1333 ;;      Locals:         0       1       0       0       0
+  1334 ;;      Temps:          0       0       0       0       0
+  1335 ;;      Totals:         0       2       0       0       0
+  1336 ;;Total ram usage:        2 bytes
+  1337 ;; Hardware stack levels used:    1
+  1338 ;; Hardware stack levels required when called:    3
+  1339 ;; This function calls:
+  1340 ;;		Nothing
+  1341 ;; This function is called by:
+  1342 ;;		_main
+  1343 ;; This function uses a non-reentrant model
+  1344 ;;
+  1345  02EB                     _vSetRelay:	
+  1346                           
+  1347                           ; Regs used in _vSetRelay: [wreg-fsr0h+status,2+status,0]
+  1348                           ;vSetRelay@relay stored from wreg
+  1349  02EB  00B6               	movwf	vSetRelay@relay
+  1350                           
+  1351                           ;main.c: 370: switch (relay) {
+  1352  02EC  2B0B               	goto	l4271
+  1353  02ED                     l4259:	
+  1354                           
+  1355                           ;main.c: 372: (PORTDbits.RD1) = value;
+  1356  02ED  0835               	movf	vSetRelay@value,w
+  1357  02EE  1D03               	skipz
+  1358  02EF  1488               	bsf	8,1	;volatile
+  1359  02F0  1903               	skipnz
+  1360  02F1  1088               	bcf	8,1	;volatile
+  1361                           
+  1362                           ;main.c: 373: break;
+  1363  02F2  0008               	return
+  1364  02F3                     l4261:	
+  1365                           
+  1366                           ;main.c: 375: (PORTDbits.RD2) = value;
+  1367  02F3  0835               	movf	vSetRelay@value,w
+  1368  02F4  1D03               	skipz
+  1369  02F5  1508               	bsf	8,2	;volatile
+  1370  02F6  1903               	skipnz
+  1371  02F7  1108               	bcf	8,2	;volatile
+  1372                           
+  1373                           ;main.c: 376: break;
+  1374  02F8  0008               	return
+  1375  02F9                     l4263:	
+  1376                           
+  1377                           ;main.c: 378: (PORTDbits.RD3) = value;
+  1378  02F9  0835               	movf	vSetRelay@value,w
+  1379  02FA  1D03               	skipz
+  1380  02FB  1588               	bsf	8,3	;volatile
+  1381  02FC  1903               	skipnz
+  1382  02FD  1188               	bcf	8,3	;volatile
+  1383                           
+  1384                           ;main.c: 379: break;
+  1385  02FE  0008               	return
+  1386  02FF                     l4265:	
+  1387                           
+  1388                           ;main.c: 381: (PORTCbits.RC4) = value;
+  1389  02FF  0835               	movf	vSetRelay@value,w
+  1390  0300  1D03               	skipz
+  1391  0301  1607               	bsf	7,4	;volatile
+  1392  0302  1903               	skipnz
+  1393  0303  1207               	bcf	7,4	;volatile
+  1394                           
+  1395                           ;main.c: 382: break;
+  1396  0304  0008               	return
+  1397  0305                     l4267:	
+  1398                           
+  1399                           ;main.c: 384: (PORTCbits.RC5) = value;
+  1400  0305  0835               	movf	vSetRelay@value,w
+  1401  0306  1D03               	skipz
+  1402  0307  1687               	bsf	7,5	;volatile
+  1403  0308  1903               	skipnz
+  1404  0309  1287               	bcf	7,5	;volatile
+  1405                           
+  1406                           ;main.c: 385: break;
+  1407  030A  0008               	return
+  1408  030B                     l4271:	
+  1409  030B  0836               	movf	vSetRelay@relay,w
+  1410                           
+  1411                           ; Switch size 1, requested type "space"
+  1412                           ; Number of cases is 5, Range of values is 1 to 5
+  1413                           ; switch strategies available:
+  1414                           ; Name         Instructions Cycles
+  1415                           ; simple_byte           16     9 (average)
+  1416                           ; direct_byte           26    11 (fixed)
+  1417                           ; jumptable            263     9 (fixed)
+  1418                           ;	Chosen strategy is simple_byte
+  1419  030C  3A01               	xorlw	1	; case 1
+  1420  030D  1903               	skipnz
+  1421  030E  2AED               	goto	l4259
+  1422  030F  3A03               	xorlw	3	; case 2
+  1423  0310  1903               	skipnz
+  1424  0311  2AF3               	goto	l4261
+  1425  0312  3A01               	xorlw	1	; case 3
+  1426  0313  1903               	skipnz
+  1427  0314  2AF9               	goto	l4263
+  1428  0315  3A07               	xorlw	7	; case 4
+  1429  0316  1903               	skipnz
+  1430  0317  2AFF               	goto	l4265
+  1431  0318  3A01               	xorlw	1	; case 5
+  1432  0319  1903               	skipnz
+  1433  031A  2B05               	goto	l4267
+  1434  031B  2B1C               	goto	l1197
+  1435  031C                     l1197:	
+  1436  031C  0008               	return
+  1437  031D                     __end_of_vSetRelay:	
+  1438                           
+  1439                           	psect	text345
+  1440  0384                     __ptext345:	
+  1441 ;; =============== function _vSetRelay ends ============
+  1442                           
+  1443                           
+  1444 ;; *************** function _cGetFromReceiveBuffer *****************
+  1445 ;; Defined at:
+  1446 ;;		line 478 in file "../src/main.c"
+  1447 ;; Parameters:    Size  Location     Type
+  1448 ;;		None
+  1449 ;; Auto vars:     Size  Location     Type
+  1450 ;;  value           1    0[BANK0 ] unsigned char 
+  1451 ;; Return value:  Size  Location     Type
+  1452 ;;                  1    wreg      unsigned char 
+  1453 ;; Registers used:
+  1454 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1455 ;; Tracked objects:
+  1456 ;;		On entry : 0/0
+  1457 ;;		On exit  : 160/100
+  1458 ;;		Unchanged: FFE9F/0
+  1459 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1460 ;;      Params:         0       0       0       0       0
+  1461 ;;      Locals:         0       1       0       0       0
+  1462 ;;      Temps:          0       0       0       0       0
+  1463 ;;      Totals:         0       1       0       0       0
+  1464 ;;Total ram usage:        1 bytes
+  1465 ;; Hardware stack levels used:    1
+  1466 ;; Hardware stack levels required when called:    3
+  1467 ;; This function calls:
+  1468 ;;		Nothing
+  1469 ;; This function is called by:
+  1470 ;;		_main
+  1471 ;; This function uses a non-reentrant model
+  1472 ;;
+  1473  0384                     _cGetFromReceiveBuffer:	
+  1474                           
+  1475                           ;main.c: 479: unsigned char value;
+  1476                           ;main.c: 481: value = uartReceiveBuffer[uartReceiveBufferR];
+  1477                           
+  1478                           ; Regs used in _cGetFromReceiveBuffer: [wreg-fsr0h+status,2+status,0]
+  1479  0384  1283               	bcf	3,5	;RP0=0, select bank0
+  1480  0385  1303               	bcf	3,6	;RP1=0, select bank0
+  1481  0386  0829               	movf	_uartReceiveBufferR,w
+  1482  0387  3E90               	addlw	_uartReceiveBuffer& (0+255)
+  1483  0388  0084               	movwf	4
+  1484  0389  1783               	bsf	3,7	;select IRP bank3
+  1485  038A  0800               	movf	0,w
+  1486  038B  00B5               	movwf	cGetFromReceiveBuffer@value
+  1487                           
+  1488                           ;main.c: 482: uartReceiveBufferR++;
+  1489  038C  0AA9               	incf	_uartReceiveBufferR,f	;volatile
+  1490                           
+  1491                           ;main.c: 483: if (uartReceiveBufferR == ( 90 )) {
+  1492  038D  0829               	movf	_uartReceiveBufferR,w	;volatile
+  1493  038E  3A5A               	xorlw	90
+  1494  038F  1903               	btfsc	3,2
+  1495                           
+  1496                           ;main.c: 484: uartReceiveBufferR = 0;
+  1497  0390  01A9               	clrf	_uartReceiveBufferR	;volatile
+  1498                           
+  1499                           ;main.c: 485: }
+  1500                           ;main.c: 486: return value;
+  1501  0391  0835               	movf	cGetFromReceiveBuffer@value,w
+  1502  0392  0008               	return
+  1503  0393                     __end_of_cGetFromReceiveBuffer:	
+  1504                           
+  1505                           	psect	text346
+  1506  03BC                     __ptext346:	
+  1507 ;; =============== function _cGetFromReceiveBuffer ends ============
+  1508                           
+  1509                           
+  1510 ;; *************** function _vSendDataToUart *****************
+  1511 ;; Defined at:
+  1512 ;;		line 541 in file "../src/main.c"
+  1513 ;; Parameters:    Size  Location     Type
+  1514 ;;		None
+  1515 ;; Auto vars:     Size  Location     Type
+  1516 ;;		None
+  1517 ;; Return value:  Size  Location     Type
+  1518 ;;		None               void
+  1519 ;; Registers used:
+  1520 ;;		None
+  1521 ;; Tracked objects:
+  1522 ;;		On entry : 160/0
+  1523 ;;		On exit  : 160/20
+  1524 ;;		Unchanged: FFE9F/0
+  1525 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1526 ;;      Params:         0       0       0       0       0
+  1527 ;;      Locals:         0       0       0       0       0
+  1528 ;;      Temps:          0       0       0       0       0
+  1529 ;;      Totals:         0       0       0       0       0
+  1530 ;;Total ram usage:        0 bytes
+  1531 ;; Hardware stack levels used:    1
+  1532 ;; Hardware stack levels required when called:    3
+  1533 ;; This function calls:
+  1534 ;;		Nothing
+  1535 ;; This function is called by:
+  1536 ;;		_main
+  1537 ;; This function uses a non-reentrant model
+  1538 ;;
+  1539  03BC                     _vSendDataToUart:	
+  1540                           
+  1541                           ;main.c: 542: TXIF = 0;
+  1542                           
+  1543                           ; Regs used in _vSendDataToUart: []
+  1544  03BC  120C               	bcf	12,4
+  1545                           
+  1546                           ;main.c: 543: TXIE = 1;
+  1547  03BD  1683               	bsf	3,5	;RP0=1, select bank1
+  1548  03BE  160C               	bsf	12,4
+  1549  03BF  0008               	return
+  1550  03C0                     __end_of_vSendDataToUart:	
+  1551                           
+  1552                           	psect	text347
+  1553  03A1                     __ptext347:	
+  1554 ;; =============== function _vSendDataToUart ends ============
+  1555                           
+  1556                           
+  1557 ;; *************** function _vAddToUartTransmitBuffer *****************
+  1558 ;; Defined at:
+  1559 ;;		line 500 in file "../src/main.c"
+  1560 ;; Parameters:    Size  Location     Type
+  1561 ;;  data            1    wreg     unsigned char 
+  1562 ;; Auto vars:     Size  Location     Type
+  1563 ;;  data            1    0[BANK0 ] unsigned char 
+  1564 ;; Return value:  Size  Location     Type
+  1565 ;;		None               void
+  1566 ;; Registers used:
+  1567 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1568 ;; Tracked objects:
+  1569 ;;		On entry : 60/0
+  1570 ;;		On exit  : 160/0
+  1571 ;;		Unchanged: FFE9F/0
+  1572 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1573 ;;      Params:         0       0       0       0       0
+  1574 ;;      Locals:         0       1       0       0       0
+  1575 ;;      Temps:          0       0       0       0       0
+  1576 ;;      Totals:         0       1       0       0       0
+  1577 ;;Total ram usage:        1 bytes
+  1578 ;; Hardware stack levels used:    1
+  1579 ;; Hardware stack levels required when called:    3
+  1580 ;; This function calls:
+  1581 ;;		Nothing
+  1582 ;; This function is called by:
+  1583 ;;		_main
+  1584 ;; This function uses a non-reentrant model
+  1585 ;;
+  1586  03A1                     _vAddToUartTransmitBuffer:	
+  1587                           
+  1588                           ; Regs used in _vAddToUartTransmitBuffer: [wreg-fsr0h+status,2+status,0]
+  1589                           ;vAddToUartTransmitBuffer@data stored from wreg
+  1590  03A1  00B5               	movwf	vAddToUartTransmitBuffer@data
+  1591                           
+  1592                           ;main.c: 501: uartTransmitBuffer[uartTransmitBufferW] = data;
+  1593  03A2  087C               	movf	_uartTransmitBufferW,w
+  1594  03A3  3EA0               	addlw	_uartTransmitBuffer& (0+255)
+  1595  03A4  0084               	movwf	4
+  1596  03A5  0835               	movf	vAddToUartTransmitBuffer@data,w
+  1597  03A6  1383               	bcf	3,7	;select IRP bank1
+  1598  03A7  0080               	movwf	0
+  1599                           
+  1600                           ;main.c: 502: uartTransmitBufferW++;
+  1601  03A8  0AFC               	incf	_uartTransmitBufferW,f	;volatile
+  1602                           
+  1603                           ;main.c: 503: if (uartTransmitBufferW == ( 60 )) {
+  1604  03A9  087C               	movf	_uartTransmitBufferW,w	;volatile
+  1605  03AA  3A3C               	xorlw	60
+  1606  03AB  1903               	btfsc	3,2
+  1607                           
+  1608                           ;main.c: 504: uartTransmitBufferW = 0;
+  1609  03AC  01FC               	clrf	_uartTransmitBufferW	;volatile
+  1610  03AD  0008               	return
+  1611  03AE                     __end_of_vAddToUartTransmitBuffer:	
+  1612                           
+  1613                           	psect	text348
+  1614  03B6                     __ptext348:	
+  1615 ;; =============== function _vAddToUartTransmitBuffer ends ============
+  1616                           
+  1617                           
+  1618 ;; *************** function _setCommunicationTimeOut *****************
+  1619 ;; Defined at:
+  1620 ;;		line 546 in file "../src/main.c"
+  1621 ;; Parameters:    Size  Location     Type
+  1622 ;;  value           2    0[BANK0 ] unsigned int 
+  1623 ;; Auto vars:     Size  Location     Type
+  1624 ;;		None
+  1625 ;; Return value:  Size  Location     Type
+  1626 ;;		None               void
+  1627 ;; Registers used:
+  1628 ;;		wreg
+  1629 ;; Tracked objects:
+  1630 ;;		On entry : 160/0
+  1631 ;;		On exit  : 160/0
+  1632 ;;		Unchanged: FFE9F/0
+  1633 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1634 ;;      Params:         0       2       0       0       0
+  1635 ;;      Locals:         0       0       0       0       0
+  1636 ;;      Temps:          0       0       0       0       0
+  1637 ;;      Totals:         0       2       0       0       0
+  1638 ;;Total ram usage:        2 bytes
+  1639 ;; Hardware stack levels used:    1
+  1640 ;; Hardware stack levels required when called:    3
+  1641 ;; This function calls:
+  1642 ;;		Nothing
+  1643 ;; This function is called by:
+  1644 ;;		_main
+  1645 ;; This function uses a non-reentrant model
+  1646 ;;
+  1647  03B6                     _setCommunicationTimeOut:	
+  1648                           
+  1649                           ;main.c: 547: communicationControlTimer = value;
+  1650                           
+  1651                           ; Regs used in _setCommunicationTimeOut: [wreg]
+  1652  03B6  0836               	movf	setCommunicationTimeOut@value+1,w
+  1653  03B7  00A1               	movwf	_communicationControlTimer+1	;volatile
+  1654  03B8  0835               	movf	setCommunicationTimeOut@value,w
+  1655  03B9  00A0               	movwf	_communicationControlTimer	;volatile
+  1656                           
+  1657                           ;main.c: 548: communicationControlTimer_En = 1;
+  1658  03BA  16F8               	bsf	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  1659  03BB  0008               	return
+  1660  03BC                     __end_of_setCommunicationTimeOut:	
+  1661                           
+  1662                           	psect	text349
+  1663  036D                     __ptext349:	
+  1664 ;; =============== function _setCommunicationTimeOut ends ============
+  1665                           
+  1666                           
+  1667 ;; *************** function _vInitializeUart *****************
+  1668 ;; Defined at:
+  1669 ;;		line 41 in file "../src/uart.c"
+  1670 ;; Parameters:    Size  Location     Type
+  1671 ;;		None
+  1672 ;; Auto vars:     Size  Location     Type
+  1673 ;;  cBaudTemp       1    0        unsigned char 
+  1674 ;; Return value:  Size  Location     Type
+  1675 ;;		None               void
+  1676 ;; Registers used:
+  1677 ;;		wreg
+  1678 ;; Tracked objects:
+  1679 ;;		On entry : 17F/0
+  1680 ;;		On exit  : 17F/20
+  1681 ;;		Unchanged: FFE80/0
+  1682 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1683 ;;      Params:         0       0       0       0       0
+  1684 ;;      Locals:         0       1       0       0       0
+  1685 ;;      Temps:          0       0       0       0       0
+  1686 ;;      Totals:         0       1       0       0       0
+  1687 ;;Total ram usage:        1 bytes
+  1688 ;; Hardware stack levels used:    1
+  1689 ;; Hardware stack levels required when called:    3
+  1690 ;; This function calls:
+  1691 ;;		Nothing
+  1692 ;; This function is called by:
+  1693 ;;		_main
+  1694 ;; This function uses a non-reentrant model
+  1695 ;;
+  1696  036D                     _vInitializeUart:	
+  1697                           
+  1698                           ;uart.c: 46: (TRISCbits.TRISC6) = 1;
+  1699                           
+  1700                           ; Regs used in _vInitializeUart: [wreg]
+  1701  036D  1683               	bsf	3,5	;RP0=1, select bank1
+  1702  036E  1707               	bsf	7,6	;volatile
+  1703                           
+  1704                           ;uart.c: 47: (TRISCbits.TRISC7) = 1;
+  1705  036F  1787               	bsf	7,7	;volatile
+  1706                           
+  1707                           ;uart.c: 56: {
+  1708                           ;uart.c: 57: BRGH = 0;
+  1709                           
+  1710                           ;uart.c: 55: else if( cBaudTemp == ( 2 ) )
+  1711  0370  1118               	bcf	24,2
+  1712                           
+  1713                           ;uart.c: 58: BRG16 = 1;
+  1714  0371  1703               	bsf	3,6	;RP1=1, select bank3
+  1715  0372  3033               	movlw	51
+  1716  0373  1587               	bsf	7,3
+  1717                           
+  1718                           ;uart.c: 59: SPBRG = 51;
+  1719  0374  1303               	bcf	3,6	;RP1=0, select bank1
+  1720  0375  0099               	movwf	25	;volatile
+  1721                           
+  1722                           ;uart.c: 72: }
+  1723                           ;uart.c: 74: SYNC = 0;
+  1724                           
+  1725                           ;uart.c: 60: }
+  1726  0376  1218               	bcf	24,4
+  1727                           
+  1728                           ;uart.c: 75: SPEN = 1;
+  1729  0377  1283               	bcf	3,5	;RP0=0, select bank0
+  1730  0378  1798               	bsf	24,7
+  1731                           
+  1732                           ;uart.c: 76: CREN = 1;
+  1733  0379  1618               	bsf	24,4
+  1734                           
+  1735                           ;uart.c: 77: TXEN = 1;
+  1736  037A  1683               	bsf	3,5	;RP0=1, select bank1
+  1737  037B  1698               	bsf	24,5
+  1738                           
+  1739                           ;uart.c: 78: TX9 = 0;
+  1740  037C  1318               	bcf	24,6
+  1741                           
+  1742                           ;uart.c: 79: RX9 = 0;
+  1743  037D  1283               	bcf	3,5	;RP0=0, select bank0
+  1744  037E  1318               	bcf	24,6
+  1745                           
+  1746                           ;uart.c: 80: ADDEN = 0;
+  1747  037F  1198               	bcf	24,3
+  1748                           
+  1749                           ;uart.c: 81: RCIE = 1;
+  1750  0380  1683               	bsf	3,5	;RP0=1, select bank1
+  1751  0381  168C               	bsf	12,5
+  1752                           
+  1753                           ;uart.c: 82: TXIE = 0;
+  1754  0382  120C               	bcf	12,4
+  1755  0383  0008               	return
+  1756  0384                     __end_of_vInitializeUart:	
+  1757                           
+  1758                           	psect	text350
+  1759  02B8                     __ptext350:	
+  1760 ;; =============== function _vInitializeUart ends ============
+  1761                           
+  1762                           
+  1763 ;; *************** function _vInitializeBoard *****************
+  1764 ;; Defined at:
+  1765 ;;		line 402 in file "../src/main.c"
+  1766 ;; Parameters:    Size  Location     Type
+  1767 ;;		None
+  1768 ;; Auto vars:     Size  Location     Type
+  1769 ;;		None
+  1770 ;; Return value:  Size  Location     Type
+  1771 ;;		None               void
+  1772 ;; Registers used:
+  1773 ;;		wreg, status,2
+  1774 ;; Tracked objects:
+  1775 ;;		On entry : 17F/0
+  1776 ;;		On exit  : 17F/0
+  1777 ;;		Unchanged: FFE80/0
+  1778 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1779 ;;      Params:         0       0       0       0       0
+  1780 ;;      Locals:         0       0       0       0       0
+  1781 ;;      Temps:          0       0       0       0       0
+  1782 ;;      Totals:         0       0       0       0       0
+  1783 ;;Total ram usage:        0 bytes
+  1784 ;; Hardware stack levels used:    1
+  1785 ;; Hardware stack levels required when called:    3
+  1786 ;; This function calls:
+  1787 ;;		Nothing
+  1788 ;; This function is called by:
+  1789 ;;		_main
+  1790 ;; This function uses a non-reentrant model
+  1791 ;;
+  1792  02B8                     _vInitializeBoard:	
+  1793                           
+  1794                           ;main.c: 403: PORTA = 0;
+  1795                           
+  1796                           ; Regs used in _vInitializeBoard: [wreg+status,2]
+  1797  02B8  0185               	clrf	5	;volatile
+  1798                           
+  1799                           ;main.c: 404: PORTB = 0;
+  1800  02B9  0186               	clrf	6	;volatile
+  1801                           
+  1802                           ;main.c: 405: PORTC = 0;
+  1803  02BA  0187               	clrf	7	;volatile
+  1804                           
+  1805                           ;main.c: 406: PORTD = 0;
+  1806  02BB  0188               	clrf	8	;volatile
+  1807                           
+  1808                           ;main.c: 407: PORTE = 0;
+  1809  02BC  0189               	clrf	9	;volatile
+  1810                           
+  1811                           ;main.c: 409: OSCCON = 0b01110101;
+  1812  02BD  3075               	movlw	117
+  1813  02BE  1683               	bsf	3,5	;RP0=1, select bank1
+  1814  02BF  008F               	movwf	15	;volatile
+  1815                           
+  1816                           ;main.c: 411: CM1CON0 = 0;
+  1817  02C0  1283               	bcf	3,5	;RP0=0, select bank2
+  1818  02C1  1703               	bsf	3,6	;RP1=1, select bank2
+  1819  02C2  0187               	clrf	7	;volatile
+  1820                           
+  1821                           ;main.c: 412: CM2CON0 = 0;
+  1822  02C3  0188               	clrf	8	;volatile
+  1823  02C4  3016               	movlw	22
+  1824                           
+  1825                           ;main.c: 413: C1ON = 0;
+  1826  02C5  1387               	bcf	7,7
+  1827                           
+  1828                           ;main.c: 414: C2ON = 0;
+  1829  02C6  1388               	bcf	8,7
+  1830                           
+  1831                           ;main.c: 416: WDTCON = 0b00010110;
+  1832  02C7  0085               	movwf	5	;volatile
+  1833                           
+  1834                           ;main.c: 417: OPTION_REG = 0b10000111;
+  1835  02C8  3087               	movlw	135
+  1836  02C9  1683               	bsf	3,5	;RP0=1, select bank1
+  1837  02CA  1303               	bcf	3,6	;RP1=0, select bank1
+  1838  02CB  0081               	movwf	1	;volatile
+  1839                           
+  1840                           ;main.c: 418: INTCON = 0;
+  1841  02CC  018B               	clrf	11	;volatile
+  1842                           
+  1843                           ;main.c: 419: PIE1 = 0;
+  1844  02CD  018C               	clrf	12	;volatile
+  1845                           
+  1846                           ;main.c: 420: PIE2 = 0;
+  1847  02CE  018D               	clrf	13	;volatile
+  1848                           
+  1849                           ;main.c: 422: ANSELH = 0;
+  1850  02CF  1703               	bsf	3,6	;RP1=1, select bank3
+  1851  02D0  0189               	clrf	9	;volatile
+  1852                           
+  1853                           ;main.c: 423: ANSEL = 0;
+  1854  02D1  0188               	clrf	8	;volatile
+  1855                           
+  1856                           ;main.c: 424: WPUB = 0;
+  1857  02D2  1303               	bcf	3,6	;RP1=0, select bank1
+  1858  02D3  0195               	clrf	21	;volatile
+  1859                           
+  1860                           ;main.c: 426: T0IF = 0;
+  1861  02D4  110B               	bcf	11,2
+  1862                           
+  1863                           ;main.c: 427: T0IE = 1;
+  1864  02D5  168B               	bsf	11,5
+  1865                           
+  1866                           ;main.c: 429: TRISA = 0b00000000;
+  1867  02D6  0185               	clrf	5	;volatile
+  1868                           
+  1869                           ;main.c: 430: TRISB = 0b00110111;
+  1870  02D7  3037               	movlw	55
+  1871  02D8  0086               	movwf	6	;volatile
+  1872                           
+  1873                           ;main.c: 431: TRISC = 0b11000000;
+  1874  02D9  30C0               	movlw	192
+  1875  02DA  0087               	movwf	7	;volatile
+  1876                           
+  1877                           ;main.c: 432: TRISD = 0b00000000;
+  1878  02DB  0188               	clrf	8	;volatile
+  1879                           
+  1880                           ;main.c: 433: TRISE = 0b00000000;
+  1881  02DC  0189               	clrf	9	;volatile
+  1882                           
+  1883                           ;main.c: 434: (TRISCbits.TRISC3) = 0;
+  1884  02DD  1187               	bcf	7,3	;volatile
+  1885                           
+  1886                           ;main.c: 435: (PORTCbits.RC3) = 0;
+  1887  02DE  1283               	bcf	3,5	;RP0=0, select bank0
+  1888  02DF  1187               	bcf	7,3	;volatile
+  1889                           
+  1890                           ;main.c: 437: PORTA = 0;
+  1891  02E0  0185               	clrf	5	;volatile
+  1892                           
+  1893                           ;main.c: 438: PORTB = 0;
+  1894  02E1  0186               	clrf	6	;volatile
+  1895                           
+  1896                           ;main.c: 439: PORTC = 0;
+  1897  02E2  0187               	clrf	7	;volatile
+  1898                           
+  1899                           ;main.c: 440: PORTD = 0;
+  1900  02E3  0188               	clrf	8	;volatile
+  1901                           
+  1902                           ;main.c: 441: PORTE = 0;
+  1903  02E4  0189               	clrf	9	;volatile
+  1904                           
+  1905                           ;main.c: 443: tim10Hz = 5;
+  1906  02E5  3005               	movlw	5
+  1907  02E6  00BD               	movwf	_tim10Hz	;volatile
+  1908                           
+  1909                           ;main.c: 444: tim2Hz = 5;
+  1910  02E7  00BF               	movwf	_tim2Hz	;volatile
+  1911                           
+  1912                           ;main.c: 445: tim1sec = 2;
+  1913  02E8  3002               	movlw	2
+  1914  02E9  00BE               	movwf	_tim1sec	;volatile
+  1915  02EA  0008               	return
+  1916  02EB                     __end_of_vInitializeBoard:	
+  1917                           
+  1918                           	psect	text351
+  1919  01C9                     __ptext351:	
+  1920 ;; =============== function _vInitializeBoard ends ============
+  1921                           
+  1922                           
+  1923 ;; *************** function _erdem *****************
+  1924 ;; Defined at:
+  1925 ;;		line 232 in file "../src/main.c"
+  1926 ;; Parameters:    Size  Location     Type
+  1927 ;;		None
+  1928 ;; Auto vars:     Size  Location     Type
+  1929 ;;  temp            1    7[COMMON] unsigned char 
+  1930 ;; Return value:  Size  Location     Type
+  1931 ;;		None               void
+  1932 ;; Registers used:
+  1933 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1934 ;; Tracked objects:
+  1935 ;;		On entry : 0/0
+  1936 ;;		On exit  : 40/0
+  1937 ;;		Unchanged: 0/0
+  1938 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1939 ;;      Params:         0       0       0       0       0
+  1940 ;;      Locals:         1       0       0       0       0
+  1941 ;;      Temps:          3       0       0       0       0
+  1942 ;;      Totals:         4       0       0       0       0
+  1943 ;;Total ram usage:        4 bytes
+  1944 ;; Hardware stack levels used:    1
+  1945 ;; Hardware stack levels required when called:    2
+  1946 ;; This function calls:
+  1947 ;;		_restartUSR_K2
+  1948 ;;		_vCheckError
+  1949 ;;		_vAddToUartReceiveBuffer
+  1950 ;;		_cGetFromTxBuffer
+  1951 ;; This function is called by:
+  1952 ;;		Interrupt level 1
+  1953 ;; This function uses a non-reentrant model
+  1954 ;;
+  1955  01C9                     _erdem:	
+  1956                           
+  1957                           ;main.c: 233: unsigned char temp;
+  1958                           ;main.c: 236: if (T0IE && T0IF) {
+  1959  01C9  1A8B               	btfsc	11,5
+  1960  01CA  1D0B               	btfss	11,2
+  1961  01CB  2A10               	goto	i1l1156
+  1962                           
+  1963                           ;main.c: 237: TMR0 = 190;
+  1964  01CC  30BE               	movlw	190
+  1965  01CD  1283               	bcf	3,5	;RP0=0, select bank0
+  1966  01CE  1303               	bcf	3,6	;RP1=0, select bank0
+  1967  01CF  0081               	movwf	1	;volatile
+  1968                           
+  1969                           ;main.c: 239: if (--tim10Hz == 0)
+  1970  01D0  0BBD               	decfsz	_tim10Hz,f	;volatile
+  1971  01D1  2A0E               	goto	i1l4347
+  1972                           
+  1973                           ;main.c: 240: {
+  1974                           ;main.c: 241: tim10Hz = 12;
+  1975  01D2  300C               	movlw	12
+  1976  01D3  00BD               	movwf	_tim10Hz	;volatile
+  1977                           
+  1978                           ;main.c: 243: if ((--RELAY_1_Timer == 0) && RELAY_1_Timer_En) {
+  1979  01D4  0BF9               	decfsz	_RELAY_1_Timer,f	;volatile
+  1980  01D5  29DA               	goto	i1l1158
+  1981  01D6  1C78               	btfss	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  1982  01D7  29DA               	goto	i1l1158
+  1983                           
+  1984                           ;main.c: 244: (PORTDbits.RD1) = 0;
+  1985  01D8  1088               	bcf	8,1	;volatile
+  1986                           
+  1987                           ;main.c: 245: RELAY_1_Timer_En = 0;
+  1988  01D9  1078               	bcf	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  1989  01DA                     i1l1158:	
+  1990                           
+  1991                           ;main.c: 246: }
+  1992                           ;main.c: 247: if ((--RELAY_2_Timer == 0) && RELAY_2_Timer_En) {
+  1993  01DA  0BFA               	decfsz	_RELAY_2_Timer,f	;volatile
+  1994  01DB  29E0               	goto	i1l1159
+  1995  01DC  1CF8               	btfss	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  1996  01DD  29E0               	goto	i1l1159
+  1997                           
+  1998                           ;main.c: 248: (PORTDbits.RD2) = 0;
+  1999  01DE  1108               	bcf	8,2	;volatile
+  2000                           
+  2001                           ;main.c: 249: RELAY_2_Timer_En = 0;
+  2002  01DF  10F8               	bcf	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  2003  01E0                     i1l1159:	
+  2004                           
+  2005                           ;main.c: 250: }
+  2006                           ;main.c: 251: if ((--RELAY_3_Timer == 0) && RELAY_3_Timer_En) {
+  2007  01E0  0BA2               	decfsz	_RELAY_3_Timer,f	;volatile
+  2008  01E1  29E6               	goto	i1l1160
+  2009  01E2  1D78               	btfss	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  2010  01E3  29E6               	goto	i1l1160
+  2011                           
+  2012                           ;main.c: 252: (PORTDbits.RD3) = 0;
+  2013  01E4  1188               	bcf	8,3	;volatile
+  2014                           
+  2015                           ;main.c: 253: RELAY_3_Timer_En = 0;
+  2016  01E5  1178               	bcf	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  2017  01E6                     i1l1160:	
+  2018                           
+  2019                           ;main.c: 254: }
+  2020                           ;main.c: 255: if ((--RELAY_4_Timer == 0) && RELAY_4_Timer_En) {
+  2021  01E6  0BA3               	decfsz	_RELAY_4_Timer,f	;volatile
+  2022  01E7  29EC               	goto	i1l1161
+  2023  01E8  1DF8               	btfss	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  2024  01E9  29EC               	goto	i1l1161
+  2025                           
+  2026                           ;main.c: 256: (PORTCbits.RC4) = 0;
+  2027  01EA  1207               	bcf	7,4	;volatile
+  2028                           
+  2029                           ;main.c: 257: RELAY_4_Timer_En = 0;
+  2030  01EB  11F8               	bcf	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  2031  01EC                     i1l1161:	
+  2032                           
+  2033                           ;main.c: 258: }
+  2034                           ;main.c: 259: if ((--RELAY_5_Timer == 0) && RELAY_5_Timer_En) {
+  2035  01EC  0BA4               	decfsz	_RELAY_5_Timer,f	;volatile
+  2036  01ED  29F2               	goto	i1l4331
+  2037  01EE  1E78               	btfss	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  2038  01EF  29F2               	goto	i1l4331
+  2039                           
+  2040                           ;main.c: 260: (PORTCbits.RC5) = 0;
+  2041  01F0  1287               	bcf	7,5	;volatile
+  2042                           
+  2043                           ;main.c: 261: RELAY_5_Timer_En = 0;
+  2044  01F1  1278               	bcf	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  2045  01F2                     i1l4331:	
+  2046                           
+  2047                           ;main.c: 262: }
+  2048                           ;main.c: 263: if ((--communicationControlTimer == 0) && communicationControlTimer_En) {
+  2049  01F2  3001               	movlw	1
+  2050  01F3  02A0               	subwf	_communicationControlTimer,f	;volatile
+  2051  01F4  3000               	movlw	0
+  2052  01F5  1C03               	skipc
+  2053  01F6  03A1               	decf	_communicationControlTimer+1,f	;volatile
+  2054  01F7  02A1               	subwf	_communicationControlTimer+1,f	;volatile
+  2055  01F8  0821               	movf	_communicationControlTimer+1,w	;volatile
+  2056  01F9  0420               	iorwf	_communicationControlTimer,w	;volatile
+  2057  01FA  1903               	btfsc	3,2
+  2058  01FB  1EF8               	btfss	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  2059  01FC  2A04               	goto	i1l4339
+  2060                           
+  2061                           ;main.c: 264: restartUSR_K2();
+  2062  01FD  2269  120A  118A   	fcall	_restartUSR_K2
+  2063                           
+  2064                           ;main.c: 265: communicationControlTimer = 3000;
+  2065  0200  30B8               	movlw	184
+  2066  0201  00A0               	movwf	_communicationControlTimer	;volatile
+  2067  0202  300B               	movlw	11
+  2068  0203  00A1               	movwf	_communicationControlTimer+1	;volatile
+  2069  0204                     i1l4339:	
+  2070                           
+  2071                           ;main.c: 266: }
+  2072                           ;main.c: 268: if (--tim2Hz == 0)
+  2073  0204  0BBF               	decfsz	_tim2Hz,f	;volatile
+  2074  0205  2A0E               	goto	i1l4347
+  2075                           
+  2076                           ;main.c: 269: {
+  2077                           ;main.c: 270: tim2Hz = 5;
+  2078  0206  3005               	movlw	5
+  2079  0207  00BF               	movwf	_tim2Hz	;volatile
+  2080                           
+  2081                           ;main.c: 271: if (--tim1sec == 0)
+  2082  0208  0BBE               	decfsz	_tim1sec,f	;volatile
+  2083  0209  2A0E               	goto	i1l4347
+  2084                           
+  2085                           ;main.c: 272: {
+  2086                           ;main.c: 273: tim1sec = 2;
+  2087  020A  3002               	movlw	2
+  2088  020B  00BE               	movwf	_tim1sec	;volatile
+  2089                           
+  2090                           ;main.c: 274: (PORTDbits.RD0) ^= 1;
+  2091  020C  3001               	movlw	1
+  2092  020D  0688               	xorwf	8,f	;volatile
+  2093  020E                     i1l4347:	
+  2094                           
+  2095                           ;main.c: 275: }
+  2096                           ;main.c: 276: }
+  2097                           ;main.c: 277: }
+  2098                           ;main.c: 279: T0IF = 0;
+  2099  020E  110B               	bcf	11,2
+  2100  020F  2A3D               	goto	i1l1166
+  2101  0210                     i1l1156:	
+  2102                           
+  2103                           ;main.c: 281: }
+  2104                           ;main.c: 283: if (RCIE && RCIF) {
+  2105  0210  1683               	bsf	3,5	;RP0=1, select bank1
+  2106  0211  1303               	bcf	3,6	;RP1=0, select bank1
+  2107  0212  1E8C               	btfss	12,5
+  2108  0213  2A29               	goto	i1l1167
+  2109  0214  1283               	bcf	3,5	;RP0=0, select bank0
+  2110  0215  1E8C               	btfss	12,5
+  2111  0216  2A29               	goto	i1l1167
+  2112                           
+  2113                           ;main.c: 284: if (OERR) {
+  2114  0217  1C98               	btfss	24,1
+  2115  0218  2A1B               	goto	i1l1168
+  2116                           
+  2117                           ;main.c: 285: CREN = 0;
+  2118  0219  1218               	bcf	24,4
+  2119                           
+  2120                           ;main.c: 286: CREN = 1;
+  2121  021A  1618               	bsf	24,4
+  2122  021B                     i1l1168:	
+  2123                           
+  2124                           ;main.c: 287: }
+  2125                           ;main.c: 288: if (FERR) {
+  2126  021B  1918               	btfsc	24,2
+  2127  021C  081A               	movf	26,w	;volatile
+  2128  021D                     i1l4361:	
+  2129  021D  1A8C               	btfsc	12,5
+  2130  021E  2A23               	goto	i1l4363
+  2131                           
+  2132                           ;main.c: 292: vCheckError();
+  2133  021F  2246  120A  118A   	fcall	_vCheckError
+  2134  0222  2A1D               	goto	i1l4361
+  2135  0223                     i1l4363:	
+  2136                           
+  2137                           ;main.c: 293: }
+  2138                           ;main.c: 295: temp = RCREG;
+  2139  0223  081A               	movf	26,w	;volatile
+  2140  0224  00F7               	movwf	erdem@temp
+  2141                           
+  2142                           ;main.c: 296: vAddToUartReceiveBuffer(temp);
+  2143  0225  224F  120A  118A   	fcall	_vAddToUartReceiveBuffer
+  2144  0228  2A3D               	goto	i1l1166
+  2145  0229                     i1l1167:	
+  2146                           
+  2147                           ;main.c: 298: }
+  2148                           ;main.c: 300: if (TXIE && TXIF) {
+  2149  0229  1683               	bsf	3,5	;RP0=1, select bank1
+  2150  022A  1E0C               	btfss	12,4
+  2151  022B  2A3D               	goto	i1l1166
+  2152  022C  1283               	bcf	3,5	;RP0=0, select bank0
+  2153  022D  1E0C               	btfss	12,4
+  2154  022E  2A3D               	goto	i1l1166
+  2155                           
+  2156                           ;main.c: 301: if (uartTransmitBufferR != uartTransmitBufferW) {
+  2157  022F  087B               	movf	_uartTransmitBufferR,w	;volatile
+  2158  0230  067C               	xorwf	_uartTransmitBufferW,w	;volatile
+  2159  0231  1903               	skipnz
+  2160  0232  2A39               	goto	i1l1174
+  2161                           
+  2162                           ;main.c: 302: temp = cGetFromTxBuffer();
+  2163  0233  225C  120A  118A   	fcall	_cGetFromTxBuffer
+  2164  0236  00F7               	movwf	erdem@temp
+  2165                           
+  2166                           ;main.c: 303: TXREG = temp;
+  2167  0237  0099               	movwf	25	;volatile
+  2168                           
+  2169                           ;main.c: 304: } else {
+  2170  0238  2A3D               	goto	i1l1166
+  2171  0239                     i1l1174:	
+  2172                           
+  2173                           ;main.c: 305: TXIE = 0;
+  2174  0239  1683               	bsf	3,5	;RP0=1, select bank1
+  2175  023A  120C               	bcf	12,4
+  2176                           
+  2177                           ;main.c: 306: TXIF = 0;
+  2178  023B  1283               	bcf	3,5	;RP0=0, select bank0
+  2179  023C  120C               	bcf	12,4
+  2180  023D                     i1l1166:	
+  2181  023D  0876               	movf	??_erdem+2,w
+  2182  023E  008A               	movwf	10
+  2183  023F  0875               	movf	??_erdem+1,w
+  2184  0240  0084               	movwf	4
+  2185  0241  0E74               	swapf	??_erdem^(0+-128),w
+  2186  0242  0083               	movwf	3
+  2187  0243  0EFE               	swapf	126,f
+  2188  0244  0E7E               	swapf	126,w
+  2189  0245  0009               	retfie
+  2190  0246                     __end_of_erdem:	
+  2191  0246                     __ptext356:	
+  2192 ;; =============== function _vAddToUartReceiveBuffer ends ============
+  2193                           
+  2194                           
+  2195 ;; *************** function _vCheckError *****************
+  2196 ;; Defined at:
+  2197 ;;		line 97 in file "../src/uart.c"
+  2198 ;; Parameters:    Size  Location     Type
+  2199 ;;		None
+  2200 ;; Auto vars:     Size  Location     Type
+  2201 ;;  a               1    0        unsigned char 
+  2202 ;; Return value:  Size  Location     Type
+  2203 ;;		None               void
+  2204 ;; Registers used:
+  2205 ;;		wreg
+  2206 ;; Tracked objects:
+  2207 ;;		On entry : 0/0
+  2208 ;;		On exit  : 60/0
+  2209 ;;		Unchanged: FFF9F/0
+  2210 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2211 ;;      Params:         0       0       0       0       0
+  2212 ;;      Locals:         0       0       0       0       0
+  2213 ;;      Temps:          0       0       0       0       0
+  2214 ;;      Totals:         0       0       0       0       0
+  2215 ;;Total ram usage:        0 bytes
+  2216 ;; Hardware stack levels used:    1
+  2217 ;; This function calls:
+  2218 ;;		Nothing
+  2219 ;; This function is called by:
+  2220 ;;		_erdem
+  2221 ;; This function uses a non-reentrant model
+  2222 ;;
+  2223  0246                     _vCheckError:	
+  2224                           
+  2225                           ;uart.c: 99: if ( OERR )
+  2226                           
+  2227                           ; Regs used in _vCheckError: [wreg]
+  2228  0246  1283               	bcf	3,5	;RP0=0, select bank0
+  2229  0247  1303               	bcf	3,6	;RP1=0, select bank0
+  2230  0248  1C98               	btfss	24,1
+  2231  0249  2A4C               	goto	i1l2260
+  2232                           
+  2233                           ;uart.c: 100: {
+  2234                           ;uart.c: 101: CREN =0;
+  2235  024A  1218               	bcf	24,4
+  2236                           
+  2237                           ;uart.c: 102: CREN = 1;
+  2238  024B  1618               	bsf	24,4
+  2239  024C                     i1l2260:	
+  2240                           
+  2241                           ;uart.c: 103: }
+  2242                           ;uart.c: 104: if( FERR )
+  2243  024C  1918               	btfsc	24,2
+  2244                           
+  2245                           ;uart.c: 105: {
+  2246                           ;uart.c: 106: a = RCREG;
+  2247  024D  081A               	movf	26,w	;volatile
+  2248  024E  0008               	return
+  2249  024F                     __end_of_vCheckError:	
+  2250  024F                     __ptext355:	
+  2251 ;; =============== function _cGetFromTxBuffer ends ============
+  2252                           
+  2253                           
+  2254 ;; *************** function _vAddToUartReceiveBuffer *****************
+  2255 ;; Defined at:
+  2256 ;;		line 459 in file "../src/main.c"
+  2257 ;; Parameters:    Size  Location     Type
+  2258 ;;  data            1    wreg     unsigned char 
+  2259 ;; Auto vars:     Size  Location     Type
+  2260 ;;  data            1    0[COMMON] unsigned char 
+  2261 ;; Return value:  Size  Location     Type
+  2262 ;;		None               void
+  2263 ;; Registers used:
+  2264 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  2265 ;; Tracked objects:
+  2266 ;;		On entry : 60/0
+  2267 ;;		On exit  : 160/100
+  2268 ;;		Unchanged: FFE9F/0
+  2269 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2270 ;;      Params:         0       0       0       0       0
+  2271 ;;      Locals:         1       0       0       0       0
+  2272 ;;      Temps:          0       0       0       0       0
+  2273 ;;      Totals:         1       0       0       0       0
+  2274 ;;Total ram usage:        1 bytes
+  2275 ;; Hardware stack levels used:    1
+  2276 ;; This function calls:
+  2277 ;;		Nothing
+  2278 ;; This function is called by:
+  2279 ;;		_erdem
+  2280 ;; This function uses a non-reentrant model
+  2281 ;;
+  2282  024F                     _vAddToUartReceiveBuffer:	
+  2283                           
+  2284                           ; Regs used in _vAddToUartReceiveBuffer: [wreg-fsr0h+status,2+status,0]
+  2285                           ;vAddToUartReceiveBuffer@data stored from wreg
+  2286  024F  00F0               	movwf	vAddToUartReceiveBuffer@data
+  2287                           
+  2288                           ;main.c: 460: uartReceiveBuffer[ uartReceiveBufferW ] = data;
+  2289  0250  082A               	movf	_uartReceiveBufferW,w
+  2290  0251  3E90               	addlw	_uartReceiveBuffer& (0+255)
+  2291  0252  0084               	movwf	4
+  2292  0253  0870               	movf	vAddToUartReceiveBuffer@data,w
+  2293  0254  1783               	bsf	3,7	;select IRP bank3
+  2294  0255  0080               	movwf	0
+  2295                           
+  2296                           ;main.c: 461: uartReceiveBufferW++;
+  2297  0256  0AAA               	incf	_uartReceiveBufferW,f	;volatile
+  2298                           
+  2299                           ;main.c: 462: if (uartReceiveBufferW == ( 90 )) {
+  2300  0257  082A               	movf	_uartReceiveBufferW,w	;volatile
+  2301  0258  3A5A               	xorlw	90
+  2302  0259  1903               	btfsc	3,2
+  2303                           
+  2304                           ;main.c: 463: uartReceiveBufferW = 0;
+  2305  025A  01AA               	clrf	_uartReceiveBufferW	;volatile
+  2306  025B  0008               	return
+  2307  025C                     __end_of_vAddToUartReceiveBuffer:	
+  2308  025C                     __ptext354:	
+  2309 ;; =============== function i1_setCommunicationTimeOut ends ============
+  2310                           
+  2311                           
+  2312 ;; *************** function _cGetFromTxBuffer *****************
+  2313 ;; Defined at:
+  2314 ;;		line 519 in file "../src/main.c"
+  2315 ;; Parameters:    Size  Location     Type
+  2316 ;;		None
+  2317 ;; Auto vars:     Size  Location     Type
+  2318 ;;  value           1    0[COMMON] unsigned char 
+  2319 ;; Return value:  Size  Location     Type
+  2320 ;;                  1    wreg      unsigned char 
+  2321 ;; Registers used:
+  2322 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  2323 ;; Tracked objects:
+  2324 ;;		On entry : 60/0
+  2325 ;;		On exit  : 160/0
+  2326 ;;		Unchanged: FFE9F/0
+  2327 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2328 ;;      Params:         0       0       0       0       0
+  2329 ;;      Locals:         1       0       0       0       0
+  2330 ;;      Temps:          0       0       0       0       0
+  2331 ;;      Totals:         1       0       0       0       0
+  2332 ;;Total ram usage:        1 bytes
+  2333 ;; Hardware stack levels used:    1
+  2334 ;; This function calls:
+  2335 ;;		Nothing
+  2336 ;; This function is called by:
+  2337 ;;		_erdem
+  2338 ;; This function uses a non-reentrant model
+  2339 ;;
+  2340  025C                     _cGetFromTxBuffer:	
+  2341                           
+  2342                           ;main.c: 520: unsigned char value;
+  2343                           ;main.c: 522: value = uartTransmitBuffer[uartTransmitBufferR];
+  2344                           
+  2345                           ; Regs used in _cGetFromTxBuffer: [wreg-fsr0h+status,2+status,0]
+  2346  025C  087B               	movf	_uartTransmitBufferR,w
+  2347  025D  3EA0               	addlw	_uartTransmitBuffer& (0+255)
+  2348  025E  0084               	movwf	4
+  2349  025F  1383               	bcf	3,7	;select IRP bank1
+  2350  0260  0800               	movf	0,w
+  2351  0261  00F0               	movwf	cGetFromTxBuffer@value
+  2352                           
+  2353                           ;main.c: 523: uartTransmitBufferR++;
+  2354  0262  0AFB               	incf	_uartTransmitBufferR,f	;volatile
+  2355                           
+  2356                           ;main.c: 524: if (uartTransmitBufferR == ( 60 )) {
+  2357  0263  087B               	movf	_uartTransmitBufferR,w	;volatile
+  2358  0264  3A3C               	xorlw	60
+  2359  0265  1903               	btfsc	3,2
+  2360                           
+  2361                           ;main.c: 525: uartTransmitBufferR = 0;
+  2362  0266  01FB               	clrf	_uartTransmitBufferR	;volatile
+  2363                           
+  2364                           ;main.c: 526: }
+  2365                           ;main.c: 527: return value;
+  2366  0267  0870               	movf	cGetFromTxBuffer@value,w
+  2367  0268  0008               	return
+  2368  0269                     __end_of_cGetFromTxBuffer:	
+  2369  0269                     __ptext352:	
+  2370 ;; =============== function _erdem ends ============
+  2371                           
+  2372                           
+  2373 ;; *************** function _restartUSR_K2 *****************
+  2374 ;; Defined at:
+  2375 ;;		line 551 in file "../src/main.c"
+  2376 ;; Parameters:    Size  Location     Type
+  2377 ;;		None
+  2378 ;; Auto vars:     Size  Location     Type
+  2379 ;;		None
+  2380 ;; Return value:  Size  Location     Type
+  2381 ;;		None               void
+  2382 ;; Registers used:
+  2383 ;;		wreg, status,2, status,0, pclath, cstack
+  2384 ;; Tracked objects:
+  2385 ;;		On entry : 60/0
+  2386 ;;		On exit  : 60/0
+  2387 ;;		Unchanged: 0/0
+  2388 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2389 ;;      Params:         0       0       0       0       0
+  2390 ;;      Locals:         0       0       0       0       0
+  2391 ;;      Temps:          2       0       0       0       0
+  2392 ;;      Totals:         2       0       0       0       0
+  2393 ;;Total ram usage:        2 bytes
+  2394 ;; Hardware stack levels used:    1
+  2395 ;; Hardware stack levels required when called:    1
+  2396 ;; This function calls:
+  2397 ;;		i1_setCommunicationTimeOut
+  2398 ;; This function is called by:
+  2399 ;;		_erdem
+  2400 ;; This function uses a non-reentrant model
+  2401 ;;
+  2402  0269                     _restartUSR_K2:	
+  2403                           
+  2404                           ;main.c: 552: (PORTCbits.RC3) = 1;
+  2405                           
+  2406                           ; Regs used in _restartUSR_K2: [wreg+status,2+status,0+pclath+cstack]
+  2407  0269  1587               	bsf	7,3	;volatile
+  2408                           
+  2409                           ;main.c: 556: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2410  026A  3068               	movlw	104
+  2411  026B  00F3               	movwf	??_restartUSR_K2+1
+  2412  026C  30E4               	movlw	228
+  2413  026D  00F2               	movwf	??_restartUSR_K2
+  2414  026E                     u123_27:	
+  2415  026E  0BF2               	decfsz	??_restartUSR_K2,f
+  2416  026F  2A6E               	goto	u123_27
+  2417  0270  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2418  0271  2A6E               	goto	u123_27
+  2419  0272  0064               	clrwdt
+  2420                           
+  2421                           ;main.c: 557: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2422  0273  3068               	movlw	104
+  2423  0274  00F3               	movwf	??_restartUSR_K2+1
+  2424  0275  30E4               	movlw	228
+  2425  0276  00F2               	movwf	??_restartUSR_K2
+  2426  0277                     u124_27:	
+  2427  0277  0BF2               	decfsz	??_restartUSR_K2,f
+  2428  0278  2A77               	goto	u124_27
+  2429  0279  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2430  027A  2A77               	goto	u124_27
+  2431  027B  0064               	clrwdt
+  2432                           
+  2433                           ;main.c: 558: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2434  027C  3068               	movlw	104
+  2435  027D  00F3               	movwf	??_restartUSR_K2+1
+  2436  027E  30E4               	movlw	228
+  2437  027F  00F2               	movwf	??_restartUSR_K2
+  2438  0280                     u125_27:	
+  2439  0280  0BF2               	decfsz	??_restartUSR_K2,f
+  2440  0281  2A80               	goto	u125_27
+  2441  0282  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2442  0283  2A80               	goto	u125_27
+  2443  0284  0064               	clrwdt
+  2444                           
+  2445                           ;main.c: 559: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2446  0285  3068               	movlw	104
+  2447  0286  00F3               	movwf	??_restartUSR_K2+1
+  2448  0287  30E4               	movlw	228
+  2449  0288  00F2               	movwf	??_restartUSR_K2
+  2450  0289                     u126_27:	
+  2451  0289  0BF2               	decfsz	??_restartUSR_K2,f
+  2452  028A  2A89               	goto	u126_27
+  2453  028B  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2454  028C  2A89               	goto	u126_27
+  2455  028D  0064               	clrwdt
+  2456                           
+  2457                           ;main.c: 560: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2458  028E  3068               	movlw	104
+  2459  028F  00F3               	movwf	??_restartUSR_K2+1
+  2460  0290  30E4               	movlw	228
+  2461  0291  00F2               	movwf	??_restartUSR_K2
+  2462  0292                     u127_27:	
+  2463  0292  0BF2               	decfsz	??_restartUSR_K2,f
+  2464  0293  2A92               	goto	u127_27
+  2465  0294  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2466  0295  2A92               	goto	u127_27
+  2467  0296  0064               	clrwdt
+  2468                           
+  2469                           ;main.c: 561: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2470  0297  3068               	movlw	104
+  2471  0298  00F3               	movwf	??_restartUSR_K2+1
+  2472  0299  30E4               	movlw	228
+  2473  029A  00F2               	movwf	??_restartUSR_K2
+  2474  029B                     u128_27:	
+  2475  029B  0BF2               	decfsz	??_restartUSR_K2,f
+  2476  029C  2A9B               	goto	u128_27
+  2477  029D  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2478  029E  2A9B               	goto	u128_27
+  2479  029F  0064               	clrwdt
+  2480                           
+  2481                           ;main.c: 562: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2482  02A0  3068               	movlw	104
+  2483  02A1  00F3               	movwf	??_restartUSR_K2+1
+  2484  02A2  30E4               	movlw	228
+  2485  02A3  00F2               	movwf	??_restartUSR_K2
+  2486  02A4                     u129_27:	
+  2487  02A4  0BF2               	decfsz	??_restartUSR_K2,f
+  2488  02A5  2AA4               	goto	u129_27
+  2489  02A6  0BF3               	decfsz	??_restartUSR_K2+1,f
+  2490  02A7  2AA4               	goto	u129_27
+  2491  02A8  0064               	clrwdt
+  2492                           
+  2493                           ;main.c: 563: (PORTCbits.RC3) = 0;
+  2494  02A9  1283               	bcf	3,5	;RP0=0, select bank0
+  2495  02AA  1303               	bcf	3,6	;RP1=0, select bank0
+  2496  02AB  1187               	bcf	7,3	;volatile
+  2497                           
+  2498                           ;main.c: 568: setCommunicationTimeOut(3000);
+  2499  02AC  30B8               	movlw	184
+  2500  02AD  00F0               	movwf	?i1_setCommunicationTimeOut
+  2501  02AE  300B               	movlw	11
+  2502  02AF  00F1               	movwf	?i1_setCommunicationTimeOut+1
+  2503  02B0  22B2               	fcall	i1_setCommunicationTimeOut
+  2504  02B1  0008               	return
+  2505  02B2                     __end_of_restartUSR_K2:	
+  2506  02B2                     __ptext353:	
+  2507 ;; =============== function _restartUSR_K2 ends ============
+  2508                           
+  2509                           
+  2510 ;; *************** function i1_setCommunicationTimeOut *****************
+  2511 ;; Defined at:
+  2512 ;;		line 546 in file "../src/main.c"
+  2513 ;; Parameters:    Size  Location     Type
+  2514 ;;  setCommunica    2    0[COMMON] unsigned int 
+  2515 ;; Auto vars:     Size  Location     Type
+  2516 ;;		None
+  2517 ;; Return value:  Size  Location     Type
+  2518 ;;		None               void
+  2519 ;; Registers used:
+  2520 ;;		wreg
+  2521 ;; Tracked objects:
+  2522 ;;		On entry : 60/0
+  2523 ;;		On exit  : 60/0
+  2524 ;;		Unchanged: FFF9F/0
+  2525 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2526 ;;      Params:         2       0       0       0       0
+  2527 ;;      Locals:         0       0       0       0       0
+  2528 ;;      Temps:          0       0       0       0       0
+  2529 ;;      Totals:         2       0       0       0       0
+  2530 ;;Total ram usage:        2 bytes
+  2531 ;; Hardware stack levels used:    1
+  2532 ;; This function calls:
+  2533 ;;		Nothing
+  2534 ;; This function is called by:
+  2535 ;;		_restartUSR_K2
+  2536 ;; This function uses a non-reentrant model
+  2537 ;;
+  2538  02B2                     i1_setCommunicationTimeOut:	
+  2539                           
+  2540                           ;main.c: 547: communicationControlTimer = value;
+  2541                           
+  2542                           ; Regs used in i1_setCommunicationTimeOut: [wreg]
+  2543  02B2  0871               	movf	i1setCommunicationTimeOut@value+1,w
+  2544  02B3  00A1               	movwf	_communicationControlTimer+1	;volatile
+  2545  02B4  0870               	movf	i1setCommunicationTimeOut@value,w
+  2546  02B5  00A0               	movwf	_communicationControlTimer	;volatile
+  2547                           
+  2548                           ;main.c: 548: communicationControlTimer_En = 1;
+  2549  02B6  16F8               	bsf	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  2550  02B7  0008               	return
+  2551  02B8                     __end_ofi1_setCommunicationTimeOut:	
+  2552                           
+  2553                           	psect	intentry
+  2554  0004                     __pintentry:	
+  2555                           ; Regs used in _erdem: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  2556                           
+  2557  0004                     interrupt_function:	
+  2558  007E                     saved_w	set	btemp
+  2559  0004  00FE               	movwf	btemp
+  2560  0005  0E03               	swapf	3,w
+  2561  0006  00F4               	movwf	??_erdem
+  2562  0007  0804               	movf	4,w
+  2563  0008  00F5               	movwf	??_erdem+1
+  2564  0009  080A               	movf	10,w
+  2565  000A  00F6               	movwf	??_erdem+2
+  2566  000B  120A  118A  29C9   	ljmp	_erdem
+  2567                           
+  2568                           	psect	text357
+  2569  0000                     __ptext357:	
+  2570 ;; =============== function _vCheckError ends ============
+  2571                           
+  2572  007E                     btemp	set	126	;btemp
+  2573  007E                     wtemp0	set	126
+
+
+HI-TECH Software PICC Macro Assembler V9.83 build 10920 
+Symbol Table                                                                                   Mon May 14 16:10:36 2018
+
+                    ___bmul@product 0036                                  fsr 0004  
+         ??_vAddToUartReceiveBuffer 0070                                 _GIE 005F  
+                               _RX9 00C6                                 _TX9 04C6  
+                   _vInitializeUart 036D                                 fsr0 0004  
+                               indf 0000             ??_cGetFromReceiveBuffer 0035  
+                              l1200 0000                                l1113 00CF  
+                              l1222 0000                                l1208 0000  
+                              l1219 0000                                l1181 0324  
+                              l1182 0329                                l1183 032E  
+                              l1184 0333                                l1186 0349  
+                              l1179 031F                                l1197 031C  
+                              _C1ON 083F                                l2257 0000  
+                              l4131 0000                                _C2ON 0847  
+                              l4141 0000                                l4133 0000  
+                              l4125 0000                                l4221 0000  
+                              l4213 0000                                l3254 0000  
+                              l4151 0000                                l4143 0000  
+                              l4135 0000                                l4127 0000  
+                              l4223 0000                                l4215 0000  
+                              l4231 0000                                l4161 0000  
+                              l4153 0000                                l4145 0000  
+                              l4137 0000                                l4129 0000  
+                              l4225 0000                                l4217 0000  
+                              l4233 0000                                l4171 0000  
+                              l4163 0000                                l4155 0000  
+                              l4147 0000                                l4139 0000  
+                              l4227 0000                                l4219 0000  
+                              l4235 0000                                l4243 0000  
+                              l4411 0000                                l4181 0000  
+                              l4173 0000                                l4165 0000  
+                              l4157 0000                                l4149 0000  
+                              l4229 0000                                l4237 0000  
+                              l4245 0000                                l4261 02F3  
+                              l4421 0000                                l4413 0395  
+                              l4501 00C5                                l4175 0000  
+                              l4167 0000                                l4159 0000  
+                              l4183 0000                                l4239 0000  
+                              l4247 0000                                l4263 02F9  
+                              l4271 030B                                l4431 0000  
+                              l4177 0000                                l4169 0000  
+                              l4193 0000                                l4185 0000  
+                              l4249 0000                                l4265 02FF  
+                              l4257 0000                                l4281 0000  
+                              l4273 0000                                l4601 01C6  
+                              l4513 00DC                                l4441 0000  
+                              l4433 0000                                l4179 0000  
+                              l4195 0000                                l4187 0000  
+                              l4267 0305                                l4259 02ED  
+                              l4291 0000                                l4283 0000  
+                              l4275 0000                                l4419 0000  
+                              l4531 00FA                                l4507 00D2  
+                              l4451 0000                                l4443 0000  
+                              l4435 0000                                l4197 0000  
+                              l4293 0000                                l4285 0000  
+                              l4277 0000                                l4541 0101  
+                              l4525 00F0                                l4461 0000  
+                              l4445 0000                                l4437 0000  
+                              l4287 0000                                l4279 0000  
+                              l4543 0000                                l4535 0000  
+                              l4519 00E6                                l4471 0000  
+                              l4463 0000                                l4455 0000  
+                              l4447 0025                                l4439 0000  
+                              l4289 0000                                l4297 0338  
+                              l4545 0000                                l4561 012C  
+                              l4481 0000                                l4473 0000  
+                              l4465 0000                                l4449 002F  
+                              l4571 0135                                l4483 0000  
+                              l4475 0000                                l4467 0000  
+                              l4459 0000                                l4491 00B2  
+                              l4557 0000                                l4485 0000  
+                              l4477 0000                                l4469 0000  
+                              l4591 0000                                l4583 015E  
+                              l4575 0146                                l4559 0000  
+                              l4495 0000                                l4487 0000  
+                              l4479 0000                                l4497 0000  
+                              l4489 0000                                l4595 0000  
+                              l4579 0155                                l4499 00C3  
+                              l4597 0000                                l4589 019F  
+                              _BRGH 04C2                                _T0IE 005D  
+                              _T0IF 005A                                _CREN 00C4  
+                              _FERR 00C2                                u1217 003B  
+                              u1227 0105                                u1185 0170  
+                              u1195 0187                                _PIE1 008C  
+                              _PIE2 008D            ?_setCommunicationTimeOut 0035  
+                              _PEIE 005E                                _RCIE 0465  
+                              _RCIF 0065                                _OERR 00C1  
+                              _TMR0 0001                                _SPEN 00C7  
+                              _TXIE 0464                                _TXEN 04C5  
+                              _TXIF 0064                                _SYNC 04C4  
+                              _WPUB 0095                    _vInitializeBoard 02B8  
+                              _main 0011                                btemp 007E  
+                              start 000E                   ___bmul@multiplier 0037  
+                             _ADDEN 00C3                               ?_main 0070  
+                             _BRG16 0C3B                               _ANSEL 0188  
+                    vSetRelay@relay 0036                      vSetRelay@value 0035  
+                             _RCREG 001A                               _SPBRG 0099  
+                             _PORTA 0005                               _PORTB 0006  
+                             _PORTC 0007                               _PORTD 0008  
+                             _PORTE 0009                               _TRISA 0085  
+                             _TRISB 0086                               _TRISC 0087  
+                             _TRISD 0088                               _TRISE 0089  
+                             _TXREG 0019                   ??_vSendDataToUart 0035  
+             cGetFromTxBuffer@value 0070                        ?_vPulseRelay 0038  
+                             _erdem 01C9                               _timer 0028  
+          _vAddToUartTransmitBuffer 03A1                 _uartTransmitBufferR 007B  
+               _uartTransmitBufferW 007C                               main@i 003C  
+                    __pbitbssCOMMON 03C0                               pclath 000A  
+   __end_of_vAddToUartReceiveBuffer 025C                   _uartReceiveBuffer 0190  
+              __size_of_vCheckError 0009                               status 0003  
+                             wtemp0 007E                        __end_of_main 01C9  
+           __end_of_vInitializeUart 0384               vPulseRelay@timerValue 0038  
+       vAddToUartReceiveBuffer@data 0070                              ??_main 003A  
+                            ?_erdem 0070                              _ANSELH 0189  
+                            i1l1222 0000                              i1l1216 0000  
+                            i1l1160 01E6                              i1l1225 0000  
+                            i1l1161 01EC                              i1l1156 0210  
+                            i1l1174 0239                              i1l1166 023D  
+                            i1l1158 01DA                              i1l1167 0229  
+                            i1l1159 01E0                              i1l1168 021B  
+                            i1l2260 024C                              i1l4311 0000  
+                            i1l4401 0000                              i1l4305 0000  
+                            i1l4403 0000                              i1l4331 01F2  
+                            i1l4323 0000                              i1l4315 0000  
+                            i1l4307 0000                              i1l4341 0000  
+                            i1l4309 0000                              i1l4343 0000  
+                            i1l4327 0000                              i1l4319 0000  
+                            i1l4361 021D                              i1l4345 0000  
+                            i1l4337 0000                              i1l4427 0000  
+                            i1l4363 0223                              i1l4339 0204  
+                            i1l4347 020E                              i1l4429 0000  
+                            i1l4381 0000                              i1l4365 0000  
+                            i1l4391 0000                              i1l4383 0000  
+                            u123_27 026E                              i1l4375 0000  
+                            i1l4385 0000                              i1l4393 0000  
+                            i1l4377 0000                              i1l4395 0000  
+                            i1l4379 0000                              i1l4299 0000  
+                            i1l4399 0000                              u124_27 0277  
+                            u125_27 0280                              u126_27 0289  
+                            u127_27 0292                              u128_27 029B  
+                            _INTCON 000B                              u129_27 02A4  
+                            _OSCCON 008F                              _WDTCON 0105  
+        ?i1_setCommunicationTimeOut 0070                              ___bmul 0393  
+         __size_of_cGetFromTxBuffer 000D                              _tim2Hz 003F  
+                            clrloop 03AF                              saved_w 007E  
+                _uartReceiveBufferR 0029                  _uartReceiveBufferW 002A  
+ __end_ofi1_setCommunicationTimeOut 02B8                 ___bmul@multiplicand 0035  
+                    __pcstackCOMMON 0070                        __pidataBANK0 0000  
+      _communicationControlTimer_En 03C5                       __end_of_erdem 0246  
+                  ?_vInitializeUart 0070            __end_of_vInitializeBoard 02EB  
+                           ??_erdem 0074                          _dataBuffer 002B  
+                        __pbssBANK0 0020                          __pbssBANK1 00A0  
+                        __pbssBANK3 0190                __size_of_vPulseRelay 002D  
+                __size_of_vSetRelay 0032      __size_of_cGetFromReceiveBuffer 000F  
+     __end_of_cGetFromReceiveBuffer 0393                       _RELAY_1_Timer 0079  
+                     _RELAY_2_Timer 007A                       _RELAY_3_Timer 0022  
+                     _RELAY_4_Timer 0023                       _RELAY_5_Timer 0024  
+             __end_of_restartUSR_K2 02B2                          __pmaintext 0011  
+                           ?___bmul 0035    __size_of_setCommunicationTimeOut 0006  
+                        __pintentry 0004                             _CM1CON0 0107  
+                           _CM2CON0 0108                     _vSendDataToUart 03BC  
+        ??_vAddToUartTransmitBuffer 0035            ?_vAddToUartReceiveBuffer 0070  
+                   __size_of___bmul 000E                    _cGetFromTxBuffer 025C  
+                 __end_of_vSetRelay 031D                             _tim10Hz 003D  
+                           _tim1min 0027                             _tim1sec 003E  
+                     ??_vCheckError 0070                end_of_initialization 0369  
+       ??i1_setCommunicationTimeOut 0072             __end_of_vSendDataToUart 03C0  
+                         _PORTBbits 0006                           _PORTCbits 0007  
+                         _PORTDbits 0008                           _TRISCbits 0087  
+               __end_of_vCheckError 024F             _setCommunicationTimeOut 03B6  
+                    __end_of___bmul 03A1    __end_of_vAddToUartTransmitBuffer 03AE  
+                 ?_vInitializeBoard 0070                  _uartTransmitBuffer 00A0  
+                  _RELAY_1_Timer_En 03C0           i1_setCommunicationTimeOut 02B2  
+                ??_vInitializeBoard 0035                 start_initialization 034A  
+                  _RELAY_2_Timer_En 03C1        vAddToUartTransmitBuffer@data 0035  
+                  _RELAY_3_Timer_En 03C2                    _RELAY_4_Timer_En 03C3  
+                  _RELAY_5_Timer_En 03C4                    ?_vSendDataToUart 0070  
+                          ??___bmul 0036                         __pdataBANK0 0040  
+                       __pbssCOMMON 0079            __size_of_vInitializeUart 0017  
+                     __pcstackBANK0 0035                       ??_vPulseRelay 0039  
+          __end_of_cGetFromTxBuffer 0269      i1setCommunicationTimeOut@value 0070  
+                       _vCheckError 0246           ??_setCommunicationTimeOut 0037  
+                         __pnvBANK0 003D               _cGetFromReceiveBuffer 0384  
+                         __ptext350 02B8                           __ptext342 0393  
+                         __ptext351 01C9                           __ptext343 031D  
+                         __ptext352 0269                           __ptext344 02EB  
+                         __ptext353 02B2                           __ptext345 0384  
+                         __ptext354 025C                           __ptext346 03BC  
+                         __ptext355 024F                           __ptext347 03A1  
+                         __ptext356 0246                           __ptext348 03B6  
+                         __ptext357 0000                           __ptext349 036D  
+                         _buffer_SM 0040                           _vSetRelay 02EB  
+            __size_of_restartUSR_K2 0049    __size_of_vAddToUartReceiveBuffer 000D  
+                    __size_of_erdem 007D                           _inputPort 0026  
+                 interrupt_function 0004   __size_of_vAddToUartTransmitBuffer 000D  
+               __end_of_vPulseRelay 034A           ?_vAddToUartTransmitBuffer 0070  
+                       _bufferValue 0025     __end_of_setCommunicationTimeOut 03BC  
+                         erdem@temp 0077                          ?_vSetRelay 0035  
+__size_ofi1_setCommunicationTimeOut 0006                   ??_vInitializeUart 0035  
+            ?_cGetFromReceiveBuffer 0070                       _restartUSR_K2 0269  
+                  vPulseRelay@relay 0039                         _vPulseRelay 031D  
+        cGetFromReceiveBuffer@value 0035           __size_of_vInitializeBoard 0033  
+                     __size_of_main 01B8                      ?_restartUSR_K2 0070  
+                          clear_ram 03AE        setCommunicationTimeOut@value 0035  
+         _communicationControlTimer 0020             _vAddToUartReceiveBuffer 024F  
+                       ??_vSetRelay 0036                        ?_vCheckError 0070  
+                 ?_cGetFromTxBuffer 0070                            intlevel1 0000  
+                ??_cGetFromTxBuffer 0070            __size_of_vSendDataToUart 0004  
+                        _OPTION_REG 0081                     ??_restartUSR_K2 0072  

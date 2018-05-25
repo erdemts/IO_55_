@@ -1,0 +1,17 @@
+_vInitializeUart: CODE, 877 0 23
+_setCommunicationTimeOut: CODE, 950 0 6
+_restartUSR_K2: CODE, 617 0 73
+_vCheckError: CODE, 582 0 9
+_main: CODE, 17 0 440
+_erdem: CODE, 457 0 125
+_vPulseRelay: CODE, 797 0 45
+_vAddToUartTransmitBuffer: CODE, 929 0 13
+_vInitializeBoard: CODE, 696 0 51
+_vSetRelay: CODE, 747 0 50
+_cGetFromReceiveBuffer: CODE, 900 0 15
+_cGetFromTxBuffer: CODE, 604 0 13
+_vSendDataToUart: CODE, 956 0 4
+i1_setCommunicationTimeOut: CODE, 690 0 6
+_vAddToUartReceiveBuffer: CODE, 591 0 13
+___bmul: CODE, 915 0 14
+Total: 900
