@@ -1301,88 +1301,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EECON1bits `VS139  1 e@396 ]
 "1666 C:\Program Files (x86)\HI-TECH Software\PICC\9.83\include\pic16f887.h
 [v _EECON2 `Vuc  1 e@397 ]
-"58 ../src/main.c
-[v _tim10Hz `Vuc  1 e ]
-"58 ../src/main.c
-[v _tim2Hz `Vuc  1 e ]
-"58 ../src/main.c
-[v _tim1sec `Vuc  1 e ]
-"58 ../src/main.c
-[v _tim1min `Vuc  1 e ]
-"59 ../src/main.c
-[v _RELAY_1_Timer `Vuc  1 e ]
-"60 ../src/main.c
-[v _RELAY_1_Timer_En `b  1 e ]
-"61 ../src/main.c
-[v _RELAY_2_Timer `Vuc  1 e ]
-"62 ../src/main.c
-[v _RELAY_2_Timer_En `b  1 e ]
-"63 ../src/main.c
-[v _RELAY_3_Timer `Vuc  1 e ]
-"64 ../src/main.c
-[v _RELAY_3_Timer_En `b  1 e ]
-"65 ../src/main.c
-[v _RELAY_4_Timer `Vuc  1 e ]
-"66 ../src/main.c
-[v _RELAY_4_Timer_En `b  1 e ]
-"67 ../src/main.c
-[v _RELAY_5_Timer `Vuc  1 e ]
-"68 ../src/main.c
-[v _RELAY_5_Timer_En `b  1 e ]
-"70 ../src/main.c
-[v _communicationControlTimer `Vui  1 e ]
-"71 ../src/main.c
-[v _communicationControlTimer_En `b  1 e ]
-"73 ../src/main.c
-[v _uartReceiveBuffer `Vuc  -> 90 `i e ]
-"74 ../src/main.c
-[v _uartReceiveBufferR `Vuc  1 e ]
-"75 ../src/main.c
-[v _uartReceiveBufferW `Vuc  1 e ]
-"77 ../src/main.c
-[v _uartTransmitBuffer `Vuc  -> 60 `i e ]
-"78 ../src/main.c
-[v _uartTransmitBufferR `Vuc  1 e ]
-"79 ../src/main.c
-[v _uartTransmitBufferW `Vuc  1 e ]
-"81 ../src/main.c
-[v _dataBuffer `uc  -> 10 `i e ]
-"82 ../src/main.c
-[v _inputPort `uc  1 e ]
-"84 ../src/main.c
-[v _buffer_SM `Vuc  1 e ]
-"86 ../src/main.c
-[v _bufferValue `uc  1 e ]
-"87 ../src/main.c
-[v _timer `Vuc  1 e ]
-[p mainexit ]
-"91 ../src/main.c
-[v _vInitializeBoard `(v  0 ef ]
-"71 ../include\uart.h
-[v _vInitializeUart `(v  0 ef ]
-"99 ../src/main.c
-[v _setCommunicationTimeOut `(v  0 ef1`ui ]
-"154 C:\Program Files (x86)\HI-TECH Software\PICC\9.83\include\pic.h
-[v __delay `(v  0 ef1`ul ]
-[p i __delay ]
-"94 ../src/main.c
-[v _vAddToUartTransmitBuffer `(v  0 ef1`uc ]
-"98 ../src/main.c
-[v _vSendDataToUart `(v  0 ef ]
-"93 ../src/main.c
-[v _cGetFromReceiveBuffer `(uc  0 ef ]
-"97 ../src/main.c
-[v _vSetRelay `(v  0 ef2`uc`uc ]
-"96 ../src/main.c
-[v _vPulseRelay `(v  0 ef2`uc`uc ]
-"100 ../src/main.c
-[v _restartUSR_K2 `(v  0 ef ]
-"84 ../include\uart.h
-[v _vCheckError `(v  0 ef ]
-"92 ../src/main.c
-[v _vAddToUartReceiveBuffer `(v  0 ef1`uc ]
-"95 ../src/main.c
-[v _cGetFromTxBuffer `(uc  0 ef ]
 [; ;pic16f887.h: 118: volatile unsigned char INDF @ 0x000;
 [; ;pic16f887.h: 122: volatile unsigned char TMR0 @ 0x001;
 [; ;pic16f887.h: 126: volatile unsigned char PCL @ 0x002;
@@ -2595,1377 +2513,221 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern void _delay(unsigned long);
-[; ;stdlib.h: 4: typedef int ptrdiff_t;
-[; ;stdlib.h: 5: typedef unsigned size_t;
-[; ;stdlib.h: 6: typedef unsigned short wchar_t;
-[; ;stdlib.h: 16: extern int errno;
-[; ;stdlib.h: 27: typedef struct {
-[; ;stdlib.h: 28: int rem;
-[; ;stdlib.h: 29: int quot;
-[; ;stdlib.h: 30: } div_t;
-[; ;stdlib.h: 31: typedef struct {
-[; ;stdlib.h: 32: unsigned rem;
-[; ;stdlib.h: 33: unsigned quot;
-[; ;stdlib.h: 34: } udiv_t;
-[; ;stdlib.h: 35: typedef struct {
-[; ;stdlib.h: 36: long quot;
-[; ;stdlib.h: 37: long rem;
-[; ;stdlib.h: 38: } ldiv_t;
-[; ;stdlib.h: 39: typedef struct {
-[; ;stdlib.h: 40: unsigned long quot;
-[; ;stdlib.h: 41: unsigned long rem;
-[; ;stdlib.h: 42: } uldiv_t;
-[; ;stdlib.h: 65: extern double atof(const char *);
-[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
-[; ;stdlib.h: 67: extern int atoi(const char *);
-[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
-[; ;stdlib.h: 69: extern long atol(const char *);
-[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
-[; ;stdlib.h: 72: extern int rand(void);
-[; ;stdlib.h: 73: extern void srand(unsigned int);
-[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
-[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
-[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
-[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
-[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 106: extern void * malloc(size_t);
-[; ;stdlib.h: 107: extern void free(void *);
-[; ;stdlib.h: 108: extern void * realloc(void *, size_t);
-[; ;stdlib.h: 122: extern void abort(void);
-[; ;stdlib.h: 123: extern void exit(int);
-[; ;stdlib.h: 124: extern int atexit(void (*)(void));
-[; ;stdlib.h: 125: extern char * getenv(const char *);
-[; ;stdlib.h: 126: extern char ** environ;
-[; ;stdlib.h: 127: extern int system(char *);
-[; ;stdlib.h: 128: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-[; ;stdlib.h: 129: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-[; ;stdlib.h: 130: extern int abs(int);
-[; ;stdlib.h: 131: extern long labs(long);
-[; ;stdlib.h: 145: extern char * itoa(char * buf, int val, int base);
-[; ;stdlib.h: 146: extern char * utoa(char * buf, unsigned val, int base);
-[; ;stdlib.h: 147: extern char * ltoa(char * buf, long val, int base);
-[; ;stdlib.h: 148: extern char * ultoa(char * buf, unsigned long val, int base);
-[; ;stdarg.h: 31: typedef void * va_list[1];
-[; ;stdarg.h: 34: extern void * __va_start(void);
-[; ;stdarg.h: 37: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 27: extern int errno;
-[; ;stdio.h: 58: struct __prbuf
-[; ;stdio.h: 59: {
-[; ;stdio.h: 60: char * ptr;
-[; ;stdio.h: 61: void (* func)(char);
-[; ;stdio.h: 62: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 103: extern int cprintf(char *, ...);
-[; ;stdio.h: 108: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 195: extern char * gets(char *);
-[; ;stdio.h: 196: extern int puts(const char *);
-[; ;stdio.h: 197: extern int scanf(const char *, ...);
-[; ;stdio.h: 198: extern int sscanf(const char *, const char *, ...);
-[; ;stdio.h: 199: extern int vprintf(const char *, va_list);
-[; ;stdio.h: 200: extern int vsprintf(char *, const char *, va_list);
-[; ;stdio.h: 201: extern int vscanf(const char *, va_list ap);
-[; ;stdio.h: 202: extern int vsscanf(const char *, const char *, va_list);
-[; ;stdio.h: 206: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 207: extern int printf(const char *, ...);
-[; ;include\uart.h: 71: void vInitializeUart( void );
-[; ;include\uart.h: 84: void vCheckError( void );
-[; ;include\uart.h: 97: void putch( unsigned char c );
-"23 ../src/main.c
-[; ;main.c: 23: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFC & 0xFFFF & 0xFFEF & 0xFFFF & 0xFFBF & 0xFF7F & 0xFCFF & 0xFBFF & 0xF7FF & 0xEFFF & 0xFFFF & 0xFEFF");
-[; 	psect config,class=CONFIG,delta=2 ;#
-[; 	dw 0xFFFC & 0xFFFF & 0xFFEF & 0xFFFF & 0xFFBF & 0xFF7F & 0xFCFF & 0xFBFF & 0xF7FF & 0xEFFF & 0xFFFF & 0xFEFF ;#
-"44
-[; ;main.c: 44: asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=2"); asm("\tdb\t" "'1'" "," "'0'" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0");
-[; 	psect eeprom_data,class=EEDATA,delta=2,space=2 ;#
-[; 	db	'1','0',0,0,0,0,0,0 ;#
-[; ;main.c: 58: volatile unsigned char tim10Hz, tim2Hz, tim1sec, tim1min;
-[; ;main.c: 59: volatile unsigned char RELAY_1_Timer;
-[; ;main.c: 60: bit RELAY_1_Timer_En;
-[; ;main.c: 61: volatile unsigned char RELAY_2_Timer;
-[; ;main.c: 62: bit RELAY_2_Timer_En;
-[; ;main.c: 63: volatile unsigned char RELAY_3_Timer;
-[; ;main.c: 64: bit RELAY_3_Timer_En;
-[; ;main.c: 65: volatile unsigned char RELAY_4_Timer;
-[; ;main.c: 66: bit RELAY_4_Timer_En;
-[; ;main.c: 67: volatile unsigned char RELAY_5_Timer;
-[; ;main.c: 68: bit RELAY_5_Timer_En;
-[; ;main.c: 70: volatile unsigned int communicationControlTimer;
-[; ;main.c: 71: bit communicationControlTimer_En;
-[; ;main.c: 73: volatile unsigned char uartReceiveBuffer[( 90 )];
-"74
-[i _uartReceiveBufferR
--> -> 0 `i `uc
-]
-[; ;main.c: 74: volatile unsigned char uartReceiveBufferR = 0;
-"75
-[i _uartReceiveBufferW
--> -> 0 `i `uc
-]
-[; ;main.c: 75: volatile unsigned char uartReceiveBufferW = 0;
-[; ;main.c: 77: volatile unsigned char uartTransmitBuffer[( 60 )];
-"78
-[i _uartTransmitBufferR
--> -> 0 `i `uc
-]
-[; ;main.c: 78: volatile unsigned char uartTransmitBufferR = 0;
-"79
-[i _uartTransmitBufferW
--> -> 0 `i `uc
-]
-[; ;main.c: 79: volatile unsigned char uartTransmitBufferW = 0;
-[; ;main.c: 81: unsigned char dataBuffer[10];
-[; ;main.c: 82: unsigned char inputPort;
-"84
-[i _buffer_SM
--> -> 1 `i `uc
-]
-[; ;main.c: 84: volatile unsigned char buffer_SM = 1;
-"86
-[i _bufferValue
--> -> 0 `i `uc
-]
-[; ;main.c: 86: unsigned char bufferValue = 0;
-"87
-[i _timer
--> -> 0 `i `uc
-]
-[; ;main.c: 87: volatile unsigned char timer = 0;
-[; ;main.c: 91: void vInitializeBoard(void);
-[; ;main.c: 92: void vAddToUartReceiveBuffer(unsigned char data);
-[; ;main.c: 93: unsigned char cGetFromReceiveBuffer(void);
-[; ;main.c: 94: void vAddToUartTransmitBuffer(unsigned char data);
-[; ;main.c: 95: unsigned char cGetFromTxBuffer(void);
-[; ;main.c: 96: void vPulseRelay(unsigned char relay, unsigned char timerValue);
-[; ;main.c: 97: void vSetRelay(unsigned char relay, unsigned char value);
-[; ;main.c: 98: void vSendDataToUart(void);
-[; ;main.c: 99: void setCommunicationTimeOut(unsigned int value);
-[; ;main.c: 100: void restartUSR_K2(void);
-"116
-[v _main `(i  1 ef ]
+"49 ../src/uart.c
+[v _vInitializeUart `(v  1 ef ]
 {
-[; ;main.c: 116: main(void) {
-[e :U _main ]
+[; ;uart.c: 48: void vInitializeUart( void )
+[; ;uart.c: 49: {
+[e :U _vInitializeUart ]
 [f ]
-"117
-[v _i `uc  1 a ]
-[; ;main.c: 117: unsigned char i;
-[; ;main.c: 118: vInitializeBoard();
-"118
-[e ( _vInitializeBoard ..  ]
-[; ;main.c: 119: vInitializeUart();
-"119
-[e ( _vInitializeUart ..  ]
-[; ;main.c: 120: PEIE = 1;
-"120
-[e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 121: GIE = 1;
-"121
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 122: (GIE = 1);
-"122
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 123: uartReceiveBufferW = 0;
-"123
-[e = _uartReceiveBufferW -> -> 0 `i `uc ]
-[; ;main.c: 124: uartReceiveBufferR = 0;
-"124
-[e = _uartReceiveBufferR -> -> 0 `i `uc ]
-[; ;main.c: 125: inputPort = (PORTB & 0b00110111);
-"125
-[e = _inputPort -> & -> _PORTB `i -> 55 `i `uc ]
-[; ;main.c: 126: setCommunicationTimeOut(3000);
-"126
-[e ( _setCommunicationTimeOut (1 -> -> 3000 `i `ui ]
-[; ;main.c: 128: while (1) {
-"128
-[e :U 148 ]
+"50
+[v _cBaudTemp `uc  1 a ]
+[; ;uart.c: 50: unsigned char cBaudTemp;
+[; ;uart.c: 52: cBaudTemp = ( 2 );
+"52
+[e = _cBaudTemp -> -> 2 `i `uc ]
+[; ;uart.c: 54: (TRISCbits.TRISC6) = 1;
+"54
+[e = . . _TRISCbits 0 6 -> -> 1 `i `uc ]
+[; ;uart.c: 55: (TRISCbits.TRISC7) = 1;
+"55
+[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
+[; ;uart.c: 57: if( cBaudTemp == ( 1 ) )
+"57
+[e $ ! == -> _cBaudTemp `i -> 1 `i 142  ]
+[; ;uart.c: 58: {
+"58
 {
-[; ;main.c: 129: asm("clrwdt");
-"129
-[; clrwdt ;#
-[; ;main.c: 131: if (inputPort != (PORTB & 0b00110111)) {
-"131
-[e $ ! != -> _inputPort `i & -> _PORTB `i -> 55 `i 150  ]
-{
-[; ;main.c: 132: _delay((unsigned long)((40)*(8000000/4000.0)));
-"132
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 133: if (inputPort != (PORTB & 0b00110111)) {
-"133
-[e $ ! != -> _inputPort `i & -> _PORTB `i -> 55 `i 151  ]
-{
-[; ;main.c: 134: inputPort = (PORTB & 0b00110111);
-"134
-[e = _inputPort -> & -> _PORTB `i -> 55 `i `uc ]
-[; ;main.c: 136: vAddToUartTransmitBuffer('<');
-"136
-[e ( _vAddToUartTransmitBuffer (1 -> -> 60 `ui `uc ]
-[; ;main.c: 137: vAddToUartTransmitBuffer('D');
-"137
-[e ( _vAddToUartTransmitBuffer (1 -> -> 68 `ui `uc ]
-[; ;main.c: 138: vAddToUartTransmitBuffer('U');
-"138
-[e ( _vAddToUartTransmitBuffer (1 -> -> 85 `ui `uc ]
-[; ;main.c: 139: vAddToUartTransmitBuffer('R');
-"139
-[e ( _vAddToUartTransmitBuffer (1 -> -> 82 `ui `uc ]
-[; ;main.c: 140: vAddToUartTransmitBuffer('U');
-"140
-[e ( _vAddToUartTransmitBuffer (1 -> -> 85 `ui `uc ]
-[; ;main.c: 141: vAddToUartTransmitBuffer('M');
-"141
-[e ( _vAddToUartTransmitBuffer (1 -> -> 77 `ui `uc ]
-[; ;main.c: 142: vAddToUartTransmitBuffer(':');
-"142
-[e ( _vAddToUartTransmitBuffer (1 -> -> 58 `ui `uc ]
-[; ;main.c: 143: vAddToUartTransmitBuffer((PORTBbits.RB0) + 48);
-"143
-[e ( _vAddToUartTransmitBuffer (1 -> + -> . . _PORTBbits 0 0 `i -> 48 `i `uc ]
-[; ;main.c: 144: vAddToUartTransmitBuffer((PORTBbits.RB1) + 48);
-"144
-[e ( _vAddToUartTransmitBuffer (1 -> + -> . . _PORTBbits 0 1 `i -> 48 `i `uc ]
-[; ;main.c: 145: vAddToUartTransmitBuffer((PORTBbits.RB2) + 48);
-"145
-[e ( _vAddToUartTransmitBuffer (1 -> + -> . . _PORTBbits 0 2 `i -> 48 `i `uc ]
-[; ;main.c: 146: vAddToUartTransmitBuffer((PORTBbits.RB4) + 48);
-"146
-[e ( _vAddToUartTransmitBuffer (1 -> + -> . . _PORTBbits 0 4 `i -> 48 `i `uc ]
-[; ;main.c: 147: vAddToUartTransmitBuffer((PORTBbits.RB5) + 48);
-"147
-[e ( _vAddToUartTransmitBuffer (1 -> + -> . . _PORTBbits 0 5 `i -> 48 `i `uc ]
-[; ;main.c: 148: vAddToUartTransmitBuffer('0');
-"148
-[e ( _vAddToUartTransmitBuffer (1 -> -> 48 `ui `uc ]
-[; ;main.c: 149: vAddToUartTransmitBuffer('>');
-"149
-[e ( _vAddToUartTransmitBuffer (1 -> -> 62 `ui `uc ]
-[; ;main.c: 150: vSendDataToUart();
-"150
-[e ( _vSendDataToUart ..  ]
-"151
+[; ;uart.c: 59: BRGH = 0;
+"59
+[e = _BRGH -> -> 0 `i `b ]
+[; ;uart.c: 60: BRG16 = 0;
+"60
+[e = _BRG16 -> -> 0 `i `b ]
+[; ;uart.c: 61: SPBRG = 129;
+"61
+[e = _SPBRG -> -> 129 `i `uc ]
+"62
 }
-[e :U 151 ]
-"152
+[; ;uart.c: 62: }
+[e $U 143  ]
+"63
+[e :U 142 ]
+[; ;uart.c: 63: else if( cBaudTemp == ( 2 ) )
+[e $ ! == -> _cBaudTemp `i -> 2 `i 144  ]
+[; ;uart.c: 64: {
+"64
+{
+[; ;uart.c: 65: BRGH = 0;
+"65
+[e = _BRGH -> -> 0 `i `b ]
+[; ;uart.c: 66: BRG16 = 1;
+"66
+[e = _BRG16 -> -> 1 `i `b ]
+[; ;uart.c: 67: SPBRG = 51;
+"67
+[e = _SPBRG -> -> 51 `i `uc ]
+"68
+}
+[; ;uart.c: 68: }
+[e $U 145  ]
+"69
+[e :U 144 ]
+[; ;uart.c: 69: else if( cBaudTemp == ( 3 ) )
+[e $ ! == -> _cBaudTemp `i -> 3 `i 146  ]
+[; ;uart.c: 70: {
+"70
+{
+[; ;uart.c: 71: BRGH = 0;
+"71
+[e = _BRGH -> -> 0 `i `b ]
+[; ;uart.c: 72: BRG16 = 1;
+"72
+[e = _BRG16 -> -> 1 `i `b ]
+[; ;uart.c: 73: SPBRG = 64;
+"73
+[e = _SPBRG -> -> 64 `i `uc ]
+"74
+}
+[; ;uart.c: 74: }
+[e $U 147  ]
+"75
+[e :U 146 ]
+[; ;uart.c: 75: else if( cBaudTemp == ( 4 ) )
+[e $ ! == -> _cBaudTemp `i -> 4 `i 148  ]
+[; ;uart.c: 76: {
+"76
+{
+[; ;uart.c: 77: SPBRG = 34;
+"77
+[e = _SPBRG -> -> 34 `i `uc ]
+[; ;uart.c: 78: BRGH = 1;
+"78
+[e = _BRGH -> -> 1 `i `b ]
+[; ;uart.c: 79: BRG16 = 1;
+"79
+[e = _BRG16 -> -> 1 `i `b ]
+"80
+}
+[e :U 148 ]
+"82
+[e :U 147 ]
+[e :U 145 ]
+[e :U 143 ]
+[; ;uart.c: 80: }
+[; ;uart.c: 82: SYNC = 0;
+[e = _SYNC -> -> 0 `i `b ]
+[; ;uart.c: 83: SPEN = 1;
+"83
+[e = _SPEN -> -> 1 `i `b ]
+[; ;uart.c: 84: CREN = 1;
+"84
+[e = _CREN -> -> 1 `i `b ]
+[; ;uart.c: 85: TXEN = 1;
+"85
+[e = _TXEN -> -> 1 `i `b ]
+[; ;uart.c: 86: TX9 = 0;
+"86
+[e = _TX9 -> -> 0 `i `b ]
+[; ;uart.c: 87: RX9 = 0;
+"87
+[e = _RX9 -> -> 0 `i `b ]
+[; ;uart.c: 88: ADDEN = 0;
+"88
+[e = _ADDEN -> -> 0 `i `b ]
+[; ;uart.c: 89: RCIE = 1;
+"89
+[e = _RCIE -> -> 1 `i `b ]
+[; ;uart.c: 90: TXIE = 0;
+"90
+[e = _TXIE -> -> 0 `i `b ]
+[; ;uart.c: 91: }
+"91
+[e :UE 141 ]
+}
+"105
+[v _vCheckError `(v  1 ef ]
+{
+[; ;uart.c: 104: void vCheckError( void )
+[; ;uart.c: 105: {
+[e :U _vCheckError ]
+[f ]
+"106
+[v _a `uc  1 a ]
+[; ;uart.c: 106: unsigned char a = 0;
+[e = _a -> -> 0 `i `uc ]
+[; ;uart.c: 107: if ( OERR )
+"107
+[e $ ! _OERR 150  ]
+[; ;uart.c: 108: {
+"108
+{
+[; ;uart.c: 109: CREN = 0;
+"109
+[e = _CREN -> -> 0 `i `b ]
+[; ;uart.c: 110: CREN = 1;
+"110
+[e = _CREN -> -> 1 `i `b ]
+"111
 }
 [e :U 150 ]
-[; ;main.c: 151: }
-[; ;main.c: 152: }
-[; ;main.c: 154: if (uartReceiveBufferW != uartReceiveBufferR) {
-"154
-[e $ ! != -> _uartReceiveBufferW `i -> _uartReceiveBufferR `i 152  ]
+[; ;uart.c: 111: }
+[; ;uart.c: 112: if( FERR )
+"112
+[e $ ! _FERR 151  ]
+[; ;uart.c: 113: {
+"113
 {
-[; ;main.c: 155: bufferValue = cGetFromReceiveBuffer();
-"155
-[e = _bufferValue ( _cGetFromReceiveBuffer ..  ]
-[; ;main.c: 156: if (buffer_SM == 1) {
-"156
-[e $ ! == -> _buffer_SM `i -> 1 `i 153  ]
-{
-[; ;main.c: 157: if (bufferValue == '<') {
-"157
-[e $ ! == -> _bufferValue `ui -> 60 `ui 154  ]
-{
-[; ;main.c: 158: buffer_SM = 2;
-"158
-[e = _buffer_SM -> -> 2 `i `uc ]
-"159
+[; ;uart.c: 114: a = RCREG;
+"114
+[e = _a _RCREG ]
+"115
 }
+[e :U 151 ]
+[; ;uart.c: 115: }
+[; ;uart.c: 116: }
+"116
+[e :UE 149 ]
+}
+"130
+[v _putch `(v  1 ef1`uc ]
+{
+[; ;uart.c: 129: void putch( unsigned char c )
+[; ;uart.c: 130: {
+[e :U _putch ]
+[v _c `uc  1 r1 ]
+[f ]
+[; ;uart.c: 131: while( !TXIF )
+"131
+[e $U 153  ]
 [e :U 154 ]
-"160
-}
-[; ;main.c: 159: }
-[; ;main.c: 160: } else if (buffer_SM == 2) {
-[e $U 155  ]
+[; ;uart.c: 132: continue;
+"132
+[e $U 153  ]
 [e :U 153 ]
-[e $ ! == -> _buffer_SM `i -> 2 `i 156  ]
-{
-[; ;main.c: 161: if (bufferValue == 'R') {
-"161
-[e $ ! == -> _bufferValue `ui -> 82 `ui 157  ]
-{
-[; ;main.c: 162: buffer_SM = 3;
-"162
-[e = _buffer_SM -> -> 3 `i `uc ]
-"163
-}
-[; ;main.c: 163: } else {
-[e $U 158  ]
-[e :U 157 ]
-{
-[; ;main.c: 164: buffer_SM = 1;
-"164
-[e = _buffer_SM -> -> 1 `i `uc ]
-"165
-}
-[e :U 158 ]
-"166
-}
-[; ;main.c: 165: }
-[; ;main.c: 166: } else if (buffer_SM == 3) {
-[e $U 159  ]
-[e :U 156 ]
-[e $ ! == -> _buffer_SM `i -> 3 `i 160  ]
-{
-[; ;main.c: 167: if (bufferValue == 'O') {
-"167
-[e $ ! == -> _bufferValue `ui -> 79 `ui 161  ]
-{
-[; ;main.c: 168: buffer_SM = 4;
-"168
-[e = _buffer_SM -> -> 4 `i `uc ]
-"169
-}
-[; ;main.c: 169: } else {
-[e $U 162  ]
-[e :U 161 ]
-{
-[; ;main.c: 170: buffer_SM = 1;
-"170
-[e = _buffer_SM -> -> 1 `i `uc ]
-"171
-}
-[e :U 162 ]
-"172
-}
-[; ;main.c: 171: }
-[; ;main.c: 172: } else if (buffer_SM == 4) {
-[e $U 163  ]
-[e :U 160 ]
-[e $ ! == -> _buffer_SM `i -> 4 `i 164  ]
-{
-[; ;main.c: 173: if (bufferValue == 'L') {
-"173
-[e $ ! == -> _bufferValue `ui -> 76 `ui 165  ]
-{
-[; ;main.c: 174: buffer_SM = 5;
-"174
-[e = _buffer_SM -> -> 5 `i `uc ]
-"175
-}
-[; ;main.c: 175: } else {
-[e $U 166  ]
-[e :U 165 ]
-{
-[; ;main.c: 176: buffer_SM = 1;
-"176
-[e = _buffer_SM -> -> 1 `i `uc ]
-"177
-}
-[e :U 166 ]
-"178
-}
-[; ;main.c: 177: }
-[; ;main.c: 178: } else if (buffer_SM == 5) {
-[e $U 167  ]
-[e :U 164 ]
-[e $ ! == -> _buffer_SM `i -> 5 `i 168  ]
-{
-[; ;main.c: 179: if (bufferValue == 'E') {
-"179
-[e $ ! == -> _bufferValue `ui -> 69 `ui 169  ]
-{
-[; ;main.c: 180: buffer_SM = 6;
-"180
-[e = _buffer_SM -> -> 6 `i `uc ]
-"181
-}
-[; ;main.c: 181: } else {
-[e $U 170  ]
-[e :U 169 ]
-{
-[; ;main.c: 182: buffer_SM = 1;
-"182
-[e = _buffer_SM -> -> 1 `i `uc ]
-"183
-}
-[e :U 170 ]
-"184
-}
-[; ;main.c: 183: }
-[; ;main.c: 184: } else if (buffer_SM == 6) {
-[e $U 171  ]
-[e :U 168 ]
-[e $ ! == -> _buffer_SM `i -> 6 `i 172  ]
-{
-[; ;main.c: 185: if (bufferValue == ':') {
-"185
-[e $ ! == -> _bufferValue `ui -> 58 `ui 173  ]
-{
-[; ;main.c: 186: buffer_SM = 7;
-"186
-[e = _buffer_SM -> -> 7 `i `uc ]
-"187
-}
-[; ;main.c: 187: } else {
-[e $U 174  ]
-[e :U 173 ]
-{
-[; ;main.c: 188: buffer_SM = 1;
-"188
-[e = _buffer_SM -> -> 1 `i `uc ]
-"189
-}
-[e :U 174 ]
-"190
-}
-[; ;main.c: 189: }
-[; ;main.c: 190: } else if (buffer_SM == 7) {
-[e $U 175  ]
-[e :U 172 ]
-[e $ ! == -> _buffer_SM `i -> 7 `i 176  ]
-{
-[; ;main.c: 191: dataBuffer[0] = bufferValue;
-"191
-[e = *U + &U _dataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux _bufferValue ]
-[; ;main.c: 192: for (i = 0; i < 5; ++i) {
-"192
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 5 `i 177  ]
-[e $U 178  ]
-[e :U 177 ]
-{
-[; ;main.c: 193: _delay((unsigned long)((1)*(8000000/4000.0)));
-"193
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 194: dataBuffer[i + 1] = cGetFromReceiveBuffer();
-"194
-[e = *U + &U _dataBuffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux ( _cGetFromReceiveBuffer ..  ]
-[; ;main.c: 195: if (dataBuffer[i + 1] == '<') {
-"195
-[e $ ! == -> *U + &U _dataBuffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux `ui -> 60 `ui 180  ]
-{
-[; ;main.c: 196: buffer_SM = 2;
-"196
-[e = _buffer_SM -> -> 2 `i `uc ]
-[; ;main.c: 197: break;
-"197
-[e $U 178  ]
-"198
-}
-[; ;main.c: 198: } else if (dataBuffer[i + 1] == '>') {
-[e $U 181  ]
-[e :U 180 ]
-[e $ ! == -> *U + &U _dataBuffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux `ui -> 62 `ui 182  ]
-{
-[; ;main.c: 199: buffer_SM = 1;
-"199
-[e = _buffer_SM -> -> 1 `i `uc ]
-[; ;main.c: 200: break;
-"200
-[e $U 178  ]
-"201
-}
-[e :U 182 ]
-"202
-[e :U 181 ]
-[; ;main.c: 201: }
-[; ;main.c: 202: buffer_SM = 8;
-[e = _buffer_SM -> -> 8 `i `uc ]
-"203
-}
-"192
-[e =+ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 5 `i 177  ]
-[e :U 178 ]
-"203
-}
-"204
-}
-[; ;main.c: 203: }
-[; ;main.c: 204: } else if (buffer_SM == 8) {
-[e $U 183  ]
-[e :U 176 ]
-[e $ ! == -> _buffer_SM `i -> 8 `i 184  ]
-{
-[; ;main.c: 205: if (bufferValue == '>') {
-"205
-[e $ ! == -> _bufferValue `ui -> 62 `ui 185  ]
-{
-[; ;main.c: 206: for (i = 0; i < 6; ++i) {
-"206
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 6 `i 186  ]
-[e $U 187  ]
-[e :U 186 ]
-{
-[; ;main.c: 207: if (dataBuffer[i] == 'A')
-"207
-[e $ ! == -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `ui -> 65 `ui 189  ]
-[; ;main.c: 208: vSetRelay(i + 1, 1);
-"208
-[e ( _vSetRelay (2 , -> + -> _i `i -> 1 `i `uc -> -> 1 `i `uc ]
-[e $U 190  ]
-"209
-[e :U 189 ]
-[; ;main.c: 209: else if (dataBuffer[i] == 'K')
-[e $ ! == -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `ui -> 75 `ui 191  ]
-[; ;main.c: 210: vSetRelay(i + 1, 0);
-"210
-[e ( _vSetRelay (2 , -> + -> _i `i -> 1 `i `uc -> -> 0 `i `uc ]
-[e $U 192  ]
-"211
-[e :U 191 ]
-[; ;main.c: 211: else if (dataBuffer[i] == '0') {
-[e $ ! == -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `ui -> 48 `ui 193  ]
-{
-[; ;main.c: 212: vPulseRelay(i + 1, 50);
-"212
-[e ( _vPulseRelay (2 , -> + -> _i `i -> 1 `i `uc -> -> 50 `i `uc ]
-"213
-}
-[; ;main.c: 213: } else if (((dataBuffer[i] - 48) > 0) && ((dataBuffer[i] - 48) <= 9)) {
-[e $U 194  ]
-[e :U 193 ]
-[e $ ! && > - -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `i -> 48 `i -> 0 `i <= - -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `i -> 48 `i -> 9 `i 195  ]
-{
-[; ;main.c: 214: vPulseRelay(i + 1, (dataBuffer[i] - 48)*5);
-"214
-[e ( _vPulseRelay (2 , -> + -> _i `i -> 1 `i `uc -> * - -> *U + &U _dataBuffer * -> _i `ux -> -> # *U &U _dataBuffer `ui `ux `i -> 48 `i -> 5 `i `uc ]
-"215
-}
-[e :U 195 ]
-"216
-[e :U 194 ]
-[e :U 192 ]
-[e :U 190 ]
-}
-"206
-[e =+ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 6 `i 186  ]
-[e :U 187 ]
-"216
-}
-[; ;main.c: 215: }
-[; ;main.c: 216: }
-[; ;main.c: 217: vAddToUartTransmitBuffer('<');
-"217
-[e ( _vAddToUartTransmitBuffer (1 -> -> 60 `ui `uc ]
-[; ;main.c: 218: vAddToUartTransmitBuffer('O');
-"218
-[e ( _vAddToUartTransmitBuffer (1 -> -> 79 `ui `uc ]
-[; ;main.c: 219: vAddToUartTransmitBuffer('K');
-"219
-[e ( _vAddToUartTransmitBuffer (1 -> -> 75 `ui `uc ]
-[; ;main.c: 220: vAddToUartTransmitBuffer('>');
-"220
-[e ( _vAddToUartTransmitBuffer (1 -> -> 62 `ui `uc ]
-[; ;main.c: 221: buffer_SM = 1;
-"221
-[e = _buffer_SM -> -> 1 `i `uc ]
-[; ;main.c: 222: vSendDataToUart();
-"222
-[e ( _vSendDataToUart ..  ]
-[; ;main.c: 223: setCommunicationTimeOut(3000);
-"223
-[e ( _setCommunicationTimeOut (1 -> -> 3000 `i `ui ]
-"224
-}
-[; ;main.c: 224: } else {
-[e $U 196  ]
-[e :U 185 ]
-{
-[; ;main.c: 225: buffer_SM = 8;
-"225
-[e = _buffer_SM -> -> 8 `i `uc ]
-"226
-}
-[e :U 196 ]
-"227
-}
-[e :U 184 ]
-"228
-[e :U 183 ]
-[e :U 175 ]
-[e :U 171 ]
-[e :U 167 ]
-[e :U 163 ]
-[e :U 159 ]
+"131
+[e $ ! _TXIF 154  ]
 [e :U 155 ]
+[; ;uart.c: 133: TXREG = c;
+"133
+[e = _TXREG _c ]
+[; ;uart.c: 134: }
+"134
+[e :UE 152 ]
 }
-[e :U 152 ]
-"229
-}
-[e :U 147 ]
-"128
-[e $U 148  ]
-[e :U 149 ]
-[; ;main.c: 226: }
-[; ;main.c: 227: }
-[; ;main.c: 228: }
-[; ;main.c: 229: }
-[; ;main.c: 230: }
-"230
-[e :UE 146 ]
-}
-"232
-[v F1850 `(v  1 tf ]
-[v _erdem `IF1850  1 e ]
-{
-[; ;main.c: 232: void interrupt erdem(void) {
-[e :U _erdem ]
-[f ]
-"233
-[v _temp `uc  1 a ]
-[; ;main.c: 233: unsigned char temp;
-[; ;main.c: 236: if (T0IE && T0IF) {
-"236
-[e $ ! && _T0IE _T0IF 198  ]
-{
-[; ;main.c: 237: TMR0 = 190;
-"237
-[e = _TMR0 -> -> 190 `i `uc ]
-[; ;main.c: 239: if (--tim10Hz == 0)
-"239
-[e $ ! == -> =- _tim10Hz -> -> 1 `i `uc `i -> 0 `i 199  ]
-[; ;main.c: 240: {
-"240
-{
-[; ;main.c: 241: tim10Hz = 12;
-"241
-[e = _tim10Hz -> -> 12 `i `uc ]
-[; ;main.c: 243: if ((--RELAY_1_Timer == 0) && RELAY_1_Timer_En) {
-"243
-[e $ ! && == -> =- _RELAY_1_Timer -> -> 1 `i `uc `i -> 0 `i _RELAY_1_Timer_En 200  ]
-{
-[; ;main.c: 244: (PORTDbits.RD1) = 0;
-"244
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 245: RELAY_1_Timer_En = 0;
-"245
-[e = _RELAY_1_Timer_En -> -> 0 `i `b ]
-"246
-}
-[e :U 200 ]
-[; ;main.c: 246: }
-[; ;main.c: 247: if ((--RELAY_2_Timer == 0) && RELAY_2_Timer_En) {
-"247
-[e $ ! && == -> =- _RELAY_2_Timer -> -> 1 `i `uc `i -> 0 `i _RELAY_2_Timer_En 201  ]
-{
-[; ;main.c: 248: (PORTDbits.RD2) = 0;
-"248
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 249: RELAY_2_Timer_En = 0;
-"249
-[e = _RELAY_2_Timer_En -> -> 0 `i `b ]
-"250
-}
-[e :U 201 ]
-[; ;main.c: 250: }
-[; ;main.c: 251: if ((--RELAY_3_Timer == 0) && RELAY_3_Timer_En) {
-"251
-[e $ ! && == -> =- _RELAY_3_Timer -> -> 1 `i `uc `i -> 0 `i _RELAY_3_Timer_En 202  ]
-{
-[; ;main.c: 252: (PORTDbits.RD3) = 0;
-"252
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 253: RELAY_3_Timer_En = 0;
-"253
-[e = _RELAY_3_Timer_En -> -> 0 `i `b ]
-"254
-}
-[e :U 202 ]
-[; ;main.c: 254: }
-[; ;main.c: 255: if ((--RELAY_4_Timer == 0) && RELAY_4_Timer_En) {
-"255
-[e $ ! && == -> =- _RELAY_4_Timer -> -> 1 `i `uc `i -> 0 `i _RELAY_4_Timer_En 203  ]
-{
-[; ;main.c: 256: (PORTCbits.RC4) = 0;
-"256
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 257: RELAY_4_Timer_En = 0;
-"257
-[e = _RELAY_4_Timer_En -> -> 0 `i `b ]
-"258
-}
-[e :U 203 ]
-[; ;main.c: 258: }
-[; ;main.c: 259: if ((--RELAY_5_Timer == 0) && RELAY_5_Timer_En) {
-"259
-[e $ ! && == -> =- _RELAY_5_Timer -> -> 1 `i `uc `i -> 0 `i _RELAY_5_Timer_En 204  ]
-{
-[; ;main.c: 260: (PORTCbits.RC5) = 0;
-"260
-[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 261: RELAY_5_Timer_En = 0;
-"261
-[e = _RELAY_5_Timer_En -> -> 0 `i `b ]
-"262
-}
-[e :U 204 ]
-[; ;main.c: 262: }
-[; ;main.c: 263: if ((--communicationControlTimer == 0) && communicationControlTimer_En) {
-"263
-[e $ ! && == =- _communicationControlTimer -> -> 1 `i `ui -> -> 0 `i `ui _communicationControlTimer_En 205  ]
-{
-[; ;main.c: 264: restartUSR_K2();
-"264
-[e ( _restartUSR_K2 ..  ]
-[; ;main.c: 265: communicationControlTimer = 3000;
-"265
-[e = _communicationControlTimer -> -> 3000 `i `ui ]
-"266
-}
-[e :U 205 ]
-[; ;main.c: 266: }
-[; ;main.c: 268: if (--tim2Hz == 0)
-"268
-[e $ ! == -> =- _tim2Hz -> -> 1 `i `uc `i -> 0 `i 206  ]
-[; ;main.c: 269: {
-"269
-{
-[; ;main.c: 270: tim2Hz = 5;
-"270
-[e = _tim2Hz -> -> 5 `i `uc ]
-[; ;main.c: 271: if (--tim1sec == 0)
-"271
-[e $ ! == -> =- _tim1sec -> -> 1 `i `uc `i -> 0 `i 207  ]
-[; ;main.c: 272: {
-"272
-{
-[; ;main.c: 273: tim1sec = 2;
-"273
-[e = _tim1sec -> -> 2 `i `uc ]
-[; ;main.c: 274: (PORTDbits.RD0) ^= 1;
-"274
-[e =^ . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"275
-}
-[e :U 207 ]
-"276
-}
-[e :U 206 ]
-"277
-}
-[e :U 199 ]
-[; ;main.c: 275: }
-[; ;main.c: 276: }
-[; ;main.c: 277: }
-[; ;main.c: 279: T0IF = 0;
-"279
-[e = _T0IF -> -> 0 `i `b ]
-[; ;main.c: 280: return;
-"280
-[e $UE 197  ]
-"281
-}
-[e :U 198 ]
-[; ;main.c: 281: }
-[; ;main.c: 283: if (RCIE && RCIF) {
-"283
-[e $ ! && _RCIE _RCIF 208  ]
-{
-[; ;main.c: 284: if (OERR) {
-"284
-[e $ ! _OERR 209  ]
-{
-[; ;main.c: 285: CREN = 0;
-"285
-[e = _CREN -> -> 0 `i `b ]
-[; ;main.c: 286: CREN = 1;
-"286
-[e = _CREN -> -> 1 `i `b ]
-"287
-}
-[e :U 209 ]
-[; ;main.c: 287: }
-[; ;main.c: 288: if (FERR) {
-"288
-[e $ ! _FERR 210  ]
-{
-[; ;main.c: 289: temp = RCREG;
-"289
-[e = _temp _RCREG ]
-"290
-}
-[e :U 210 ]
-[; ;main.c: 290: }
-[; ;main.c: 291: while (!RCIF) {
-"291
-[e $U 211  ]
-[e :U 212 ]
-{
-[; ;main.c: 292: vCheckError();
-"292
-[e ( _vCheckError ..  ]
-"293
-}
-[e :U 211 ]
-"291
-[e $ ! _RCIF 212  ]
-[e :U 213 ]
-[; ;main.c: 293: }
-[; ;main.c: 295: temp = RCREG;
-"295
-[e = _temp _RCREG ]
-[; ;main.c: 296: vAddToUartReceiveBuffer(temp);
-"296
-[e ( _vAddToUartReceiveBuffer (1 _temp ]
-[; ;main.c: 297: return;
-"297
-[e $UE 197  ]
-"298
-}
-[e :U 208 ]
-[; ;main.c: 298: }
-[; ;main.c: 300: if (TXIE && TXIF) {
-"300
-[e $ ! && _TXIE _TXIF 214  ]
-{
-[; ;main.c: 301: if (uartTransmitBufferR != uartTransmitBufferW) {
-"301
-[e $ ! != -> _uartTransmitBufferR `i -> _uartTransmitBufferW `i 215  ]
-{
-[; ;main.c: 302: temp = cGetFromTxBuffer();
-"302
-[e = _temp ( _cGetFromTxBuffer ..  ]
-[; ;main.c: 303: TXREG = temp;
-"303
-[e = _TXREG _temp ]
-"304
-}
-[; ;main.c: 304: } else {
-[e $U 216  ]
-[e :U 215 ]
-{
-[; ;main.c: 305: TXIE = 0;
-"305
-[e = _TXIE -> -> 0 `i `b ]
-[; ;main.c: 306: TXIF = 0;
-"306
-[e = _TXIF -> -> 0 `i `b ]
-"307
-}
-[e :U 216 ]
-[; ;main.c: 307: }
-[; ;main.c: 308: return;
-"308
-[e $UE 197  ]
-"309
-}
-[e :U 214 ]
-[; ;main.c: 309: }
-[; ;main.c: 310: return;
-"310
-[e $UE 197  ]
-[; ;main.c: 311: }
-"311
-[e :UE 197 ]
-}
-"325
-[v _vPulseRelay `(v  1 ef2`uc`uc ]
-{
-[; ;main.c: 325: void vPulseRelay(unsigned char relay, unsigned char timerValue) {
-[e :U _vPulseRelay ]
-[v _relay `uc  1 r1 ]
-[v _timerValue `uc  1 r2 ]
-[f ]
-[; ;main.c: 326: switch (relay) {
-"326
-[e $U 219  ]
-{
-[; ;main.c: 327: case 1:
-"327
-[e :U 220 ]
-[; ;main.c: 328: (PORTDbits.RD1) = 1;
-"328
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 329: RELAY_1_Timer = timerValue;
-"329
-[e = _RELAY_1_Timer _timerValue ]
-[; ;main.c: 330: RELAY_1_Timer_En = 1;
-"330
-[e = _RELAY_1_Timer_En -> -> 1 `i `b ]
-[; ;main.c: 331: break;
-"331
-[e $U 218  ]
-[; ;main.c: 332: case 2:
-"332
-[e :U 221 ]
-[; ;main.c: 333: (PORTDbits.RD2) = 1;
-"333
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 334: RELAY_2_Timer = timerValue;
-"334
-[e = _RELAY_2_Timer _timerValue ]
-[; ;main.c: 335: RELAY_2_Timer_En = 1;
-"335
-[e = _RELAY_2_Timer_En -> -> 1 `i `b ]
-[; ;main.c: 336: break;
-"336
-[e $U 218  ]
-[; ;main.c: 337: case 3:
-"337
-[e :U 222 ]
-[; ;main.c: 338: (PORTDbits.RD3) = 1;
-"338
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 339: RELAY_3_Timer = timerValue;
-"339
-[e = _RELAY_3_Timer _timerValue ]
-[; ;main.c: 340: RELAY_3_Timer_En = 1;
-"340
-[e = _RELAY_3_Timer_En -> -> 1 `i `b ]
-[; ;main.c: 341: break;
-"341
-[e $U 218  ]
-[; ;main.c: 342: case 4:
-"342
-[e :U 223 ]
-[; ;main.c: 343: (PORTCbits.RC4) = 1;
-"343
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 344: RELAY_4_Timer = timerValue;
-"344
-[e = _RELAY_4_Timer _timerValue ]
-[; ;main.c: 345: RELAY_4_Timer_En = 1;
-"345
-[e = _RELAY_4_Timer_En -> -> 1 `i `b ]
-[; ;main.c: 346: break;
-"346
-[e $U 218  ]
-[; ;main.c: 347: case 5:
-"347
-[e :U 224 ]
-[; ;main.c: 348: (PORTCbits.RC5) = 1;
-"348
-[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 349: RELAY_5_Timer = timerValue;
-"349
-[e = _RELAY_5_Timer _timerValue ]
-[; ;main.c: 350: RELAY_5_Timer_En = 1;
-"350
-[e = _RELAY_5_Timer_En -> -> 1 `i `b ]
-[; ;main.c: 351: break;
-"351
-[e $U 218  ]
-[; ;main.c: 352: default:
-"352
-[e :U 225 ]
-[; ;main.c: 353: break;
-"353
-[e $U 218  ]
-"354
-}
-[; ;main.c: 354: }
-[e $U 218  ]
-"326
-[e :U 219 ]
-[e [\ _relay , $ -> -> 1 `i `uc 220
- , $ -> -> 2 `i `uc 221
- , $ -> -> 3 `i `uc 222
- , $ -> -> 4 `i `uc 223
- , $ -> -> 5 `i `uc 224
- 225 ]
-"354
-[e :U 218 ]
-[; ;main.c: 355: }
-"355
-[e :UE 217 ]
-}
-"369
-[v _vSetRelay `(v  1 ef2`uc`uc ]
-{
-[; ;main.c: 369: void vSetRelay(unsigned char relay, unsigned char value) {
-[e :U _vSetRelay ]
-[v _relay `uc  1 r1 ]
-[v _value `uc  1 r2 ]
-[f ]
-[; ;main.c: 370: switch (relay) {
-"370
-[e $U 228  ]
-{
-[; ;main.c: 371: case 1:
-"371
-[e :U 229 ]
-[; ;main.c: 372: (PORTDbits.RD1) = value;
-"372
-[e = . . _PORTDbits 0 1 _value ]
-[; ;main.c: 373: break;
-"373
-[e $U 227  ]
-[; ;main.c: 374: case 2:
-"374
-[e :U 230 ]
-[; ;main.c: 375: (PORTDbits.RD2) = value;
-"375
-[e = . . _PORTDbits 0 2 _value ]
-[; ;main.c: 376: break;
-"376
-[e $U 227  ]
-[; ;main.c: 377: case 3:
-"377
-[e :U 231 ]
-[; ;main.c: 378: (PORTDbits.RD3) = value;
-"378
-[e = . . _PORTDbits 0 3 _value ]
-[; ;main.c: 379: break;
-"379
-[e $U 227  ]
-[; ;main.c: 380: case 4:
-"380
-[e :U 232 ]
-[; ;main.c: 381: (PORTCbits.RC4) = value;
-"381
-[e = . . _PORTCbits 0 4 _value ]
-[; ;main.c: 382: break;
-"382
-[e $U 227  ]
-[; ;main.c: 383: case 5:
-"383
-[e :U 233 ]
-[; ;main.c: 384: (PORTCbits.RC5) = value;
-"384
-[e = . . _PORTCbits 0 5 _value ]
-[; ;main.c: 385: break;
-"385
-[e $U 227  ]
-[; ;main.c: 386: default:
-"386
-[e :U 234 ]
-[; ;main.c: 387: break;
-"387
-[e $U 227  ]
-"388
-}
-[; ;main.c: 388: }
-[e $U 227  ]
-"370
-[e :U 228 ]
-[e [\ _relay , $ -> -> 1 `i `uc 229
- , $ -> -> 2 `i `uc 230
- , $ -> -> 3 `i `uc 231
- , $ -> -> 4 `i `uc 232
- , $ -> -> 5 `i `uc 233
- 234 ]
-"388
-[e :U 227 ]
-[; ;main.c: 389: }
-"389
-[e :UE 226 ]
-}
-"402
-[v _vInitializeBoard `(v  1 ef ]
-{
-[; ;main.c: 402: void vInitializeBoard(void) {
-[e :U _vInitializeBoard ]
-[f ]
-[; ;main.c: 403: PORTA = 0;
-"403
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 404: PORTB = 0;
-"404
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 405: PORTC = 0;
-"405
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;main.c: 406: PORTD = 0;
-"406
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;main.c: 407: PORTE = 0;
-"407
-[e = _PORTE -> -> 0 `i `uc ]
-[; ;main.c: 409: OSCCON = 0b01110101;
-"409
-[e = _OSCCON -> -> 117 `i `uc ]
-[; ;main.c: 411: CM1CON0 = 0;
-"411
-[e = _CM1CON0 -> -> 0 `i `uc ]
-[; ;main.c: 412: CM2CON0 = 0;
-"412
-[e = _CM2CON0 -> -> 0 `i `uc ]
-[; ;main.c: 413: C1ON = 0;
-"413
-[e = _C1ON -> -> 0 `i `b ]
-[; ;main.c: 414: C2ON = 0;
-"414
-[e = _C2ON -> -> 0 `i `b ]
-[; ;main.c: 416: WDTCON = 0b00010110;
-"416
-[e = _WDTCON -> -> 22 `i `uc ]
-[; ;main.c: 417: OPTION_REG = 0b10000111;
-"417
-[e = _OPTION_REG -> -> 135 `i `uc ]
-[; ;main.c: 418: INTCON = 0;
-"418
-[e = _INTCON -> -> 0 `i `uc ]
-[; ;main.c: 419: PIE1 = 0;
-"419
-[e = _PIE1 -> -> 0 `i `uc ]
-[; ;main.c: 420: PIE2 = 0;
-"420
-[e = _PIE2 -> -> 0 `i `uc ]
-[; ;main.c: 422: ANSELH = 0;
-"422
-[e = _ANSELH -> -> 0 `i `uc ]
-[; ;main.c: 423: ANSEL = 0;
-"423
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 424: WPUB = 0;
-"424
-[e = _WPUB -> -> 0 `i `uc ]
-[; ;main.c: 426: T0IF = 0;
-"426
-[e = _T0IF -> -> 0 `i `b ]
-[; ;main.c: 427: T0IE = 1;
-"427
-[e = _T0IE -> -> 1 `i `b ]
-[; ;main.c: 429: TRISA = 0b00000000;
-"429
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 430: TRISB = 0b00110111;
-"430
-[e = _TRISB -> -> 55 `i `uc ]
-[; ;main.c: 431: TRISC = 0b11000000;
-"431
-[e = _TRISC -> -> 192 `i `uc ]
-[; ;main.c: 432: TRISD = 0b00000000;
-"432
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 433: TRISE = 0b00000000;
-"433
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;main.c: 434: (TRISCbits.TRISC3) = 0;
-"434
-[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 435: (PORTCbits.RC3) = 0;
-"435
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 437: PORTA = 0;
-"437
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 438: PORTB = 0;
-"438
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 439: PORTC = 0;
-"439
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;main.c: 440: PORTD = 0;
-"440
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;main.c: 441: PORTE = 0;
-"441
-[e = _PORTE -> -> 0 `i `uc ]
-[; ;main.c: 443: tim10Hz = 5;
-"443
-[e = _tim10Hz -> -> 5 `i `uc ]
-[; ;main.c: 444: tim2Hz = 5;
-"444
-[e = _tim2Hz -> -> 5 `i `uc ]
-[; ;main.c: 445: tim1sec = 2;
-"445
-[e = _tim1sec -> -> 2 `i `uc ]
-[; ;main.c: 446: }
-"446
-[e :UE 235 ]
-}
-"459
-[v _vAddToUartReceiveBuffer `(v  1 ef1`uc ]
-{
-[; ;main.c: 459: void vAddToUartReceiveBuffer(unsigned char data) {
-[e :U _vAddToUartReceiveBuffer ]
-[v _data `uc  1 r1 ]
-[f ]
-[; ;main.c: 460: uartReceiveBuffer[ uartReceiveBufferW ] = data;
-"460
-[e = *U + &U _uartReceiveBuffer * -> _uartReceiveBufferW `ux -> -> # *U &U _uartReceiveBuffer `ui `ux _data ]
-[; ;main.c: 461: uartReceiveBufferW++;
-"461
-[e ++ _uartReceiveBufferW -> -> 1 `i `uc ]
-[; ;main.c: 462: if (uartReceiveBufferW == ( 90 )) {
-"462
-[e $ ! == -> _uartReceiveBufferW `i -> 90 `i 237  ]
-{
-[; ;main.c: 463: uartReceiveBufferW = 0;
-"463
-[e = _uartReceiveBufferW -> -> 0 `i `uc ]
-"464
-}
-[e :U 237 ]
-[; ;main.c: 464: }
-[; ;main.c: 465: }
-"465
-[e :UE 236 ]
-}
-"478
-[v _cGetFromReceiveBuffer `(uc  1 ef ]
-{
-[; ;main.c: 478: unsigned char cGetFromReceiveBuffer(void) {
-[e :U _cGetFromReceiveBuffer ]
-[f ]
-"479
-[v _value `uc  1 a ]
-[; ;main.c: 479: unsigned char value;
-[; ;main.c: 481: value = uartReceiveBuffer[uartReceiveBufferR];
-"481
-[e = _value *U + &U _uartReceiveBuffer * -> _uartReceiveBufferR `ux -> -> # *U &U _uartReceiveBuffer `ui `ux ]
-[; ;main.c: 482: uartReceiveBufferR++;
-"482
-[e ++ _uartReceiveBufferR -> -> 1 `i `uc ]
-[; ;main.c: 483: if (uartReceiveBufferR == ( 90 )) {
-"483
-[e $ ! == -> _uartReceiveBufferR `i -> 90 `i 239  ]
-{
-[; ;main.c: 484: uartReceiveBufferR = 0;
-"484
-[e = _uartReceiveBufferR -> -> 0 `i `uc ]
-"485
-}
-[e :U 239 ]
-[; ;main.c: 485: }
-[; ;main.c: 486: return value;
-"486
-[e ) _value ]
-[e $UE 238  ]
-[; ;main.c: 487: }
-"487
-[e :UE 238 ]
-}
-"500
-[v _vAddToUartTransmitBuffer `(v  1 ef1`uc ]
-{
-[; ;main.c: 500: void vAddToUartTransmitBuffer(unsigned char data) {
-[e :U _vAddToUartTransmitBuffer ]
-[v _data `uc  1 r1 ]
-[f ]
-[; ;main.c: 501: uartTransmitBuffer[uartTransmitBufferW] = data;
-"501
-[e = *U + &U _uartTransmitBuffer * -> _uartTransmitBufferW `ux -> -> # *U &U _uartTransmitBuffer `ui `ux _data ]
-[; ;main.c: 502: uartTransmitBufferW++;
-"502
-[e ++ _uartTransmitBufferW -> -> 1 `i `uc ]
-[; ;main.c: 503: if (uartTransmitBufferW == ( 60 )) {
-"503
-[e $ ! == -> _uartTransmitBufferW `i -> 60 `i 241  ]
-{
-[; ;main.c: 504: uartTransmitBufferW = 0;
-"504
-[e = _uartTransmitBufferW -> -> 0 `i `uc ]
-"505
-}
-[e :U 241 ]
-[; ;main.c: 505: }
-[; ;main.c: 506: }
-"506
-[e :UE 240 ]
-}
-"519
-[v _cGetFromTxBuffer `(uc  1 ef ]
-{
-[; ;main.c: 519: unsigned char cGetFromTxBuffer(void) {
-[e :U _cGetFromTxBuffer ]
-[f ]
-"520
-[v _value `uc  1 a ]
-[; ;main.c: 520: unsigned char value;
-[; ;main.c: 522: value = uartTransmitBuffer[uartTransmitBufferR];
-"522
-[e = _value *U + &U _uartTransmitBuffer * -> _uartTransmitBufferR `ux -> -> # *U &U _uartTransmitBuffer `ui `ux ]
-[; ;main.c: 523: uartTransmitBufferR++;
-"523
-[e ++ _uartTransmitBufferR -> -> 1 `i `uc ]
-[; ;main.c: 524: if (uartTransmitBufferR == ( 60 )) {
-"524
-[e $ ! == -> _uartTransmitBufferR `i -> 60 `i 243  ]
-{
-[; ;main.c: 525: uartTransmitBufferR = 0;
-"525
-[e = _uartTransmitBufferR -> -> 0 `i `uc ]
-"526
-}
-[e :U 243 ]
-[; ;main.c: 526: }
-[; ;main.c: 527: return value;
-"527
-[e ) _value ]
-[e $UE 242  ]
-[; ;main.c: 528: }
-"528
-[e :UE 242 ]
-}
-"541
+"147
 [v _vSendDataToUart `(v  1 ef ]
 {
-[; ;main.c: 541: void vSendDataToUart(void) {
+[; ;uart.c: 147: void vSendDataToUart(void) {
 [e :U _vSendDataToUart ]
 [f ]
-[; ;main.c: 542: TXIF = 0;
-"542
+[; ;uart.c: 148: TXIF = 0;
+"148
 [e = _TXIF -> -> 0 `i `b ]
-[; ;main.c: 543: TXIE = 1;
-"543
+[; ;uart.c: 149: TXIE = 1;
+"149
 [e = _TXIE -> -> 1 `i `b ]
-[; ;main.c: 544: }
-"544
-[e :UE 244 ]
-}
-"546
-[v _setCommunicationTimeOut `(v  1 ef1`ui ]
-{
-[; ;main.c: 546: void setCommunicationTimeOut(unsigned int value) {
-[e :U _setCommunicationTimeOut ]
-[v _value `ui  1 r1 ]
-[f ]
-[; ;main.c: 547: communicationControlTimer = value;
-"547
-[e = _communicationControlTimer _value ]
-[; ;main.c: 548: communicationControlTimer_En = 1;
-"548
-[e = _communicationControlTimer_En -> -> 1 `i `b ]
-[; ;main.c: 549: }
-"549
-[e :UE 245 ]
-}
-"551
-[v _restartUSR_K2 `(v  1 ef ]
-{
-[; ;main.c: 551: void restartUSR_K2(void) {
-[e :U _restartUSR_K2 ]
-[f ]
-[; ;main.c: 552: (PORTCbits.RC3) = 1;
-"552
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 556: _delay((unsigned long)((40)*(8000000/4000.0)));
-"556
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 557: _delay((unsigned long)((40)*(8000000/4000.0)));
-"557
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 558: _delay((unsigned long)((40)*(8000000/4000.0)));
-"558
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 559: _delay((unsigned long)((40)*(8000000/4000.0)));
-"559
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 560: _delay((unsigned long)((40)*(8000000/4000.0)));
-"560
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 561: _delay((unsigned long)((40)*(8000000/4000.0)));
-"561
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 562: _delay((unsigned long)((40)*(8000000/4000.0)));
-"562
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 563: (PORTCbits.RC3) = 0;
-"563
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 568: setCommunicationTimeOut(3000);
-"568
-[e ( _setCommunicationTimeOut (1 -> -> 3000 `i `ui ]
-[; ;main.c: 569: }
-"569
-[e :UE 246 ]
+[; ;uart.c: 150: }
+"150
+[e :UE 156 ]
 }

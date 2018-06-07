@@ -5,8 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>../include/HardwareProfile.h</itemPath>
-      <itemPath>../include/commands.h</itemPath>
-      <itemPath>../include/includes.h</itemPath>
+      <itemPath>../include/StringSerialProtocol.h</itemPath>
+      <itemPath>../include/main.h</itemPath>
       <itemPath>../include/uart.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
@@ -14,6 +14,7 @@
                    projectFiles="true">
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/uart.c</itemPath>
+      <itemPath>../src/StringSerialProtocol.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -64,7 +65,7 @@
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories" value="..\src;..\include"/>
         <property key="identifier-length" value="31"/>
         <property key="operation-mode" value="lite"/>
         <property key="optimization-assembler" value="true"/>
@@ -274,7 +275,7 @@
         <targetDevice>PIC16F887</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>RealICEPlatformTool</platformTool>
+        <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>hi-tech-picc</languageToolchain>
         <languageToolchainVersion>9.83</languageToolchainVersion>
         <platform>3</platform>
@@ -305,7 +306,7 @@
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="define-macros" value=""/>
-        <property key="extra-include-directories" value="..\src;..\include"/>
+        <property key="extra-include-directories" value="..\src;..\include;..\"/>
         <property key="identifier-length" value="31"/>
         <property key="operation-mode" value="pro"/>
         <property key="optimization-assembler" value="true"/>

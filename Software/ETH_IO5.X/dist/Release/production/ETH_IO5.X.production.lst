@@ -1,0 +1,3435 @@
+
+
+HI-TECH Software PIC PRO Macro Assembler V9.83 build 10920 
+                                                                                               Thu Jun 07 21:23:27 2018
+
+HI-TECH Software Omniscient Code Generator (PRO mode) build 10920
+     1                           	processor	16F887
+     2                           	opt	pw 120
+     3                           	opt	pm
+     4                           	psect	config,global,class=CONFIG,delta=2
+     5                           	psect	strings,global,class=STRING,delta=2
+     6                           	psect	nvBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	cinit,global,class=CODE,delta=2
+     8                           	psect	bitbssCOMMON,global,bit,class=COMMON,space=1,delta=1
+     9                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	bssBANK1,global,class=BANK1,space=1,delta=1
+    12                           	psect	bssBANK3,global,class=BANK3,space=1,delta=1
+    13                           	psect	clrtext,global,class=CODE,delta=2
+    14                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    15                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    16                           	psect	maintext,global,class=CODE,delta=2
+    17                           	psect	text457,local,class=CODE,delta=2
+    18                           	psect	text469,local,class=CODE,delta=2
+    19                           	psect	text470,local,class=CODE,delta=2
+    20                           	psect	text471,local,class=CODE,delta=2
+    21                           	psect	text472,local,class=CODE,delta=2
+    22                           	psect	intentry,global,class=CODE,delta=2
+    23                           	psect	text478,local,class=CODE,delta=2
+    24                           	psect	pa_nodes,global,class=CODE,delta=2
+    25                           	dabs	1,0x7E,2
+    26  000A                     	;#
+    27                           
+    28                           	psect	config
+    29  2007  E02C               	dw	57388	;#
+    30                           
+    31                           	psect	strings
+    32  0436                     __pstrings:	
+    33  0436                     stringtab:	
+    34                           ;	global	stringdir,stringtab,__stringbase
+    35                           
+    36  0436                     stringcode:	
+    37                           ;	String table - string pointers are 1 byte each
+    38                           
+    39  0436                     stringdir:	
+    40  0436  3004               	movlw	high stringdir
+    41  0437  008A               	movwf	10
+    42  0438  0804               	movf	4,w
+    43  0439  0A84               	incf	4,f
+    44  043A  0782               	addwf	2,f
+    45  043B                     __stringbase:	
+    46  043B  3400               	retlw	0
+    47  043C                     _PULSE:	
+    48  043C  3450               	retlw	80
+    49  043D  3455               	retlw	85
+    50  043E  344C               	retlw	76
+    51  043F  3453               	retlw	83
+    52  0440  3445               	retlw	69
+    53  0441  3400               	retlw	0
+    54  0442                     _ROLE:	
+    55  0442  3452               	retlw	82
+    56  0443  344F               	retlw	79
+    57  0444  344C               	retlw	76
+    58  0445  3445               	retlw	69
+    59  0446  3400               	retlw	0
+    60                           
+    61                           	psect	nvBANK0
+    62  004D                     __pnvBANK0:	
+    63  004D                     _tim10Hz:	
+    64  004D                     	ds	1
+    65  004E                     _tim1sec:	
+    66  004E                     	ds	1
+    67  004F                     _tim2Hz:	
+    68  004F                     	ds	1
+    69  000B                     _INTCON	set	11
+    70  0005                     _PORTA	set	5
+    71  0006                     _PORTB	set	6
+    72  0006                     _PORTBbits	set	6
+    73  0007                     _PORTC	set	7
+    74  0007                     _PORTCbits	set	7
+    75  0008                     _PORTD	set	8
+    76  0008                     _PORTDbits	set	8
+    77  0009                     _PORTE	set	9
+    78  001A                     _RCREG	set	26
+    79  0001                     _TMR0	set	1
+    80  0019                     _TXREG	set	25
+    81  00C3                     _ADDEN	set	195
+    82  00C4                     _CREN	set	196
+    83  00C2                     _FERR	set	194
+    84  005F                     _GIE	set	95
+    85  00C1                     _OERR	set	193
+    86  005E                     _PEIE	set	94
+    87  0065                     _RCIF	set	101
+    88  00C6                     _RX9	set	198
+    89  00C7                     _SPEN	set	199
+    90  005D                     _T0IE	set	93
+    91  005A                     _T0IF	set	90
+    92  0064                     _TXIF	set	100
+    93  0081                     _OPTION_REG	set	129
+    94  008F                     _OSCCON	set	143
+    95  008C                     _PIE1	set	140
+    96  008D                     _PIE2	set	141
+    97  0099                     _SPBRG	set	153
+    98  0085                     _TRISA	set	133
+    99  0086                     _TRISB	set	134
+   100  0087                     _TRISC	set	135
+   101  0087                     _TRISCbits	set	135
+   102  0088                     _TRISD	set	136
+   103  0089                     _TRISE	set	137
+   104  0095                     _WPUB	set	149
+   105  04C2                     _BRGH	set	1218
+   106  0465                     _RCIE	set	1125
+   107  04C4                     _SYNC	set	1220
+   108  04C6                     _TX9	set	1222
+   109  04C5                     _TXEN	set	1221
+   110  0464                     _TXIE	set	1124
+   111  0107                     _CM1CON0	set	263
+   112  0108                     _CM2CON0	set	264
+   113  0105                     _WDTCON	set	261
+   114  083F                     _C1ON	set	2111
+   115  0847                     _C2ON	set	2119
+   116  0188                     _ANSEL	set	392
+   117  0189                     _ANSELH	set	393
+   118  0C3B                     _BRG16	set	3131
+   119                           
+   120                           	psect	cinit
+   121  03FE                     start_initialization:	
+   122  03FE  3020               	movlw	low __pbssBANK0
+   123                           
+   124                           ; Clear objects allocated to BITCOMMON
+   125  03FF  01F0               	clrf	(__pbitbssCOMMON/(0+8))& (0+127)
+   126                           
+   127                           ; Clear objects allocated to COMMON
+   128  0400  01F9               	clrf	__pbssCOMMON& (0+127)
+   129  0401  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   130  0402  01FB               	clrf	(__pbssCOMMON+2)& (0+127)
+   131  0403  01FC               	clrf	(__pbssCOMMON+3)& (0+127)
+   132                           
+   133                           ; Clear objects allocated to BANK0
+   134  0404  1383               	bcf	3,7	;select IRP bank0
+   135  0405  0084               	movwf	4
+   136  0406  303E               	movlw	low (__pbssBANK0+30)
+   137  0407  120A  118A  2447   	fcall	clear_ram
+      +       120A  118A         
+   138                           
+   139                           ; Clear objects allocated to BANK1
+   140  040C  30A0               	movlw	low __pbssBANK1
+   141  040D  0084               	movwf	4
+   142  040E  30DC               	movlw	low (__pbssBANK1+60)
+   143  040F  120A  118A  2447   	fcall	clear_ram
+      +       120A  118A         
+   144  0414  3090               	movlw	low __pbssBANK3
+   145                           
+   146                           ; Clear objects allocated to BANK3
+   147  0415  1783               	bsf	3,7	;select IRP bank2
+   148  0416  0084               	movwf	4
+   149  0417  30CC               	movlw	low (__pbssBANK3+60)
+   150  0418  120A  118A  2447   	fcall	clear_ram
+   151  041B                     end_of_initialization:	
+   152                           ;End of C runtime variable initialization code
+   153                           
+   154  041B  0183               	clrf	3
+   155  041C  120A  118A  2BD7   	ljmp	_main	;jump to C main() function
+   156                           
+   157                           	psect	bitbssCOMMON
+   158  0380                     __pbitbssCOMMON:	
+   159  0380                     _RELAY_1_Timer_En:	
+   160  0380                     	ds	1
+   161  0381                     _RELAY_2_Timer_En:	
+   162  0381                     	ds	1
+   163  0382                     _RELAY_3_Timer_En:	
+   164  0382                     	ds	1
+   165  0383                     _RELAY_4_Timer_En:	
+   166  0383                     	ds	1
+   167  0384                     _RELAY_5_Timer_En:	
+   168  0384                     	ds	1
+   169  0385                     _communicationControlTimer_En:	
+   170  0385                     	ds	1
+   171  0386                     _debounceTimerEnable:	
+   172  0386                     	ds	1
+   173  0387                     _debounceTimerTimeoutFlag:	
+   174  0387                     	ds	1
+   175                           
+   176                           	psect	bssCOMMON
+   177  0079                     __pbssCOMMON:	
+   178  0079                     _debounceTimer:	
+   179  0079                     	ds	1
+   180  007A                     _inputPort:	
+   181  007A                     	ds	1
+   182  007B                     _uartTransmitBufferR:	
+   183  007B                     	ds	1
+   184  007C                     _uartTransmitBufferW:	
+   185  007C                     	ds	1
+   186                           
+   187                           	psect	bssBANK0
+   188  0020                     __pbssBANK0:	
+   189  0020                     _commandBuffer:	
+   190  0020                     	ds	5
+   191  0025                     _RELAY_1_Timer:	
+   192  0025                     	ds	2
+   193  0027                     _RELAY_2_Timer:	
+   194  0027                     	ds	2
+   195  0029                     _RELAY_3_Timer:	
+   196  0029                     	ds	2
+   197  002B                     _RELAY_4_Timer:	
+   198  002B                     	ds	2
+   199  002D                     _RELAY_5_Timer:	
+   200  002D                     	ds	2
+   201  002F                     _communicationControlTimer:	
+   202  002F                     	ds	2
+   203  0031                     CheckInputs@state:	
+   204  0031                     	ds	1
+   205  0032                     _commandCharCounter:	
+   206  0032                     	ds	1
+   207  0033                     _dataCounter:	
+   208  0033                     	ds	1
+   209  0034                     _state:	
+   210  0034                     	ds	1
+   211  0035                     _tim1min:	
+   212  0035                     	ds	1
+   213  0036                     _uartReceiveBufferR:	
+   214  0036                     	ds	1
+   215  0037                     _uartReceiveBufferW:	
+   216  0037                     	ds	1
+   217  0038                     _dataBuffer:	
+   218  0038                     	ds	6
+   219                           
+   220                           	psect	bssBANK1
+   221  00A0                     __pbssBANK1:	
+   222  00A0                     _uartReceiveBuffer:	
+   223  00A0                     	ds	60
+   224                           
+   225                           	psect	bssBANK3
+   226  0190                     __pbssBANK3:	
+   227  0190                     _uartTransmitBuffer:	
+   228  0190                     	ds	60
+   229                           
+   230                           	psect	clrtext
+   231  0447                     clear_ram:	
+   232                           ;	Called with FSR containing the base address, and
+   233                           ;	W with the last address+1
+   234                           
+   235  0447  0064               	clrwdt	;clear the watchdog before getting into this loop
+   236  0448                     clrloop:	
+   237  0448  0180               	clrf	0	;clear RAM location pointed to by FSR
+   238  0449  0A84               	incf	4,f	;increment pointer
+   239  044A  0604               	xorwf	4,w	;XOR with final address
+   240  044B  1903               	btfsc	3,2	;have we reached the end yet?
+   241  044C  3400               	retlw	0	;all done for this memory range, return
+   242  044D  0604               	xorwf	4,w	;XOR again to restore value
+   243  044E  2C48               	goto	clrloop	;do the next byte
+   244                           
+   245                           	psect	cstackCOMMON
+   246  0071                     __pcstackCOMMON:	
+   247  0071                     ?_vInitializeBoard:	
+   248  0071                     ?_vInitializeUart:	
+   249                           ; 0 bytes @ 0x0
+   250                           
+   251  0071                     ?_InitializeInputs:	
+   252                           ; 0 bytes @ 0x0
+   253                           
+   254  0071                     ?_CheckInputs:	
+   255                           ; 0 bytes @ 0x0
+   256                           
+   257  0071                     ?_StringSerialProtocolService:	
+   258                           ; 0 bytes @ 0x0
+   259                           
+   260  0071                     ?_restartUSR_K2:	
+   261                           ; 0 bytes @ 0x0
+   262                           
+   263  0071                     ?_vCheckError:	
+   264                           ; 0 bytes @ 0x0
+   265                           
+   266  0071                     ??_vCheckError:	
+   267                           ; 0 bytes @ 0x0
+   268                           
+   269  0071                     ?_vAddToUartReceiveBuffer:	
+   270                           ; 0 bytes @ 0x0
+   271                           
+   272  0071                     ??_vAddToUartReceiveBuffer:	
+   273                           ; 0 bytes @ 0x0
+   274                           
+   275  0071                     ??_cGetFromTxBuffer:	
+   276                           ; 0 bytes @ 0x0
+   277                           
+   278  0071                     ?_vAddToUartTransmitBuffer:	
+   279                           ; 0 bytes @ 0x0
+   280                           
+   281  0071                     ?_vSendDataToUart:	
+   282                           ; 0 bytes @ 0x0
+   283                           
+   284  0071                     ?_erdem:	
+   285                           ; 0 bytes @ 0x0
+   286                           
+   287  0071                     ?_setDebounceTimer:	
+   288                           ; 0 bytes @ 0x0
+   289                           
+   290  0071                     ?i1_setCommunicationTimeOut:	
+   291                           ; 0 bytes @ 0x0
+   292                           
+   293  0071                     ?_cGetFromTxBuffer:	
+   294                           ; 0 bytes @ 0x0
+   295                           
+   296  0071                     ?_cGetFromReceiveBuffer:	
+   297                           ; 1 bytes @ 0x0
+   298                           
+   299  0071                     ?_CheckCommand:	
+   300                           ; 1 bytes @ 0x0
+   301                           
+   302  0071                     ?_main:	
+   303                           ; 1 bytes @ 0x0
+   304                           
+   305  0071                     vAddToUartReceiveBuffer@data:	
+   306                           ; 2 bytes @ 0x0
+   307                           
+   308  0071                     cGetFromTxBuffer@value:	
+   309                           ; 1 bytes @ 0x0
+   310                           
+   311  0071                     i1setCommunicationTimeOut@value:	
+   312                           ; 1 bytes @ 0x0
+   313                           
+   314                           
+   315                           ; 2 bytes @ 0x0
+   316  0071                     	ds	2
+   317  0073                     ??_restartUSR_K2:	
+   318  0073                     ??i1_setCommunicationTimeOut:	
+   319                           ; 0 bytes @ 0x2
+   320                           
+   321                           
+   322                           ; 0 bytes @ 0x2
+   323  0073                     	ds	2
+   324  0075                     ??_erdem:	
+   325                           
+   326                           ; 0 bytes @ 0x4
+   327  0075                     	ds	3
+   328  0078                     erdem@temp:	
+   329                           
+   330                           ; 1 bytes @ 0x7
+   331  0078                     	ds	1
+   332                           
+   333                           	psect	cstackBANK0
+   334  003E                     __pcstackBANK0:	
+   335  003E                     ??_vInitializeBoard:	
+   336  003E                     ??_vInitializeUart:	
+   337                           ; 0 bytes @ 0x0
+   338                           
+   339  003E                     ??_InitializeInputs:	
+   340                           ; 0 bytes @ 0x0
+   341                           
+   342  003E                     ?_setCommunicationTimeOut:	
+   343                           ; 0 bytes @ 0x0
+   344                           
+   345  003E                     ??_vAddToUartTransmitBuffer:	
+   346                           ; 0 bytes @ 0x0
+   347                           
+   348  003E                     ??_vSendDataToUart:	
+   349                           ; 0 bytes @ 0x0
+   350                           
+   351  003E                     ??_cGetFromReceiveBuffer:	
+   352                           ; 0 bytes @ 0x0
+   353                           
+   354  003E                     ??_CheckCommand:	
+   355                           ; 0 bytes @ 0x0
+   356                           
+   357  003E                     ?_vSetRelay:	
+   358                           ; 0 bytes @ 0x0
+   359                           
+   360  003E                     ??_setDebounceTimer:	
+   361                           ; 0 bytes @ 0x0
+   362                           
+   363  003E                     ?___bmul:	
+   364                           ; 0 bytes @ 0x0
+   365                           
+   366  003E                     ?___wmul:	
+   367                           ; 1 bytes @ 0x0
+   368                           
+   369  003E                     vSetRelay@value:	
+   370                           ; 2 bytes @ 0x0
+   371                           
+   372  003E                     setDebounceTimer@value:	
+   373                           ; 1 bytes @ 0x0
+   374                           
+   375  003E                     vAddToUartTransmitBuffer@data:	
+   376                           ; 1 bytes @ 0x0
+   377                           
+   378  003E                     cGetFromReceiveBuffer@value:	
+   379                           ; 1 bytes @ 0x0
+   380                           
+   381  003E                     ___bmul@multiplicand:	
+   382                           ; 1 bytes @ 0x0
+   383                           
+   384  003E                     setCommunicationTimeOut@value:	
+   385                           ; 1 bytes @ 0x0
+   386                           
+   387  003E                     ___wmul@multiplier:	
+   388                           ; 2 bytes @ 0x0
+   389                           
+   390                           
+   391                           ; 2 bytes @ 0x0
+   392  003E                     	ds	1
+   393  003F                     ??_CheckInputs:	
+   394  003F                     ??_vSetRelay:	
+   395                           ; 0 bytes @ 0x1
+   396                           
+   397  003F                     ??___bmul:	
+   398                           ; 0 bytes @ 0x1
+   399                           
+   400  003F                     vSetRelay@relay:	
+   401                           ; 0 bytes @ 0x1
+   402                           
+   403  003F                     CheckCommand@command:	
+   404                           ; 1 bytes @ 0x1
+   405                           
+   406  003F                     ___bmul@product:	
+   407                           ; 1 bytes @ 0x1
+   408                           
+   409                           
+   410                           ; 1 bytes @ 0x1
+   411  003F                     	ds	1
+   412  0040                     ??_setCommunicationTimeOut:	
+   413  0040                     CheckCommand@result:	
+   414                           ; 0 bytes @ 0x2
+   415                           
+   416  0040                     ___bmul@multiplier:	
+   417                           ; 1 bytes @ 0x2
+   418                           
+   419  0040                     ___wmul@multiplicand:	
+   420                           ; 1 bytes @ 0x2
+   421                           
+   422                           
+   423                           ; 2 bytes @ 0x2
+   424  0040                     	ds	1
+   425  0041                     CheckCommand@size:	
+   426                           
+   427                           ; 1 bytes @ 0x3
+   428  0041                     	ds	1
+   429  0042                     ??___wmul:	
+   430  0042                     CheckCommand@i:	
+   431                           ; 0 bytes @ 0x4
+   432                           
+   433  0042                     ___wmul@product:	
+   434                           ; 1 bytes @ 0x4
+   435                           
+   436                           
+   437                           ; 2 bytes @ 0x4
+   438  0042                     	ds	2
+   439  0044                     ?_vPulseRelay:	
+   440  0044                     vPulseRelay@timerValue:	
+   441                           ; 0 bytes @ 0x6
+   442                           
+   443                           
+   444                           ; 2 bytes @ 0x6
+   445  0044                     	ds	2
+   446  0046                     ??_vPulseRelay:	
+   447  0046                     vPulseRelay@relay:	
+   448                           ; 0 bytes @ 0x8
+   449                           
+   450                           
+   451                           ; 1 bytes @ 0x8
+   452  0046                     	ds	1
+   453  0047                     ??_StringSerialProtocolService:	
+   454                           
+   455                           ; 0 bytes @ 0x9
+   456  0047                     	ds	3
+   457  004A                     StringSerialProtocolService@pulseDelay:	
+   458                           
+   459                           ; 1 bytes @ 0xC
+   460  004A                     	ds	1
+   461  004B                     StringSerialProtocolService@lastReceivedChar:	
+   462                           
+   463                           ; 1 bytes @ 0xD
+   464  004B                     	ds	1
+   465  004C                     StringSerialProtocolService@i:	
+   466                           
+   467                           ; 1 bytes @ 0xE
+   468  004C                     	ds	1
+   469  004D                     ??_main:	
+   470                           
+   471                           	psect	maintext
+   472  03D7                     __pmaintext:	
+   473                           ; 0 bytes @ 0xF
+   474 ;;Data sizes: Strings 0, constant 11, data 0, bss 154, persistent 3 stack 0
+   475 ;;Auto spaces:   Size  Autos    Used
+   476 ;; COMMON          14      8      13
+   477 ;; BANK0           80     15      48
+   478 ;; BANK1           80      0      60
+   479 ;; BANK3           96      0      60
+   480 ;; BANK2           96      0       0
+   481 ;;
+   482 ;; Pointer list with targets:
+   483 ;; ?___wmul	unsigned int  size(1) Largest target is 0
+   484 ;;
+   485 ;;
+   486 ;; Critical Paths under _main in COMMON
+   487 ;;
+   488 ;;   None.
+   489 ;;
+   490 ;; Critical Paths under _erdem in COMMON
+   491 ;;
+   492 ;;   _erdem->_restartUSR_K2
+   493 ;;   _restartUSR_K2->i1_setCommunicationTimeOut
+   494 ;;
+   495 ;; Critical Paths under _main in BANK0
+   496 ;;
+   497 ;;   _main->_StringSerialProtocolService
+   498 ;;   _StringSerialProtocolService->_vPulseRelay
+   499 ;;   _CheckInputs->_setDebounceTimer
+   500 ;;   _CheckInputs->_vAddToUartTransmitBuffer
+   501 ;;   _vPulseRelay->___wmul
+   502 ;;
+   503 ;; Critical Paths under _erdem in BANK0
+   504 ;;
+   505 ;;   None.
+   506 ;;
+   507 ;; Critical Paths under _main in BANK1
+   508 ;;
+   509 ;;   None.
+   510 ;;
+   511 ;; Critical Paths under _erdem in BANK1
+   512 ;;
+   513 ;;   None.
+   514 ;;
+   515 ;; Critical Paths under _main in BANK3
+   516 ;;
+   517 ;;   None.
+   518 ;;
+   519 ;; Critical Paths under _erdem in BANK3
+   520 ;;
+   521 ;;   None.
+   522 ;;
+   523 ;; Critical Paths under _main in BANK2
+   524 ;;
+   525 ;;   None.
+   526 ;;
+   527 ;; Critical Paths under _erdem in BANK2
+   528 ;;
+   529 ;;   None.
+   530 ;;
+   531 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   532 ;;
+   533 ;;
+   534 ;;Call Graph Tables:
+   535 ;;
+   536 ;; ---------------------------------------------------------------------------------
+   537 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   538 ;; ---------------------------------------------------------------------------------
+   539 ;; (0) _main                                                 0     0      0    1304
+   540 ;;                   _vInitializeBoard
+   541 ;;                    _vInitializeUart
+   542 ;;                   _InitializeInputs
+   543 ;;            _setCommunicationTimeOut
+   544 ;;                        _CheckInputs
+   545 ;;        _StringSerialProtocolService
+   546 ;; ---------------------------------------------------------------------------------
+   547 ;; (1) _StringSerialProtocolService                          6     6      0    1149
+   548 ;;                                              9 BANK0      6     6      0
+   549 ;;              _cGetFromReceiveBuffer
+   550 ;;                       _CheckCommand
+   551 ;;                          _vSetRelay
+   552 ;;                        _vPulseRelay
+   553 ;;                             ___wmul
+   554 ;;           _vAddToUartTransmitBuffer
+   555 ;;                    _vSendDataToUart
+   556 ;;            _setCommunicationTimeOut
+   557 ;;                             ___bmul
+   558 ;; ---------------------------------------------------------------------------------
+   559 ;; (1) _CheckInputs                                          1     1      0      44
+   560 ;;                                              1 BANK0      1     1      0
+   561 ;;                   _setDebounceTimer
+   562 ;;           _vAddToUartTransmitBuffer
+   563 ;;                    _vSendDataToUart
+   564 ;; ---------------------------------------------------------------------------------
+   565 ;; (2) ___wmul                                               6     2      4      92
+   566 ;;                                              0 BANK0      6     2      4
+   567 ;; ---------------------------------------------------------------------------------
+   568 ;; (2) ___bmul                                               3     2      1      92
+   569 ;;                                              0 BANK0      3     2      1
+   570 ;; ---------------------------------------------------------------------------------
+   571 ;; (2) _CheckCommand                                         5     5      0     232
+   572 ;;                                              0 BANK0      5     5      0
+   573 ;; ---------------------------------------------------------------------------------
+   574 ;; (2) _cGetFromReceiveBuffer                                1     1      0      23
+   575 ;;                                              0 BANK0      1     1      0
+   576 ;; ---------------------------------------------------------------------------------
+   577 ;; (2) _vSendDataToUart                                      0     0      0       0
+   578 ;; ---------------------------------------------------------------------------------
+   579 ;; (2) _vAddToUartTransmitBuffer                             1     1      0      22
+   580 ;;                                              0 BANK0      1     1      0
+   581 ;; ---------------------------------------------------------------------------------
+   582 ;; (2) _setDebounceTimer                                     1     1      0      22
+   583 ;;                                              0 BANK0      1     1      0
+   584 ;; ---------------------------------------------------------------------------------
+   585 ;; (2) _vSetRelay                                            2     1      1     132
+   586 ;;                                              0 BANK0      2     1      1
+   587 ;; ---------------------------------------------------------------------------------
+   588 ;; (2) _vPulseRelay                                          3     1      2     132
+   589 ;;                                              6 BANK0      3     1      2
+   590 ;;                             ___wmul (ARG)
+   591 ;; ---------------------------------------------------------------------------------
+   592 ;; (2) _setCommunicationTimeOut                              2     0      2      22
+   593 ;;                                              0 BANK0      2     0      2
+   594 ;; ---------------------------------------------------------------------------------
+   595 ;; (1) _InitializeInputs                                     0     0      0       0
+   596 ;; ---------------------------------------------------------------------------------
+   597 ;; (1) _vInitializeUart                                      1     1      0      89
+   598 ;;                                              0 BANK0      1     1      0
+   599 ;; ---------------------------------------------------------------------------------
+   600 ;; (1) _vInitializeBoard                                     0     0      0       0
+   601 ;; ---------------------------------------------------------------------------------
+   602 ;; Estimated maximum stack depth 2
+   603 ;; ---------------------------------------------------------------------------------
+   604 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   605 ;; ---------------------------------------------------------------------------------
+   606 ;; (3) _erdem                                                4     4      0     165
+   607 ;;                                              4 COMMON     4     4      0
+   608 ;;                      _restartUSR_K2
+   609 ;;                        _vCheckError
+   610 ;;            _vAddToUartReceiveBuffer
+   611 ;;                   _cGetFromTxBuffer
+   612 ;; ---------------------------------------------------------------------------------
+   613 ;; (4) _restartUSR_K2                                        2     2      0      73
+   614 ;;                                              2 COMMON     2     2      0
+   615 ;;          i1_setCommunicationTimeOut
+   616 ;; ---------------------------------------------------------------------------------
+   617 ;; (5) i1_setCommunicationTimeOut                            2     0      2      73
+   618 ;;                                              0 COMMON     2     0      2
+   619 ;; ---------------------------------------------------------------------------------
+   620 ;; (4) _cGetFromTxBuffer                                     1     1      0      23
+   621 ;;                                              0 COMMON     1     1      0
+   622 ;; ---------------------------------------------------------------------------------
+   623 ;; (4) _vAddToUartReceiveBuffer                              1     1      0      22
+   624 ;;                                              0 COMMON     1     1      0
+   625 ;; ---------------------------------------------------------------------------------
+   626 ;; (4) _vCheckError                                          1     1      0       0
+   627 ;; ---------------------------------------------------------------------------------
+   628 ;; Estimated maximum stack depth 5
+   629 ;; ---------------------------------------------------------------------------------
+   630 ;; Call Graph Graphs:
+   631 ;; _main (ROOT)
+   632 ;;   _vInitializeBoard
+   633 ;;   _vInitializeUart
+   634 ;;   _InitializeInputs
+   635 ;;   _setCommunicationTimeOut
+   636 ;;   _CheckInputs
+   637 ;;     _setDebounceTimer
+   638 ;;     _vAddToUartTransmitBuffer
+   639 ;;     _vSendDataToUart
+   640 ;;   _StringSerialProtocolService
+   641 ;;     _cGetFromReceiveBuffer
+   642 ;;     _CheckCommand
+   643 ;;     _vSetRelay
+   644 ;;     _vPulseRelay
+   645 ;;       ___wmul (ARG)
+   646 ;;     ___wmul
+   647 ;;     _vAddToUartTransmitBuffer
+   648 ;;     _vSendDataToUart
+   649 ;;     _setCommunicationTimeOut
+   650 ;;     ___bmul
+   651 ;;
+   652 ;; _erdem (ROOT)
+   653 ;;   _restartUSR_K2
+   654 ;;     i1_setCommunicationTimeOut
+   655 ;;   _vCheckError
+   656 ;;   _vAddToUartReceiveBuffer
+   657 ;;   _cGetFromTxBuffer
+   658 ;;
+   659 ;; Address spaces:
+   660 ;;Name               Size   Autos  Total    Cost      Usage
+   661 ;;BITCOMMON            E      0       1       0        7.1%
+   662 ;;EEDATA             100      0       0       0        0.0%
+   663 ;;NULL                 0      0       0       0        0.0%
+   664 ;;CODE                 0      0       0       0        0.0%
+   665 ;;COMMON               E      8       D       1       92.9%
+   666 ;;BITSFR0              0      0       0       1        0.0%
+   667 ;;SFR0                 0      0       0       1        0.0%
+   668 ;;BITSFR1              0      0       0       2        0.0%
+   669 ;;SFR1                 0      0       0       2        0.0%
+   670 ;;STACK                0      0       8       2        0.0%
+   671 ;;ABS                  0      0      B5       3        0.0%
+   672 ;;BITBANK0            50      0       0       4        0.0%
+   673 ;;BITSFR3              0      0       0       4        0.0%
+   674 ;;SFR3                 0      0       0       4        0.0%
+   675 ;;BANK0               50      F      30       5       60.0%
+   676 ;;BITSFR2              0      0       0       5        0.0%
+   677 ;;SFR2                 0      0       0       5        0.0%
+   678 ;;BITBANK1            50      0       0       6        0.0%
+   679 ;;BANK1               50      0      3C       7       75.0%
+   680 ;;BITBANK3            60      0       0       8        0.0%
+   681 ;;BANK3               60      0      3C       9       62.5%
+   682 ;;BITBANK2            60      0       0      10        0.0%
+   683 ;;BANK2               60      0       0      11        0.0%
+   684 ;;DATA                 0      0      BD      12        0.0%
+   685                           
+   686                           
+   687 ;; *************** function _main *****************
+   688 ;; Defined at:
+   689 ;;		line 97 in file "../src/main.c"
+   690 ;; Parameters:    Size  Location     Type
+   691 ;;		None
+   692 ;; Auto vars:     Size  Location     Type
+   693 ;;		None
+   694 ;; Return value:  Size  Location     Type
+   695 ;;                  2  1094[COMMON] int 
+   696 ;; Registers used:
+   697 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   698 ;; Tracked objects:
+   699 ;;		On entry : 17F/0
+   700 ;;		On exit  : 60/0
+   701 ;;		Unchanged: FFE00/0
+   702 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   703 ;;      Params:         0       0       0       0       0
+   704 ;;      Locals:         0       0       0       0       0
+   705 ;;      Temps:          0       0       0       0       0
+   706 ;;      Totals:         0       0       0       0       0
+   707 ;;Total ram usage:        0 bytes
+   708 ;; Hardware stack levels required when called:    5
+   709 ;; This function calls:
+   710 ;;		_vInitializeBoard
+   711 ;;		_vInitializeUart
+   712 ;;		_InitializeInputs
+   713 ;;		_setCommunicationTimeOut
+   714 ;;		_CheckInputs
+   715 ;;		_StringSerialProtocolService
+   716 ;; This function is called by:
+   717 ;;		Startup code after reset
+   718 ;; This function uses a non-reentrant model
+   719 ;;
+   720  03D7                     _main:	
+   721                           
+   722                           ;main.c: 98: vInitializeBoard();
+   723                           
+   724                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   725  03D7  120A  118A  23A4   	fcall	_vInitializeBoard
+      +       120A  118A         
+   726                           
+   727                           ;main.c: 99: vInitializeUart();
+   728  03DC  120A  118A  241F   	fcall	_vInitializeUart
+      +       120A  118A         
+   729                           
+   730                           ;main.c: 100: PEIE = 1;
+   731  03E1  170B               	bsf	11,6
+   732                           
+   733                           ;main.c: 101: GIE = 1;
+   734  03E2  178B               	bsf	11,7
+   735                           
+   736                           ;main.c: 102: (GIE = 1);
+   737  03E3  178B               	bsf	11,7
+   738                           
+   739                           ;main.c: 104: InitializeInputs();
+   740  03E4  120A  118A  244F   	fcall	_InitializeInputs
+      +       120A  118A         
+   741                           
+   742                           ;main.c: 105: setCommunicationTimeOut(3000);
+   743  03E9  30B8               	movlw	184
+   744  03EA  00BE               	movwf	?_setCommunicationTimeOut
+   745  03EB  300B               	movlw	11
+   746  03EC  00BF               	movwf	?_setCommunicationTimeOut+1
+   747  03ED  120A  118A  2267   	fcall	_setCommunicationTimeOut
+      +       120A  118A         
+   748  03F2                     l5873:	
+   749  03F2  0064               	clrwdt	;#
+   750                           
+   751                           ;main.c: 109: CheckInputs();
+   752  03F3  120A  118A  2115   	fcall	_CheckInputs
+      +       120A  118A         
+   753                           
+   754                           ;main.c: 110: StringSerialProtocolService();
+   755  03F8  120A  118A  2011   	fcall	_StringSerialProtocolService
+      +       120A  118A         
+   756  03FD  2BF2               	goto	l5873
+   757  03FE                     __end_of_main:	
+   758                           
+   759                           	psect	text457
+   760  0011                     __ptext457:	
+   761 ;; =============== function _main ends ============
+   762                           
+   763                           
+   764 ;; *************** function _StringSerialProtocolService *****************
+   765 ;; Defined at:
+   766 ;;		line 139 in file "../src/StringSerialProtocol.c"
+   767 ;; Parameters:    Size  Location     Type
+   768 ;;		None
+   769 ;; Auto vars:     Size  Location     Type
+   770 ;;  i               1   14[BANK0 ] unsigned char 
+   771 ;;  lastReceived    1   13[BANK0 ] unsigned char 
+   772 ;;  pulseDelay      1   12[BANK0 ] unsigned char 
+   773 ;; Return value:  Size  Location     Type
+   774 ;;		None               void
+   775 ;; Registers used:
+   776 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   777 ;; Tracked objects:
+   778 ;;		On entry : 60/0
+   779 ;;		On exit  : 60/0
+   780 ;;		Unchanged: FFE00/0
+   781 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   782 ;;      Params:         0       0       0       0       0
+   783 ;;      Locals:         0       3       0       0       0
+   784 ;;      Temps:          0       3       0       0       0
+   785 ;;      Totals:         0       6       0       0       0
+   786 ;;Total ram usage:        6 bytes
+   787 ;; Hardware stack levels used:    1
+   788 ;; Hardware stack levels required when called:    4
+   789 ;; This function calls:
+   790 ;;		_cGetFromReceiveBuffer
+   791 ;;		_CheckCommand
+   792 ;;		_vSetRelay
+   793 ;;		_vPulseRelay
+   794 ;;		___wmul
+   795 ;;		_vAddToUartTransmitBuffer
+   796 ;;		_vSendDataToUart
+   797 ;;		_setCommunicationTimeOut
+   798 ;;		___bmul
+   799 ;; This function is called by:
+   800 ;;		_main
+   801 ;; This function uses a non-reentrant model
+   802 ;;
+   803  0011                     _StringSerialProtocolService:	
+   804                           
+   805                           ;StringSerialProtocol.c: 142: unsigned char pulseDelay = 0;
+   806                           
+   807                           ; Regs used in _StringSerialProtocolService: [wreg-fsr0h+status,2+status,0+btemp+1+pclat
+      +                          h+cstack]
+   808  0011  01CA               	clrf	StringSerialProtocolService@pulseDelay
+   809                           
+   810                           ;StringSerialProtocol.c: 144: if (uartReceiveBufferW != uartReceiveBufferR) {
+   811  0012  0837               	movf	_uartReceiveBufferW,w	;volatile
+   812  0013  0636               	xorwf	_uartReceiveBufferR,w	;volatile
+   813  0014  1903               	skipnz
+   814  0015  0008               	return
+   815                           
+   816                           ;StringSerialProtocol.c: 145: lastReceivedChar = cGetFromReceiveBuffer();
+   817  0016  2241  120A  118A   	fcall	_cGetFromReceiveBuffer
+   818  0019  00CB               	movwf	StringSerialProtocolService@lastReceivedChar
+   819                           
+   820                           ;StringSerialProtocol.c: 147: if (lastReceivedChar == '<') {
+   821  001A  3A3C               	xorlw	60
+   822  001B  1D03               	skipz
+   823  001C  2822               	goto	l5771
+   824                           
+   825                           ;StringSerialProtocol.c: 148: state = WAIT_COMMAND;
+   826  001D  01B4               	clrf	_state
+   827  001E  0AB4               	incf	_state,f
+   828                           
+   829                           ;StringSerialProtocol.c: 149: commandCharCounter = 0;
+   830  001F  01B2               	clrf	_commandCharCounter
+   831                           
+   832                           ;StringSerialProtocol.c: 150: dataCounter = 0;
+   833  0020  01B3               	clrf	_dataCounter
+   834                           
+   835                           ;StringSerialProtocol.c: 151: } else if (state == WAIT_COMMAND) {
+   836  0021  284C               	goto	l5799
+   837  0022                     l5771:	
+   838  0022  0B34               	decfsz	_state,w
+   839  0023  2837               	goto	l5785
+   840                           
+   841                           ;StringSerialProtocol.c: 152: if (lastReceivedChar == ':') {
+   842  0024  084B               	movf	StringSerialProtocolService@lastReceivedChar,w
+   843  0025  3A3A               	xorlw	58
+   844  0026  1D03               	skipz
+   845  0027  282A               	goto	l5777
+   846                           
+   847                           ;StringSerialProtocol.c: 153: state = WAIT_DATA;
+   848  0028  3002               	movlw	2
+   849  0029  2840               	goto	L1
+   850  002A                     l5777:	
+   851                           ;StringSerialProtocol.c: 154: } else if (commandCharCounter < 5) {
+   852                           
+   853  002A  3005               	movlw	5
+   854  002B  0232               	subwf	_commandCharCounter,w
+   855  002C  1803               	skipnc
+   856  002D  2835               	goto	l5783
+   857                           
+   858                           ;StringSerialProtocol.c: 155: commandBuffer[commandCharCounter] = lastReceivedChar;
+   859  002E  0832               	movf	_commandCharCounter,w
+   860  002F  3E20               	addlw	_commandBuffer& (0+255)
+   861  0030  0084               	movwf	4
+   862  0031  084B               	movf	StringSerialProtocolService@lastReceivedChar,w
+   863  0032  0080               	movwf	0
+   864                           
+   865                           ;StringSerialProtocol.c: 156: ++commandCharCounter;
+   866  0033  0AB2               	incf	_commandCharCounter,f
+   867                           
+   868                           ;StringSerialProtocol.c: 157: } else {
+   869  0034  284C               	goto	l5799
+   870  0035                     l5783:	
+   871                           
+   872                           ;StringSerialProtocol.c: 158: state = IDLE;
+   873  0035  01B4               	clrf	_state
+   874  0036  284C               	goto	l5799
+   875  0037                     l5785:	
+   876  0037  0834               	movf	_state,w
+   877  0038  3A02               	xorlw	2
+   878  0039  1D03               	skipz
+   879  003A  284C               	goto	l5799
+   880                           
+   881                           ;StringSerialProtocol.c: 161: if (lastReceivedChar == '>') {
+   882  003B  084B               	movf	StringSerialProtocolService@lastReceivedChar,w
+   883  003C  3A3E               	xorlw	62
+   884  003D  1D03               	skipz
+   885  003E  2842               	goto	l5791
+   886                           
+   887                           ;StringSerialProtocol.c: 162: state = RUN_COMMAND;
+   888  003F  3003               	movlw	3
+   889  0040                     L1:	
+   890  0040  00B4               	movwf	_state
+   891                           
+   892                           ;StringSerialProtocol.c: 163: } else if (dataCounter < 6) {
+   893  0041  284C               	goto	l5799
+   894  0042                     l5791:	
+   895  0042  3006               	movlw	6
+   896  0043  0233               	subwf	_dataCounter,w
+   897  0044  1803               	skipnc
+   898  0045  2835               	goto	l5783
+   899                           
+   900                           ;StringSerialProtocol.c: 164: dataBuffer[dataCounter] = lastReceivedChar;
+   901  0046  0833               	movf	_dataCounter,w
+   902  0047  3E38               	addlw	_dataBuffer& (0+255)
+   903  0048  0084               	movwf	4
+   904  0049  084B               	movf	StringSerialProtocolService@lastReceivedChar,w
+   905  004A  0080               	movwf	0
+   906                           
+   907                           ;StringSerialProtocol.c: 165: ++dataCounter;
+   908  004B  0AB3               	incf	_dataCounter,f
+   909  004C                     l5799:	
+   910                           ;StringSerialProtocol.c: 166: } else {
+   911                           
+   912                           
+   913                           ;StringSerialProtocol.c: 168: }
+   914                           ;StringSerialProtocol.c: 169: }
+   915                           ;StringSerialProtocol.c: 171: if (state == RUN_COMMAND) {
+   916  004C  0834               	movf	_state,w
+   917  004D  3A03               	xorlw	3
+   918  004E  1D03               	skipz
+   919  004F  0008               	return
+   920                           
+   921                           ;StringSerialProtocol.c: 172: if (CheckCommand(1)) {
+   922  0050  3001               	movlw	1
+   923  0051  2200  120A  118A   	fcall	_CheckCommand
+   924  0054  3A00               	xorlw	0
+   925  0055  1903               	skipnz
+   926  0056  28C4               	goto	l5837
+   927                           
+   928                           ;StringSerialProtocol.c: 173: for (i = 0; i < 5; ++i) {
+   929  0057  01CC               	clrf	StringSerialProtocolService@i
+   930  0058                     l5809:	
+   931                           
+   932                           ;StringSerialProtocol.c: 174: if (dataBuffer[i] == 'A')
+   933  0058  084C               	movf	StringSerialProtocolService@i,w
+   934  0059  3E38               	addlw	_dataBuffer& (0+255)
+   935  005A  0084               	movwf	4
+   936  005B  1383               	bcf	3,7	;select IRP bank0
+   937  005C  0800               	movf	0,w
+   938  005D  3A41               	xorlw	65
+   939  005E  1D03               	skipz
+   940  005F  2867               	goto	l5813
+   941                           
+   942                           ;StringSerialProtocol.c: 175: vSetRelay(i + 1, 1);
+   943  0060  01BE               	clrf	?_vSetRelay
+   944  0061  0ABE               	incf	?_vSetRelay,f
+   945  0062  0A4C               	incf	StringSerialProtocolService@i,w
+   946  0063  21CE  120A  118A   	fcall	_vSetRelay
+   947  0066  28B3               	goto	l5827
+   948  0067                     l5813:	
+   949                           
+   950                           ;StringSerialProtocol.c: 176: else if (dataBuffer[i] == 'K')
+   951  0067  084C               	movf	StringSerialProtocolService@i,w
+   952  0068  3E38               	addlw	_dataBuffer& (0+255)
+   953  0069  0084               	movwf	4
+   954  006A  0800               	movf	0,w
+   955  006B  3A4B               	xorlw	75
+   956  006C  1D03               	skipz
+   957  006D  2874               	goto	l5817
+   958                           
+   959                           ;StringSerialProtocol.c: 177: vSetRelay(i + 1, 0);
+   960  006E  01BE               	clrf	?_vSetRelay
+   961  006F  0A4C               	incf	StringSerialProtocolService@i,w
+   962  0070  21CE  120A  118A   	fcall	_vSetRelay
+   963  0073  28B3               	goto	l5827
+   964  0074                     l5817:	
+   965                           
+   966                           ;StringSerialProtocol.c: 178: else if (dataBuffer[i] == '0') {
+   967  0074  084C               	movf	StringSerialProtocolService@i,w
+   968  0075  3E38               	addlw	_dataBuffer& (0+255)
+   969  0076  0084               	movwf	4
+   970  0077  0800               	movf	0,w
+   971  0078  3A30               	xorlw	48
+   972  0079  1D03               	skipz
+   973  007A  287F               	goto	l5821
+   974                           
+   975                           ;StringSerialProtocol.c: 179: vPulseRelay(i + 1, 50);
+   976  007B  3032               	movlw	50
+   977  007C  00C4               	movwf	?_vPulseRelay
+   978  007D  01C5               	clrf	?_vPulseRelay+1
+   979  007E  28AF               	goto	L2
+   980  007F                     l5821:	
+   981                           ;StringSerialProtocol.c: 180: } else if (((dataBuffer[i] - 48) > 0) && ((dataBuffer[i] -
+      +                           48) <= 9)) {
+   982                           
+   983  007F  084C               	movf	StringSerialProtocolService@i,w
+   984  0080  3E38               	addlw	_dataBuffer& (0+255)
+   985  0081  0084               	movwf	4
+   986  0082  2272  120A  118A   	fcall	PL2	;call to abstracted procedure
+   987  0085  1D03               	skipz
+   988  0086  2889               	goto	u1245
+   989  0087  3001               	movlw	1
+   990  0088  0247               	subwf	??_StringSerialProtocolService,w
+   991  0089                     u1245:	
+   992  0089  1C03               	skipc
+   993  008A  28B3               	goto	l5827
+   994  008B  1283               	bcf	3,5	;RP0=0, select bank0
+   995  008C  2286  120A  118A   	fcall	PL4	;call to abstracted procedure
+   996  008F  2272  120A  118A   	fcall	PL2	;call to abstracted procedure
+   997  0092  1D03               	skipz
+   998  0093  2896               	goto	u1255
+   999  0094  300A               	movlw	10
+  1000  0095  0247               	subwf	??_StringSerialProtocolService,w
+  1001  0096                     u1255:	
+  1002  0096  1803               	skipnc
+  1003  0097  28B3               	goto	l5827
+  1004                           
+  1005                           ;StringSerialProtocol.c: 181: vPulseRelay(i + 1, (dataBuffer[i] - 48)*5);
+  1006  0098  1283               	bcf	3,5	;RP0=0, select bank0
+  1007  0099  2286  120A  118A   	fcall	PL4	;call to abstracted procedure
+  1008  009C  0800               	movf	0,w
+  1009  009D  00BE               	movwf	?___wmul
+  1010  009E  30D0               	movlw	208
+  1011  009F  01BF               	clrf	?___wmul+1
+  1012  00A0  07BE               	addwf	?___wmul,f
+  1013  00A1  1803               	skipnc
+  1014  00A2  0ABF               	incf	?___wmul+1,f
+  1015  00A3  30FF               	movlw	255
+  1016  00A4  07BF               	addwf	?___wmul+1,f
+  1017  00A5  3005               	movlw	5
+  1018  00A6  00C0               	movwf	?___wmul+2
+  1019  00A7  01C1               	clrf	?___wmul+3
+  1020  00A8  224E  120A  118A   	fcall	___wmul
+  1021  00AB  083F               	movf	?___wmul+1,w
+  1022  00AC  00C5               	movwf	?_vPulseRelay+1
+  1023  00AD  083E               	movf	?___wmul,w
+  1024  00AE  00C4               	movwf	?_vPulseRelay
+  1025  00AF                     L2:	
+  1026  00AF  0A4C               	incf	StringSerialProtocolService@i,w
+  1027  00B0  2197  120A  118A   	fcall	_vPulseRelay
+  1028  00B3                     l5827:	
+  1029  00B3  1283               	bcf	3,5	;RP0=0, select bank0
+  1030  00B4  1303               	bcf	3,6	;RP1=0, select bank0
+  1031  00B5  3005               	movlw	5
+  1032  00B6  0ACC               	incf	StringSerialProtocolService@i,f
+  1033  00B7  024C               	subwf	StringSerialProtocolService@i,w
+  1034  00B8  1C03               	skipc
+  1035  00B9  2858               	goto	l5809
+  1036  00BA                     l5831:	
+  1037                           
+  1038                           ;StringSerialProtocol.c: 182: }
+  1039                           ;StringSerialProtocol.c: 183: }
+  1040                           ;StringSerialProtocol.c: 184: vAddToUartTransmitBuffer('<');
+  1041  00BA  303C               	movlw	60
+  1042  00BB  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1043                           
+  1044                           ;StringSerialProtocol.c: 185: vAddToUartTransmitBuffer('O');
+  1045  00BE  304F               	movlw	79
+  1046  00BF  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1047                           
+  1048                           ;StringSerialProtocol.c: 186: vAddToUartTransmitBuffer('K');
+  1049  00C2  304B               	movlw	75
+  1050  00C3  2903               	goto	L3
+  1051  00C4                     l5837:	
+  1052                           ;StringSerialProtocol.c: 190: }
+  1053                           
+  1054                           ;StringSerialProtocol.c: 187: vAddToUartTransmitBuffer('>');
+  1055                           
+  1056                           
+  1057                           ;StringSerialProtocol.c: 191: else if (CheckCommand(2)) {
+  1058  00C4  3002               	movlw	2
+  1059  00C5  2200  120A  118A   	fcall	_CheckCommand
+  1060  00C8  3A00               	xorlw	0
+  1061  00C9  1903               	skipnz
+  1062  00CA  2913               	goto	l5863
+  1063                           
+  1064                           ;StringSerialProtocol.c: 192: if (dataCounter == 5) {
+  1065  00CB  0833               	movf	_dataCounter,w
+  1066  00CC  3A05               	xorlw	5
+  1067  00CD  1D03               	skipz
+  1068  00CE  28F2               	goto	l5857
+  1069                           
+  1070                           ;StringSerialProtocol.c: 193: pulseDelay = ((dataBuffer[1] - 48) * 1000) + ((dataBuffer[
+      +                          2] - 48) * 100) + ((dataBuffer[3] - 48) * 10) + (dataBuffer[4] - 48);
+  1071  00CF  30E8               	movlw	232
+  1072  00D0  00BE               	movwf	?___bmul
+  1073  00D1  0839               	movf	_dataBuffer+1,w
+  1074  00D2  2189  120A  118A   	fcall	___bmul
+  1075  00D5  00C7               	movwf	??_StringSerialProtocolService
+  1076  00D6  3064               	movlw	100
+  1077  00D7  00BE               	movwf	?___bmul
+  1078  00D8  083A               	movf	_dataBuffer+2,w
+  1079  00D9  2189  120A  118A   	fcall	___bmul
+  1080  00DC  0747               	addwf	??_StringSerialProtocolService,w
+  1081  00DD  00C8               	movwf	??_StringSerialProtocolService+1
+  1082  00DE  300A               	movlw	10
+  1083  00DF  00BE               	movwf	?___bmul
+  1084  00E0  083B               	movf	_dataBuffer+3,w
+  1085  00E1  2189  120A  118A   	fcall	___bmul
+  1086  00E4  0748               	addwf	??_StringSerialProtocolService+1,w
+  1087  00E5  00C9               	movwf	??_StringSerialProtocolService+2
+  1088  00E6  083C               	movf	_dataBuffer+4,w
+  1089  00E7  0749               	addwf	??_StringSerialProtocolService+2,w
+  1090  00E8  3EB0               	addlw	176
+  1091  00E9  00CA               	movwf	StringSerialProtocolService@pulseDelay
+  1092                           
+  1093                           ;StringSerialProtocol.c: 194: vPulseRelay((dataBuffer[0] - 48), pulseDelay);
+  1094  00EA  00C4               	movwf	?_vPulseRelay
+  1095  00EB  01C5               	clrf	?_vPulseRelay+1
+  1096  00EC  0838               	movf	_dataBuffer,w
+  1097  00ED  3ED0               	addlw	208
+  1098  00EE  2197  120A  118A   	fcall	_vPulseRelay
+  1099  00F1  28BA               	goto	l5831
+  1100  00F2                     l5857:	
+  1101                           ;StringSerialProtocol.c: 198: vAddToUartTransmitBuffer('>');
+  1102                           
+  1103                           ;StringSerialProtocol.c: 197: vAddToUartTransmitBuffer('K');
+  1104                           
+  1105                           ;StringSerialProtocol.c: 196: vAddToUartTransmitBuffer('O');
+  1106                           
+  1107                           ;StringSerialProtocol.c: 195: vAddToUartTransmitBuffer('<');
+  1108                           
+  1109                           
+  1110                           ;StringSerialProtocol.c: 202: else
+  1111                           ;StringSerialProtocol.c: 203: {
+  1112                           ;StringSerialProtocol.c: 204: vAddToUartTransmitBuffer('<');
+  1113  00F2  303C               	movlw	60
+  1114  00F3  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1115                           
+  1116                           ;StringSerialProtocol.c: 205: vAddToUartTransmitBuffer('H');
+  1117  00F6  3048               	movlw	72
+  1118  00F7  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1119                           
+  1120                           ;StringSerialProtocol.c: 206: vAddToUartTransmitBuffer('A');
+  1121  00FA  3041               	movlw	65
+  1122  00FB  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1123                           
+  1124                           ;StringSerialProtocol.c: 207: vAddToUartTransmitBuffer('T');
+  1125  00FE  3054               	movlw	84
+  1126  00FF  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1127                           
+  1128                           ;StringSerialProtocol.c: 208: vAddToUartTransmitBuffer('A');
+  1129  0102  3041               	movlw	65
+  1130  0103                     L3:	
+  1131  0103  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1132                           
+  1133                           ;StringSerialProtocol.c: 209: vAddToUartTransmitBuffer('>');
+  1134  0106  303E               	movlw	62
+  1135  0107  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1136                           
+  1137                           ;StringSerialProtocol.c: 188: vSendDataToUart();
+  1138  010A  223D  120A  118A   	fcall	_vSendDataToUart
+  1139                           
+  1140                           ;StringSerialProtocol.c: 189: setCommunicationTimeOut(3000);
+  1141  010D  30B8               	movlw	184
+  1142  010E  1283               	bcf	3,5	;RP0=0, select bank0
+  1143  010F  00BE               	movwf	?_setCommunicationTimeOut
+  1144  0110  300B               	movlw	11
+  1145  0111  00BF               	movwf	?_setCommunicationTimeOut+1
+  1146  0112  2267               	fcall	_setCommunicationTimeOut
+  1147  0113                     l5863:	
+  1148                           
+  1149                           ;StringSerialProtocol.c: 212: }
+  1150                           ;StringSerialProtocol.c: 214: }
+  1151                           ;StringSerialProtocol.c: 215: state = IDLE;
+  1152  0113  01B4               	clrf	_state
+  1153  0114  0008               	return
+  1154  0115                     __end_of_StringSerialProtocolService:	
+  1155  0115                     __ptext458:	
+  1156 ;; =============== function _StringSerialProtocolService ends ============
+  1157                           
+  1158                           
+  1159 ;; *************** function _CheckInputs *****************
+  1160 ;; Defined at:
+  1161 ;;		line 372 in file "../src/main.c"
+  1162 ;; Parameters:    Size  Location     Type
+  1163 ;;		None
+  1164 ;; Auto vars:     Size  Location     Type
+  1165 ;;		None
+  1166 ;; Return value:  Size  Location     Type
+  1167 ;;		None               void
+  1168 ;; Registers used:
+  1169 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1170 ;; Tracked objects:
+  1171 ;;		On entry : 0/0
+  1172 ;;		On exit  : 60/0
+  1173 ;;		Unchanged: FFE9F/0
+  1174 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1175 ;;      Params:         0       0       0       0       0
+  1176 ;;      Locals:         0       0       0       0       0
+  1177 ;;      Temps:          0       1       0       0       0
+  1178 ;;      Totals:         0       1       0       0       0
+  1179 ;;Total ram usage:        1 bytes
+  1180 ;; Hardware stack levels used:    1
+  1181 ;; Hardware stack levels required when called:    4
+  1182 ;; This function calls:
+  1183 ;;		_setDebounceTimer
+  1184 ;;		_vAddToUartTransmitBuffer
+  1185 ;;		_vSendDataToUart
+  1186 ;; This function is called by:
+  1187 ;;		_main
+  1188 ;; This function uses a non-reentrant model
+  1189 ;;
+  1190  0115                     _CheckInputs:	
+  1191                           
+  1192                           ;main.c: 373: static IO_CHECK_STATES state;
+  1193                           ;main.c: 375: if (state == CHECK_IO) {
+  1194                           
+  1195                           ; Regs used in _CheckInputs: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1196  0115  1283               	bcf	3,5	;RP0=0, select bank0
+  1197  0116  1303               	bcf	3,6	;RP1=0, select bank0
+  1198  0117  08B1               	movf	CheckInputs@state,f
+  1199  0118  1D03               	skipz
+  1200  0119  2924               	goto	l5715
+  1201                           
+  1202                           ;main.c: 376: if (inputPort != (PORTB & 0b00110111)) {
+  1203  011A  0806               	movf	6,w
+  1204  011B  3937               	andlw	55
+  1205  011C  067A               	xorwf	_inputPort,w
+  1206  011D  1903               	skipnz
+  1207  011E  0008               	return
+  1208                           
+  1209                           ;main.c: 377: setDebounceTimer(5);
+  1210  011F  3005               	movlw	5
+  1211  0120  226D               	fcall	_setDebounceTimer
+  1212                           
+  1213                           ;main.c: 378: state = WAIT_DEBOUNCE;
+  1214  0121  01B1               	clrf	CheckInputs@state
+  1215  0122  0AB1               	incf	CheckInputs@state,f
+  1216  0123  0008               	return
+  1217  0124                     l5715:	
+  1218  0124  0B31               	decfsz	CheckInputs@state,w
+  1219  0125  0008               	return
+  1220  0126  1FF0               	btfss	_debounceTimerTimeoutFlag/(0+8),_debounceTimerTimeoutFlag& (0+7)
+  1221  0127  0008               	return
+  1222                           
+  1223                           ;main.c: 381: debounceTimerTimeoutFlag = 0;
+  1224  0128  13F0               	bcf	_debounceTimerTimeoutFlag/(0+8),_debounceTimerTimeoutFlag& (0+7)
+  1225                           
+  1226                           ;main.c: 382: if (inputPort != (PORTB & 0b00110111)) {
+  1227  0129  0806               	movf	6,w
+  1228  012A  3937               	andlw	55
+  1229  012B  067A               	xorwf	_inputPort,w
+  1230  012C  1903               	skipnz
+  1231  012D  2979               	goto	l5757
+  1232                           
+  1233                           ;main.c: 383: inputPort = (PORTB & 0b00110111);
+  1234  012E  0806               	movf	6,w
+  1235  012F  00FA               	movwf	_inputPort
+  1236  0130  3037               	movlw	55
+  1237  0131  05FA               	andwf	_inputPort,f
+  1238                           
+  1239                           ;main.c: 385: vAddToUartTransmitBuffer('<');
+  1240  0132  303C               	movlw	60
+  1241  0133  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1242                           
+  1243                           ;main.c: 386: vAddToUartTransmitBuffer('D');
+  1244  0136  3044               	movlw	68
+  1245  0137  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1246                           
+  1247                           ;main.c: 387: vAddToUartTransmitBuffer('U');
+  1248  013A  3055               	movlw	85
+  1249  013B  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1250                           
+  1251                           ;main.c: 388: vAddToUartTransmitBuffer('R');
+  1252  013E  3052               	movlw	82
+  1253  013F  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1254                           
+  1255                           ;main.c: 389: vAddToUartTransmitBuffer('U');
+  1256  0142  3055               	movlw	85
+  1257  0143  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1258                           
+  1259                           ;main.c: 390: vAddToUartTransmitBuffer('M');
+  1260  0146  304D               	movlw	77
+  1261  0147  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1262                           
+  1263                           ;main.c: 391: vAddToUartTransmitBuffer(':');
+  1264  014A  303A               	movlw	58
+  1265  014B  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1266                           
+  1267                           ;main.c: 392: vAddToUartTransmitBuffer((PORTBbits.RB0) + 48);
+  1268  014E  0806               	movf	6,w	;volatile
+  1269  014F  3901               	andlw	1
+  1270  0150  3E30               	addlw	48
+  1271  0151  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1272                           
+  1273                           ;main.c: 393: vAddToUartTransmitBuffer((PORTBbits.RB1) + 48);
+  1274  0154  0C06               	rrf	6,w	;volatile
+  1275  0155  3901               	andlw	1
+  1276  0156  3E30               	addlw	48
+  1277  0157  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1278                           
+  1279                           ;main.c: 394: vAddToUartTransmitBuffer((PORTBbits.RB2) + 48);
+  1280  015A  0C06               	rrf	6,w	;volatile
+  1281  015B  00BF               	movwf	??_CheckInputs
+  1282  015C  0C3F               	rrf	??_CheckInputs,w
+  1283  015D  3901               	andlw	1
+  1284  015E  3E30               	addlw	48
+  1285  015F  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1286                           
+  1287                           ;main.c: 395: vAddToUartTransmitBuffer((PORTBbits.RB4) + 48);
+  1288  0162  0E06               	swapf	6,w	;volatile
+  1289  0163  3901               	andlw	1
+  1290  0164  3E30               	addlw	48
+  1291  0165  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1292                           
+  1293                           ;main.c: 396: vAddToUartTransmitBuffer((PORTBbits.RB5) + 48);
+  1294  0168  0E06               	swapf	6,w	;volatile
+  1295  0169  00BF               	movwf	??_CheckInputs
+  1296  016A  0C3F               	rrf	??_CheckInputs,w
+  1297  016B  3901               	andlw	1
+  1298  016C  3E30               	addlw	48
+  1299  016D  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1300                           
+  1301                           ;main.c: 397: vAddToUartTransmitBuffer('0');
+  1302  0170  3030               	movlw	48
+  1303  0171  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1304                           
+  1305                           ;main.c: 398: vAddToUartTransmitBuffer('>');
+  1306  0174  303E               	movlw	62
+  1307  0175  217C  120A  118A   	fcall	_vAddToUartTransmitBuffer
+  1308                           
+  1309                           ;main.c: 399: vSendDataToUart();
+  1310  0178  223D               	fcall	_vSendDataToUart
+  1311  0179                     l5757:	
+  1312                           
+  1313                           ;main.c: 400: }
+  1314                           ;main.c: 401: state = CHECK_IO;
+  1315  0179  1283               	bcf	3,5	;RP0=0, select bank0
+  1316  017A  01B1               	clrf	CheckInputs@state
+  1317  017B  0008               	return
+  1318  017C                     __end_of_CheckInputs:	
+  1319  017C                     __ptext464:	
+  1320 ;; =============== function _vSendDataToUart ends ============
+  1321                           
+  1322                           
+  1323 ;; *************** function _vAddToUartTransmitBuffer *****************
+  1324 ;; Defined at:
+  1325 ;;		line 109 in file "../src/StringSerialProtocol.c"
+  1326 ;; Parameters:    Size  Location     Type
+  1327 ;;  data            1    wreg     unsigned char 
+  1328 ;; Auto vars:     Size  Location     Type
+  1329 ;;  data            1    0[BANK0 ] unsigned char 
+  1330 ;; Return value:  Size  Location     Type
+  1331 ;;		None               void
+  1332 ;; Registers used:
+  1333 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1334 ;; Tracked objects:
+  1335 ;;		On entry : 60/0
+  1336 ;;		On exit  : 160/100
+  1337 ;;		Unchanged: FFE9F/0
+  1338 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1339 ;;      Params:         0       0       0       0       0
+  1340 ;;      Locals:         0       1       0       0       0
+  1341 ;;      Temps:          0       0       0       0       0
+  1342 ;;      Totals:         0       1       0       0       0
+  1343 ;;Total ram usage:        1 bytes
+  1344 ;; Hardware stack levels used:    1
+  1345 ;; Hardware stack levels required when called:    3
+  1346 ;; This function calls:
+  1347 ;;		Nothing
+  1348 ;; This function is called by:
+  1349 ;;		_CheckInputs
+  1350 ;;		_StringSerialProtocolService
+  1351 ;; This function uses a non-reentrant model
+  1352 ;;
+  1353  017C                     _vAddToUartTransmitBuffer:	
+  1354                           
+  1355                           ; Regs used in _vAddToUartTransmitBuffer: [wreg-fsr0h+status,2+status,0]
+  1356                           ;vAddToUartTransmitBuffer@data stored from wreg
+  1357  017C  00BE               	movwf	vAddToUartTransmitBuffer@data
+  1358                           
+  1359                           ;StringSerialProtocol.c: 110: uartTransmitBuffer[uartTransmitBufferW] = data;
+  1360  017D  087C               	movf	_uartTransmitBufferW,w
+  1361  017E  3E90               	addlw	_uartTransmitBuffer& (0+255)
+  1362  017F  0084               	movwf	4
+  1363  0180  083E               	movf	vAddToUartTransmitBuffer@data,w
+  1364  0181  1783               	bsf	3,7	;select IRP bank3
+  1365  0182  0080               	movwf	0
+  1366                           
+  1367                           ;StringSerialProtocol.c: 111: uartTransmitBufferW++;
+  1368  0183  0AFC               	incf	_uartTransmitBufferW,f	;volatile
+  1369                           
+  1370                           ;StringSerialProtocol.c: 112: if (uartTransmitBufferW == 60) {
+  1371  0184  087C               	movf	_uartTransmitBufferW,w	;volatile
+  1372  0185  3A3C               	xorlw	60
+  1373  0186  1903               	btfsc	3,2
+  1374                           
+  1375                           ;StringSerialProtocol.c: 113: uartTransmitBufferW = 0;
+  1376  0187  01FC               	clrf	_uartTransmitBufferW	;volatile
+  1377  0188  0008               	return
+  1378  0189                     __end_of_vAddToUartTransmitBuffer:	
+  1379  0189                     __ptext460:	
+  1380 ;; =============== function ___wmul ends ============
+  1381                           
+  1382                           
+  1383 ;; *************** function ___bmul *****************
+  1384 ;; Defined at:
+  1385 ;;		line 3 in file "C:\Program Files (x86)\HI-TECH Software\PICC\9.83\sources\bmul.c"
+  1386 ;; Parameters:    Size  Location     Type
+  1387 ;;  multiplier      1    wreg     unsigned char 
+  1388 ;;  multiplicand    1    0[BANK0 ] unsigned char 
+  1389 ;; Auto vars:     Size  Location     Type
+  1390 ;;  multiplier      1    2[BANK0 ] unsigned char 
+  1391 ;;  product         1    1[BANK0 ] unsigned char 
+  1392 ;; Return value:  Size  Location     Type
+  1393 ;;                  1    wreg      unsigned char 
+  1394 ;; Registers used:
+  1395 ;;		wreg, status,2, status,0
+  1396 ;; Tracked objects:
+  1397 ;;		On entry : 60/0
+  1398 ;;		On exit  : 60/0
+  1399 ;;		Unchanged: FFF9F/0
+  1400 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1401 ;;      Params:         0       1       0       0       0
+  1402 ;;      Locals:         0       2       0       0       0
+  1403 ;;      Temps:          0       0       0       0       0
+  1404 ;;      Totals:         0       3       0       0       0
+  1405 ;;Total ram usage:        3 bytes
+  1406 ;; Hardware stack levels used:    1
+  1407 ;; Hardware stack levels required when called:    3
+  1408 ;; This function calls:
+  1409 ;;		Nothing
+  1410 ;; This function is called by:
+  1411 ;;		_StringSerialProtocolService
+  1412 ;; This function uses a non-reentrant model
+  1413 ;;
+  1414  0189                     ___bmul:	
+  1415                           
+  1416                           ; Regs used in ___bmul: [wreg+status,2+status,0]
+  1417                           ;___bmul@multiplier stored from wreg
+  1418  0189  00C0               	movwf	___bmul@multiplier
+  1419  018A  01BF               	clrf	___bmul@product
+  1420  018B                     l5673:	
+  1421  018B  083E               	movf	___bmul@multiplicand,w
+  1422  018C  1840               	btfsc	___bmul@multiplier,0
+  1423  018D  07BF               	addwf	___bmul@product,f
+  1424  018E  1003               	clrc
+  1425  018F  0DBE               	rlf	___bmul@multiplicand,f
+  1426  0190  1003               	clrc
+  1427  0191  0CC0               	rrf	___bmul@multiplier,f
+  1428  0192  08C0               	movf	___bmul@multiplier,f
+  1429  0193  1D03               	skipz
+  1430  0194  298B               	goto	l5673
+  1431  0195  083F               	movf	___bmul@product,w
+  1432  0196  0008               	return
+  1433  0197                     __end_of___bmul:	
+  1434  0197                     __ptext467:	
+  1435 ;; =============== function _vSetRelay ends ============
+  1436                           
+  1437                           
+  1438 ;; *************** function _vPulseRelay *****************
+  1439 ;; Defined at:
+  1440 ;;		line 213 in file "../src/main.c"
+  1441 ;; Parameters:    Size  Location     Type
+  1442 ;;  relay           1    wreg     unsigned char 
+  1443 ;;  timerValue      2    6[BANK0 ] unsigned int 
+  1444 ;; Auto vars:     Size  Location     Type
+  1445 ;;  relay           1    8[BANK0 ] unsigned char 
+  1446 ;; Return value:  Size  Location     Type
+  1447 ;;		None               void
+  1448 ;; Registers used:
+  1449 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1450 ;; Tracked objects:
+  1451 ;;		On entry : 60/0
+  1452 ;;		On exit  : 60/0
+  1453 ;;		Unchanged: FFF9F/0
+  1454 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1455 ;;      Params:         0       2       0       0       0
+  1456 ;;      Locals:         0       1       0       0       0
+  1457 ;;      Temps:          0       0       0       0       0
+  1458 ;;      Totals:         0       3       0       0       0
+  1459 ;;Total ram usage:        3 bytes
+  1460 ;; Hardware stack levels used:    1
+  1461 ;; Hardware stack levels required when called:    3
+  1462 ;; This function calls:
+  1463 ;;		Nothing
+  1464 ;; This function is called by:
+  1465 ;;		_StringSerialProtocolService
+  1466 ;; This function uses a non-reentrant model
+  1467 ;;
+  1468  0197                     _vPulseRelay:	
+  1469                           
+  1470                           ; Regs used in _vPulseRelay: [wreg-fsr0h+status,2+status,0]
+  1471                           ;vPulseRelay@relay stored from wreg
+  1472  0197  00C6               	movwf	vPulseRelay@relay
+  1473                           
+  1474                           ;main.c: 214: switch (relay) {
+  1475  0198  29BC               	goto	l5587
+  1476  0199                     l1125:	
+  1477                           ;main.c: 215: case 1:
+  1478                           
+  1479                           
+  1480                           ;main.c: 216: (PORTDbits.RD1) = 1;
+  1481  0199  1488               	bsf	8,1	;volatile
+  1482                           
+  1483                           ;main.c: 217: RELAY_1_Timer = timerValue;
+  1484  019A  0845               	movf	vPulseRelay@timerValue+1,w
+  1485  019B  00A6               	movwf	_RELAY_1_Timer+1	;volatile
+  1486  019C  0844               	movf	vPulseRelay@timerValue,w
+  1487  019D  00A5               	movwf	_RELAY_1_Timer	;volatile
+  1488                           
+  1489                           ;main.c: 218: RELAY_1_Timer_En = 1;
+  1490  019E  1470               	bsf	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  1491                           
+  1492                           ;main.c: 219: break;
+  1493  019F  0008               	return
+  1494  01A0                     l1127:	
+  1495                           ;main.c: 220: case 2:
+  1496                           
+  1497                           
+  1498                           ;main.c: 221: (PORTDbits.RD2) = 1;
+  1499  01A0  1508               	bsf	8,2	;volatile
+  1500                           
+  1501                           ;main.c: 222: RELAY_2_Timer = timerValue;
+  1502  01A1  0845               	movf	vPulseRelay@timerValue+1,w
+  1503  01A2  00A8               	movwf	_RELAY_2_Timer+1	;volatile
+  1504  01A3  0844               	movf	vPulseRelay@timerValue,w
+  1505  01A4  00A7               	movwf	_RELAY_2_Timer	;volatile
+  1506                           
+  1507                           ;main.c: 223: RELAY_2_Timer_En = 1;
+  1508  01A5  14F0               	bsf	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  1509                           
+  1510                           ;main.c: 224: break;
+  1511  01A6  0008               	return
+  1512  01A7                     l1128:	
+  1513                           ;main.c: 225: case 3:
+  1514                           
+  1515                           
+  1516                           ;main.c: 226: (PORTDbits.RD3) = 1;
+  1517  01A7  1588               	bsf	8,3	;volatile
+  1518                           
+  1519                           ;main.c: 227: RELAY_3_Timer = timerValue;
+  1520  01A8  0845               	movf	vPulseRelay@timerValue+1,w
+  1521  01A9  00AA               	movwf	_RELAY_3_Timer+1	;volatile
+  1522  01AA  0844               	movf	vPulseRelay@timerValue,w
+  1523  01AB  00A9               	movwf	_RELAY_3_Timer	;volatile
+  1524                           
+  1525                           ;main.c: 228: RELAY_3_Timer_En = 1;
+  1526  01AC  1570               	bsf	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  1527                           
+  1528                           ;main.c: 229: break;
+  1529  01AD  0008               	return
+  1530  01AE                     l1129:	
+  1531                           ;main.c: 230: case 4:
+  1532                           
+  1533                           
+  1534                           ;main.c: 231: (PORTCbits.RC4) = 1;
+  1535  01AE  1607               	bsf	7,4	;volatile
+  1536                           
+  1537                           ;main.c: 232: RELAY_4_Timer = timerValue;
+  1538  01AF  0845               	movf	vPulseRelay@timerValue+1,w
+  1539  01B0  00AC               	movwf	_RELAY_4_Timer+1	;volatile
+  1540  01B1  0844               	movf	vPulseRelay@timerValue,w
+  1541  01B2  00AB               	movwf	_RELAY_4_Timer	;volatile
+  1542                           
+  1543                           ;main.c: 233: RELAY_4_Timer_En = 1;
+  1544  01B3  15F0               	bsf	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  1545                           
+  1546                           ;main.c: 234: break;
+  1547  01B4  0008               	return
+  1548  01B5                     l1130:	
+  1549                           ;main.c: 235: case 5:
+  1550                           
+  1551                           
+  1552                           ;main.c: 236: (PORTCbits.RC5) = 1;
+  1553  01B5  1687               	bsf	7,5	;volatile
+  1554                           
+  1555                           ;main.c: 237: RELAY_5_Timer = timerValue;
+  1556  01B6  0845               	movf	vPulseRelay@timerValue+1,w
+  1557  01B7  00AE               	movwf	_RELAY_5_Timer+1	;volatile
+  1558  01B8  0844               	movf	vPulseRelay@timerValue,w
+  1559  01B9  00AD               	movwf	_RELAY_5_Timer	;volatile
+  1560                           
+  1561                           ;main.c: 238: RELAY_5_Timer_En = 1;
+  1562  01BA  1670               	bsf	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  1563                           
+  1564                           ;main.c: 239: break;
+  1565  01BB  0008               	return
+  1566  01BC                     l5587:	
+  1567  01BC  0846               	movf	vPulseRelay@relay,w
+  1568                           
+  1569                           ; Switch size 1, requested type "space"
+  1570                           ; Number of cases is 5, Range of values is 1 to 5
+  1571                           ; switch strategies available:
+  1572                           ; Name         Instructions Cycles
+  1573                           ; simple_byte           16     9 (average)
+  1574                           ; direct_byte           26    11 (fixed)
+  1575                           ; jumptable            263     9 (fixed)
+  1576                           ;	Chosen strategy is simple_byte
+  1577  01BD  3A01               	xorlw	1	; case 1
+  1578  01BE  1903               	skipnz
+  1579  01BF  2999               	goto	l1125
+  1580  01C0  3A03               	xorlw	3	; case 2
+  1581  01C1  1903               	skipnz
+  1582  01C2  29A0               	goto	l1127
+  1583  01C3  3A01               	xorlw	1	; case 3
+  1584  01C4  1903               	skipnz
+  1585  01C5  29A7               	goto	l1128
+  1586  01C6  3A07               	xorlw	7	; case 4
+  1587  01C7  1903               	skipnz
+  1588  01C8  29AE               	goto	l1129
+  1589  01C9  3A01               	xorlw	1	; case 5
+  1590  01CA  1903               	skipnz
+  1591  01CB  29B5               	goto	l1130
+  1592  01CC  29CD               	goto	l1132
+  1593  01CD                     l1132:	
+  1594  01CD  0008               	return
+  1595  01CE                     __end_of_vPulseRelay:	
+  1596  01CE                     __ptext466:	
+  1597 ;; =============== function _setDebounceTimer ends ============
+  1598                           
+  1599                           
+  1600 ;; *************** function _vSetRelay *****************
+  1601 ;; Defined at:
+  1602 ;;		line 257 in file "../src/main.c"
+  1603 ;; Parameters:    Size  Location     Type
+  1604 ;;  relay           1    wreg     unsigned char 
+  1605 ;;  value           1    0[BANK0 ] unsigned char 
+  1606 ;; Auto vars:     Size  Location     Type
+  1607 ;;  relay           1    1[BANK0 ] unsigned char 
+  1608 ;; Return value:  Size  Location     Type
+  1609 ;;		None               void
+  1610 ;; Registers used:
+  1611 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1612 ;; Tracked objects:
+  1613 ;;		On entry : 160/0
+  1614 ;;		On exit  : 160/0
+  1615 ;;		Unchanged: FFE9F/0
+  1616 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1617 ;;      Params:         0       1       0       0       0
+  1618 ;;      Locals:         0       1       0       0       0
+  1619 ;;      Temps:          0       0       0       0       0
+  1620 ;;      Totals:         0       2       0       0       0
+  1621 ;;Total ram usage:        2 bytes
+  1622 ;; Hardware stack levels used:    1
+  1623 ;; Hardware stack levels required when called:    3
+  1624 ;; This function calls:
+  1625 ;;		Nothing
+  1626 ;; This function is called by:
+  1627 ;;		_StringSerialProtocolService
+  1628 ;; This function uses a non-reentrant model
+  1629 ;;
+  1630  01CE                     _vSetRelay:	
+  1631                           
+  1632                           ; Regs used in _vSetRelay: [wreg-fsr0h+status,2+status,0]
+  1633                           ;vSetRelay@relay stored from wreg
+  1634  01CE  00BF               	movwf	vSetRelay@relay
+  1635                           
+  1636                           ;main.c: 258: switch (relay) {
+  1637  01CF  29EE               	goto	l5603
+  1638  01D0                     l5591:	
+  1639                           
+  1640                           ;main.c: 260: (PORTDbits.RD1) = value;
+  1641  01D0  083E               	movf	vSetRelay@value,w
+  1642  01D1  1D03               	skipz
+  1643  01D2  1488               	bsf	8,1	;volatile
+  1644  01D3  1903               	skipnz
+  1645  01D4  1088               	bcf	8,1	;volatile
+  1646                           
+  1647                           ;main.c: 261: break;
+  1648  01D5  0008               	return
+  1649  01D6                     l5593:	
+  1650                           
+  1651                           ;main.c: 263: (PORTDbits.RD2) = value;
+  1652  01D6  083E               	movf	vSetRelay@value,w
+  1653  01D7  1D03               	skipz
+  1654  01D8  1508               	bsf	8,2	;volatile
+  1655  01D9  1903               	skipnz
+  1656  01DA  1108               	bcf	8,2	;volatile
+  1657                           
+  1658                           ;main.c: 264: break;
+  1659  01DB  0008               	return
+  1660  01DC                     l5595:	
+  1661                           
+  1662                           ;main.c: 266: (PORTDbits.RD3) = value;
+  1663  01DC  083E               	movf	vSetRelay@value,w
+  1664  01DD  1D03               	skipz
+  1665  01DE  1588               	bsf	8,3	;volatile
+  1666  01DF  1903               	skipnz
+  1667  01E0  1188               	bcf	8,3	;volatile
+  1668                           
+  1669                           ;main.c: 267: break;
+  1670  01E1  0008               	return
+  1671  01E2                     l5597:	
+  1672                           
+  1673                           ;main.c: 269: (PORTCbits.RC4) = value;
+  1674  01E2  083E               	movf	vSetRelay@value,w
+  1675  01E3  1D03               	skipz
+  1676  01E4  1607               	bsf	7,4	;volatile
+  1677  01E5  1903               	skipnz
+  1678  01E6  1207               	bcf	7,4	;volatile
+  1679                           
+  1680                           ;main.c: 270: break;
+  1681  01E7  0008               	return
+  1682  01E8                     l5599:	
+  1683                           
+  1684                           ;main.c: 272: (PORTCbits.RC5) = value;
+  1685  01E8  083E               	movf	vSetRelay@value,w
+  1686  01E9  1D03               	skipz
+  1687  01EA  1687               	bsf	7,5	;volatile
+  1688  01EB  1903               	skipnz
+  1689  01EC  1287               	bcf	7,5	;volatile
+  1690                           
+  1691                           ;main.c: 273: break;
+  1692  01ED  0008               	return
+  1693  01EE                     l5603:	
+  1694  01EE  083F               	movf	vSetRelay@relay,w
+  1695                           
+  1696                           ; Switch size 1, requested type "space"
+  1697                           ; Number of cases is 5, Range of values is 1 to 5
+  1698                           ; switch strategies available:
+  1699                           ; Name         Instructions Cycles
+  1700                           ; simple_byte           16     9 (average)
+  1701                           ; direct_byte           26    11 (fixed)
+  1702                           ; jumptable            263     9 (fixed)
+  1703                           ;	Chosen strategy is simple_byte
+  1704  01EF  3A01               	xorlw	1	; case 1
+  1705  01F0  1903               	skipnz
+  1706  01F1  29D0               	goto	l5591
+  1707  01F2  3A03               	xorlw	3	; case 2
+  1708  01F3  1903               	skipnz
+  1709  01F4  29D6               	goto	l5593
+  1710  01F5  3A01               	xorlw	1	; case 3
+  1711  01F6  1903               	skipnz
+  1712  01F7  29DC               	goto	l5595
+  1713  01F8  3A07               	xorlw	7	; case 4
+  1714  01F9  1903               	skipnz
+  1715  01FA  29E2               	goto	l5597
+  1716  01FB  3A01               	xorlw	1	; case 5
+  1717  01FC  1903               	skipnz
+  1718  01FD  29E8               	goto	l5599
+  1719  01FE  29FF               	goto	l1143
+  1720  01FF                     l1143:	
+  1721  01FF  0008               	return
+  1722  0200                     __end_of_vSetRelay:	
+  1723  0200                     __ptext461:	
+  1724 ;; =============== function ___bmul ends ============
+  1725                           
+  1726                           
+  1727 ;; *************** function _CheckCommand *****************
+  1728 ;; Defined at:
+  1729 ;;		line 247 in file "../src/StringSerialProtocol.c"
+  1730 ;; Parameters:    Size  Location     Type
+  1731 ;;  command         1    wreg     unsigned char 
+  1732 ;; Auto vars:     Size  Location     Type
+  1733 ;;  command         1    1[BANK0 ] unsigned char 
+  1734 ;;  i               1    4[BANK0 ] unsigned char 
+  1735 ;;  size            1    3[BANK0 ] unsigned char 
+  1736 ;;  result          1    2[BANK0 ] unsigned char 
+  1737 ;; Return value:  Size  Location     Type
+  1738 ;;                  1    wreg      unsigned char 
+  1739 ;; Registers used:
+  1740 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+  1741 ;; Tracked objects:
+  1742 ;;		On entry : 60/0
+  1743 ;;		On exit  : 60/0
+  1744 ;;		Unchanged: FFE9F/0
+  1745 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1746 ;;      Params:         0       0       0       0       0
+  1747 ;;      Locals:         0       4       0       0       0
+  1748 ;;      Temps:          0       1       0       0       0
+  1749 ;;      Totals:         0       5       0       0       0
+  1750 ;;Total ram usage:        5 bytes
+  1751 ;; Hardware stack levels used:    1
+  1752 ;; Hardware stack levels required when called:    3
+  1753 ;; This function calls:
+  1754 ;;		Nothing
+  1755 ;; This function is called by:
+  1756 ;;		_StringSerialProtocolService
+  1757 ;; This function uses a non-reentrant model
+  1758 ;;
+  1759  0200                     _CheckCommand:	
+  1760                           
+  1761                           ; Regs used in _CheckCommand: [wreg-fsr0h+status,2+status,0+pclath]
+  1762                           ;CheckCommand@command stored from wreg
+  1763  0200  00BF               	movwf	CheckCommand@command
+  1764                           
+  1765                           ;StringSerialProtocol.c: 249: unsigned char i;
+  1766                           ;StringSerialProtocol.c: 250: unsigned char size = 0;
+  1767  0201  01C1               	clrf	CheckCommand@size
+  1768                           
+  1769                           ;StringSerialProtocol.c: 252: result = 1;
+  1770  0202  01C0               	clrf	CheckCommand@result
+  1771  0203  0AC0               	incf	CheckCommand@result,f
+  1772                           
+  1773                           ;StringSerialProtocol.c: 253: switch (command) {
+  1774  0204  2A33               	goto	l5665
+  1775  0205                     l5637:	
+  1776                           
+  1777                           ;StringSerialProtocol.c: 255: size = sizeof (ROLE) - 1;
+  1778  0205  3004               	movlw	4
+  1779  0206  00C1               	movwf	CheckCommand@size
+  1780                           
+  1781                           ;StringSerialProtocol.c: 257: for (i = 0; i < size; ++i) {
+  1782  0207  01C2               	clrf	CheckCommand@i
+  1783  0208                     l5647:	
+  1784  0208  0841               	movf	CheckCommand@size,w
+  1785  0209  0242               	subwf	CheckCommand@i,w
+  1786  020A  1803               	btfsc	3,0
+  1787  020B  2A3B               	goto	l5667
+  1788                           
+  1789                           ;StringSerialProtocol.c: 258: if (commandBuffer[i] != ROLE[i]) {
+  1790  020C  0842               	movf	CheckCommand@i,w
+  1791  020D  3E07               	addlw	low (_ROLE-__stringbase)
+  1792  020E  0084               	movwf	4
+  1793  020F  120A  118A  2436   	fcall	stringdir
+      +       120A  118A         
+  1794  0214  227E  120A  118A   	fcall	PL3	;call to abstracted procedure
+  1795  0217  1903               	skipnz
+  1796  0218  2A1B               	goto	l5645
+  1797  0219                     l5643:	
+  1798                           
+  1799                           ;StringSerialProtocol.c: 259: result = 0;
+  1800  0219  01C0               	clrf	CheckCommand@result
+  1801                           
+  1802                           ;StringSerialProtocol.c: 260: break;
+  1803  021A  2A3B               	goto	l5667
+  1804  021B                     l5645:	
+  1805  021B  0AC2               	incf	CheckCommand@i,f
+  1806  021C  2A08               	goto	l5647
+  1807  021D                     l5649:	
+  1808                           
+  1809                           ;StringSerialProtocol.c: 265: size = sizeof (PULSE) - 1;
+  1810  021D  3005               	movlw	5
+  1811  021E  00C1               	movwf	CheckCommand@size
+  1812                           
+  1813                           ;StringSerialProtocol.c: 267: for (i = 0; i < size; ++i) {
+  1814  021F  01C2               	clrf	CheckCommand@i
+  1815  0220                     l5659:	
+  1816  0220  0841               	movf	CheckCommand@size,w
+  1817  0221  0242               	subwf	CheckCommand@i,w
+  1818  0222  1803               	btfsc	3,0
+  1819  0223  2A3B               	goto	l5667
+  1820                           
+  1821                           ;StringSerialProtocol.c: 268: if (commandBuffer[i] != PULSE[i]) {
+  1822  0224  0842               	movf	CheckCommand@i,w
+  1823  0225  3E01               	addlw	low (_PULSE-__stringbase)
+  1824  0226  0084               	movwf	4
+  1825  0227  120A  118A  2436   	fcall	stringdir
+      +       120A  118A         
+  1826  022C  227E  120A  118A   	fcall	PL3	;call to abstracted procedure
+  1827  022F  1D03               	btfss	3,2
+  1828  0230  2A19               	goto	l5643
+  1829  0231  0AC2               	incf	CheckCommand@i,f
+  1830  0232  2A20               	goto	l5659
+  1831  0233                     l5665:	
+  1832  0233  083F               	movf	CheckCommand@command,w
+  1833                           
+  1834                           ; Switch size 1, requested type "space"
+  1835                           ; Number of cases is 2, Range of values is 1 to 2
+  1836                           ; switch strategies available:
+  1837                           ; Name         Instructions Cycles
+  1838                           ; simple_byte            7     4 (average)
+  1839                           ; direct_byte           17    11 (fixed)
+  1840                           ; jumptable            263     9 (fixed)
+  1841                           ;	Chosen strategy is simple_byte
+  1842  0234  3A01               	xorlw	1	; case 1
+  1843  0235  1903               	skipnz
+  1844  0236  2A05               	goto	l5637
+  1845  0237  3A03               	xorlw	3	; case 2
+  1846  0238  1903               	skipnz
+  1847  0239  2A1D               	goto	l5649
+  1848  023A  2A19               	goto	l5643
+  1849  023B                     l5667:	
+  1850                           
+  1851                           ;StringSerialProtocol.c: 278: return result;
+  1852  023B  0840               	movf	CheckCommand@result,w
+  1853  023C  0008               	return
+  1854  023D                     __end_of_CheckCommand:	
+  1855  023D                     __ptext463:	
+  1856 ;; =============== function _cGetFromReceiveBuffer ends ============
+  1857                           
+  1858                           
+  1859 ;; *************** function _vSendDataToUart *****************
+  1860 ;; Defined at:
+  1861 ;;		line 147 in file "../src/uart.c"
+  1862 ;; Parameters:    Size  Location     Type
+  1863 ;;		None
+  1864 ;; Auto vars:     Size  Location     Type
+  1865 ;;		None
+  1866 ;; Return value:  Size  Location     Type
+  1867 ;;		None               void
+  1868 ;; Registers used:
+  1869 ;;		None
+  1870 ;; Tracked objects:
+  1871 ;;		On entry : 60/100
+  1872 ;;		On exit  : 60/120
+  1873 ;;		Unchanged: FFF9F/0
+  1874 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1875 ;;      Params:         0       0       0       0       0
+  1876 ;;      Locals:         0       0       0       0       0
+  1877 ;;      Temps:          0       0       0       0       0
+  1878 ;;      Totals:         0       0       0       0       0
+  1879 ;;Total ram usage:        0 bytes
+  1880 ;; Hardware stack levels used:    1
+  1881 ;; Hardware stack levels required when called:    3
+  1882 ;; This function calls:
+  1883 ;;		Nothing
+  1884 ;; This function is called by:
+  1885 ;;		_CheckInputs
+  1886 ;;		_StringSerialProtocolService
+  1887 ;; This function uses a non-reentrant model
+  1888 ;;
+  1889  023D                     _vSendDataToUart:	
+  1890                           
+  1891                           ;uart.c: 148: TXIF = 0;
+  1892                           
+  1893                           ; Regs used in _vSendDataToUart: []
+  1894  023D  120C               	bcf	12,4
+  1895                           
+  1896                           ;uart.c: 149: TXIE = 1;
+  1897  023E  1683               	bsf	3,5	;RP0=1, select bank1
+  1898  023F  160C               	bsf	12,4
+  1899  0240  0008               	return
+  1900  0241                     __end_of_vSendDataToUart:	
+  1901  0241                     __ptext462:	
+  1902 ;; =============== function _CheckCommand ends ============
+  1903                           
+  1904                           
+  1905 ;; *************** function _cGetFromReceiveBuffer *****************
+  1906 ;; Defined at:
+  1907 ;;		line 236 in file "../src/StringSerialProtocol.c"
+  1908 ;; Parameters:    Size  Location     Type
+  1909 ;;		None
+  1910 ;; Auto vars:     Size  Location     Type
+  1911 ;;  value           1    0[BANK0 ] unsigned char 
+  1912 ;; Return value:  Size  Location     Type
+  1913 ;;                  1    wreg      unsigned char 
+  1914 ;; Registers used:
+  1915 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1916 ;; Tracked objects:
+  1917 ;;		On entry : 60/0
+  1918 ;;		On exit  : 160/0
+  1919 ;;		Unchanged: FFE9F/0
+  1920 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1921 ;;      Params:         0       0       0       0       0
+  1922 ;;      Locals:         0       1       0       0       0
+  1923 ;;      Temps:          0       0       0       0       0
+  1924 ;;      Totals:         0       1       0       0       0
+  1925 ;;Total ram usage:        1 bytes
+  1926 ;; Hardware stack levels used:    1
+  1927 ;; Hardware stack levels required when called:    3
+  1928 ;; This function calls:
+  1929 ;;		Nothing
+  1930 ;; This function is called by:
+  1931 ;;		_StringSerialProtocolService
+  1932 ;; This function uses a non-reentrant model
+  1933 ;;
+  1934  0241                     _cGetFromReceiveBuffer:	
+  1935                           
+  1936                           ;StringSerialProtocol.c: 237: unsigned char value;
+  1937                           ;StringSerialProtocol.c: 239: value = uartReceiveBuffer[uartReceiveBufferR];
+  1938                           
+  1939                           ; Regs used in _cGetFromReceiveBuffer: [wreg-fsr0h+status,2+status,0]
+  1940  0241  0836               	movf	_uartReceiveBufferR,w
+  1941  0242  3EA0               	addlw	_uartReceiveBuffer& (0+255)
+  1942  0243  0084               	movwf	4
+  1943  0244  1383               	bcf	3,7	;select IRP bank1
+  1944  0245  0800               	movf	0,w
+  1945  0246  00BE               	movwf	cGetFromReceiveBuffer@value
+  1946                           
+  1947                           ;StringSerialProtocol.c: 240: uartReceiveBufferR++;
+  1948  0247  0AB6               	incf	_uartReceiveBufferR,f	;volatile
+  1949                           
+  1950                           ;StringSerialProtocol.c: 241: if (uartReceiveBufferR == 60) {
+  1951  0248  0836               	movf	_uartReceiveBufferR,w	;volatile
+  1952  0249  3A3C               	xorlw	60
+  1953  024A  1903               	btfsc	3,2
+  1954                           
+  1955                           ;StringSerialProtocol.c: 242: uartReceiveBufferR = 0;
+  1956  024B  01B6               	clrf	_uartReceiveBufferR	;volatile
+  1957                           
+  1958                           ;StringSerialProtocol.c: 243: }
+  1959                           ;StringSerialProtocol.c: 244: return value;
+  1960  024C  083E               	movf	cGetFromReceiveBuffer@value,w
+  1961  024D  0008               	return
+  1962  024E                     __end_of_cGetFromReceiveBuffer:	
+  1963  024E                     __ptext459:	
+  1964 ;; =============== function _CheckInputs ends ============
+  1965                           
+  1966                           
+  1967 ;; *************** function ___wmul *****************
+  1968 ;; Defined at:
+  1969 ;;		line 3 in file "C:\Program Files (x86)\HI-TECH Software\PICC\9.83\sources\wmul.c"
+  1970 ;; Parameters:    Size  Location     Type
+  1971 ;;  multiplier      2    0[BANK0 ] unsigned int 
+  1972 ;;  multiplicand    2    2[BANK0 ] unsigned int 
+  1973 ;; Auto vars:     Size  Location     Type
+  1974 ;;  product         2    4[BANK0 ] unsigned int 
+  1975 ;; Return value:  Size  Location     Type
+  1976 ;;                  2    0[BANK0 ] unsigned int 
+  1977 ;; Registers used:
+  1978 ;;		wreg, status,2, status,0
+  1979 ;; Tracked objects:
+  1980 ;;		On entry : 160/0
+  1981 ;;		On exit  : 160/0
+  1982 ;;		Unchanged: FFE9F/0
+  1983 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1984 ;;      Params:         0       4       0       0       0
+  1985 ;;      Locals:         0       2       0       0       0
+  1986 ;;      Temps:          0       0       0       0       0
+  1987 ;;      Totals:         0       6       0       0       0
+  1988 ;;Total ram usage:        6 bytes
+  1989 ;; Hardware stack levels used:    1
+  1990 ;; Hardware stack levels required when called:    3
+  1991 ;; This function calls:
+  1992 ;;		Nothing
+  1993 ;; This function is called by:
+  1994 ;;		_StringSerialProtocolService
+  1995 ;; This function uses a non-reentrant model
+  1996 ;;
+  1997  024E                     ___wmul:	
+  1998                           
+  1999                           ; Regs used in ___wmul: [wreg+status,2+status,0]
+  2000  024E  01C2               	clrf	___wmul@product
+  2001  024F  01C3               	clrf	___wmul@product+1
+  2002  0250                     l5689:	
+  2003  0250  1C3E               	btfss	___wmul@multiplier,0
+  2004  0251  2A58               	goto	l5693
+  2005  0252  0840               	movf	___wmul@multiplicand,w
+  2006  0253  07C2               	addwf	___wmul@product,f
+  2007  0254  1803               	skipnc
+  2008  0255  0AC3               	incf	___wmul@product+1,f
+  2009  0256  0841               	movf	___wmul@multiplicand+1,w
+  2010  0257  07C3               	addwf	___wmul@product+1,f
+  2011  0258                     l5693:	
+  2012  0258  1003               	clrc
+  2013  0259  0DC0               	rlf	___wmul@multiplicand,f
+  2014  025A  0DC1               	rlf	___wmul@multiplicand+1,f
+  2015  025B  1003               	clrc
+  2016  025C  0CBF               	rrf	___wmul@multiplier+1,f
+  2017  025D  0CBE               	rrf	___wmul@multiplier,f
+  2018  025E  083F               	movf	___wmul@multiplier+1,w
+  2019  025F  043E               	iorwf	___wmul@multiplier,w
+  2020  0260  1D03               	skipz
+  2021  0261  2A50               	goto	l5689
+  2022  0262  0843               	movf	___wmul@product+1,w
+  2023  0263  00BF               	movwf	?___wmul+1
+  2024  0264  0842               	movf	___wmul@product,w
+  2025  0265  00BE               	movwf	?___wmul
+  2026  0266  0008               	return
+  2027  0267                     __end_of___wmul:	
+  2028  0267                     __ptext468:	
+  2029 ;; =============== function _vPulseRelay ends ============
+  2030                           
+  2031                           
+  2032 ;; *************** function _setCommunicationTimeOut *****************
+  2033 ;; Defined at:
+  2034 ;;		line 336 in file "../src/main.c"
+  2035 ;; Parameters:    Size  Location     Type
+  2036 ;;  value           2    0[BANK0 ] unsigned int 
+  2037 ;; Auto vars:     Size  Location     Type
+  2038 ;;		None
+  2039 ;; Return value:  Size  Location     Type
+  2040 ;;		None               void
+  2041 ;; Registers used:
+  2042 ;;		wreg
+  2043 ;; Tracked objects:
+  2044 ;;		On entry : 60/0
+  2045 ;;		On exit  : 60/0
+  2046 ;;		Unchanged: FFF9F/0
+  2047 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2048 ;;      Params:         0       2       0       0       0
+  2049 ;;      Locals:         0       0       0       0       0
+  2050 ;;      Temps:          0       0       0       0       0
+  2051 ;;      Totals:         0       2       0       0       0
+  2052 ;;Total ram usage:        2 bytes
+  2053 ;; Hardware stack levels used:    1
+  2054 ;; Hardware stack levels required when called:    3
+  2055 ;; This function calls:
+  2056 ;;		Nothing
+  2057 ;; This function is called by:
+  2058 ;;		_main
+  2059 ;;		_StringSerialProtocolService
+  2060 ;; This function uses a non-reentrant model
+  2061 ;;
+  2062  0267                     _setCommunicationTimeOut:	
+  2063                           
+  2064                           ;main.c: 337: communicationControlTimer = value;
+  2065                           
+  2066                           ; Regs used in _setCommunicationTimeOut: [wreg]
+  2067  0267  083F               	movf	setCommunicationTimeOut@value+1,w
+  2068  0268  00B0               	movwf	_communicationControlTimer+1	;volatile
+  2069  0269  083E               	movf	setCommunicationTimeOut@value,w
+  2070  026A  00AF               	movwf	_communicationControlTimer	;volatile
+  2071                           
+  2072                           ;main.c: 338: communicationControlTimer_En = 1;
+  2073  026B  16F0               	bsf	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  2074  026C  0008               	return
+  2075  026D                     __end_of_setCommunicationTimeOut:	
+  2076  026D                     __ptext465:	
+  2077 ;; =============== function _vAddToUartTransmitBuffer ends ============
+  2078                           
+  2079                           
+  2080 ;; *************** function _setDebounceTimer *****************
+  2081 ;; Defined at:
+  2082 ;;		line 342 in file "../src/main.c"
+  2083 ;; Parameters:    Size  Location     Type
+  2084 ;;  value           1    wreg     unsigned char 
+  2085 ;; Auto vars:     Size  Location     Type
+  2086 ;;  value           1    0[BANK0 ] unsigned char 
+  2087 ;; Return value:  Size  Location     Type
+  2088 ;;		None               void
+  2089 ;; Registers used:
+  2090 ;;		wreg
+  2091 ;; Tracked objects:
+  2092 ;;		On entry : 60/0
+  2093 ;;		On exit  : 60/0
+  2094 ;;		Unchanged: FFF9F/0
+  2095 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2096 ;;      Params:         0       0       0       0       0
+  2097 ;;      Locals:         0       1       0       0       0
+  2098 ;;      Temps:          0       0       0       0       0
+  2099 ;;      Totals:         0       1       0       0       0
+  2100 ;;Total ram usage:        1 bytes
+  2101 ;; Hardware stack levels used:    1
+  2102 ;; Hardware stack levels required when called:    3
+  2103 ;; This function calls:
+  2104 ;;		Nothing
+  2105 ;; This function is called by:
+  2106 ;;		_CheckInputs
+  2107 ;; This function uses a non-reentrant model
+  2108 ;;
+  2109  026D                     _setDebounceTimer:	
+  2110                           
+  2111                           ; Regs used in _setDebounceTimer: [wreg]
+  2112                           ;setDebounceTimer@value stored from wreg
+  2113  026D  00BE               	movwf	setDebounceTimer@value
+  2114                           
+  2115                           ;main.c: 343: debounceTimer = value;
+  2116  026E  00F9               	movwf	_debounceTimer	;volatile
+  2117                           
+  2118                           ;main.c: 344: debounceTimerEnable = 1;
+  2119  026F  1770               	bsf	_debounceTimerEnable/(0+8),_debounceTimerEnable& (0+7)
+  2120                           
+  2121                           ;main.c: 345: debounceTimerTimeoutFlag = 0;
+  2122  0270  13F0               	bcf	_debounceTimerTimeoutFlag/(0+8),_debounceTimerTimeoutFlag& (0+7)
+  2123  0271  0008               	return
+  2124  0272                     __end_of_setDebounceTimer:	
+  2125  0272                     PL2:	
+  2126  0272  0800               	movf	0,w
+  2127  0273  3ED0               	addlw	208
+  2128  0274  00C7               	movwf	??_StringSerialProtocolService
+  2129  0275  30FF               	movlw	255
+  2130  0276  1803               	skipnc
+  2131  0277  3000               	movlw	0
+  2132  0278  00C8               	movwf	??_StringSerialProtocolService+1
+  2133  0279  3A80               	xorlw	128
+  2134  027A  00FF               	movwf	127
+  2135  027B  3080               	movlw	128
+  2136  027C  027F               	subwf	127,w
+  2137  027D  0008               	return
+  2138  027E                     PL3:	
+  2139  027E  00BE               	movwf	??_CheckCommand
+  2140  027F  0842               	movf	CheckCommand@i,w
+  2141  0280  3E20               	addlw	_commandBuffer& (0+255)
+  2142  0281  0084               	movwf	4
+  2143  0282  1383               	bcf	3,7	;select IRP bank0
+  2144  0283  0800               	movf	0,w
+  2145  0284  063E               	xorwf	??_CheckCommand,w
+  2146  0285  0008               	return
+  2147  0286                     PL4:	
+  2148  0286  1303               	bcf	3,6	;RP1=0, select bank0
+  2149  0287  084C               	movf	StringSerialProtocolService@i,w
+  2150  0288  3E38               	addlw	_dataBuffer& (0+255)
+  2151  0289  0084               	movwf	4
+  2152  028A  1383               	bcf	3,7	;select IRP bank0
+  2153  028B  0008               	return
+  2154                           
+  2155                           	psect	text469
+  2156  044F                     __ptext469:	
+  2157 ;; =============== function _setCommunicationTimeOut ends ============
+  2158                           
+  2159                           
+  2160 ;; *************** function _InitializeInputs *****************
+  2161 ;; Defined at:
+  2162 ;;		line 368 in file "../src/main.c"
+  2163 ;; Parameters:    Size  Location     Type
+  2164 ;;		None
+  2165 ;; Auto vars:     Size  Location     Type
+  2166 ;;		None
+  2167 ;; Return value:  Size  Location     Type
+  2168 ;;		None               void
+  2169 ;; Registers used:
+  2170 ;;		wreg, status,2, status,0
+  2171 ;; Tracked objects:
+  2172 ;;		On entry : 17F/20
+  2173 ;;		On exit  : 17F/0
+  2174 ;;		Unchanged: FFE80/0
+  2175 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2176 ;;      Params:         0       0       0       0       0
+  2177 ;;      Locals:         0       0       0       0       0
+  2178 ;;      Temps:          0       0       0       0       0
+  2179 ;;      Totals:         0       0       0       0       0
+  2180 ;;Total ram usage:        0 bytes
+  2181 ;; Hardware stack levels used:    1
+  2182 ;; Hardware stack levels required when called:    3
+  2183 ;; This function calls:
+  2184 ;;		Nothing
+  2185 ;; This function is called by:
+  2186 ;;		_main
+  2187 ;; This function uses a non-reentrant model
+  2188 ;;
+  2189  044F                     _InitializeInputs:	
+  2190                           
+  2191                           ;main.c: 369: inputPort = (PORTB & 0b00110111);
+  2192                           
+  2193                           ; Regs used in _InitializeInputs: [wreg+status,2+status,0]
+  2194  044F  1283               	bcf	3,5	;RP0=0, select bank0
+  2195  0450  0806               	movf	6,w
+  2196  0451  00FA               	movwf	_inputPort
+  2197  0452  3037               	movlw	55
+  2198  0453  05FA               	andwf	_inputPort,f
+  2199  0454  0008               	return
+  2200  0455                     __end_of_InitializeInputs:	
+  2201                           
+  2202                           	psect	text470
+  2203  041F                     __ptext470:	
+  2204 ;; =============== function _InitializeInputs ends ============
+  2205                           
+  2206                           
+  2207 ;; *************** function _vInitializeUart *****************
+  2208 ;; Defined at:
+  2209 ;;		line 49 in file "../src/uart.c"
+  2210 ;; Parameters:    Size  Location     Type
+  2211 ;;		None
+  2212 ;; Auto vars:     Size  Location     Type
+  2213 ;;  cBaudTemp       1    0        unsigned char 
+  2214 ;; Return value:  Size  Location     Type
+  2215 ;;		None               void
+  2216 ;; Registers used:
+  2217 ;;		wreg
+  2218 ;; Tracked objects:
+  2219 ;;		On entry : 17F/0
+  2220 ;;		On exit  : 17F/20
+  2221 ;;		Unchanged: FFE80/0
+  2222 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2223 ;;      Params:         0       0       0       0       0
+  2224 ;;      Locals:         0       1       0       0       0
+  2225 ;;      Temps:          0       0       0       0       0
+  2226 ;;      Totals:         0       1       0       0       0
+  2227 ;;Total ram usage:        1 bytes
+  2228 ;; Hardware stack levels used:    1
+  2229 ;; Hardware stack levels required when called:    3
+  2230 ;; This function calls:
+  2231 ;;		Nothing
+  2232 ;; This function is called by:
+  2233 ;;		_main
+  2234 ;; This function uses a non-reentrant model
+  2235 ;;
+  2236  041F                     _vInitializeUart:	
+  2237                           
+  2238                           ;uart.c: 54: (TRISCbits.TRISC6) = 1;
+  2239                           
+  2240                           ; Regs used in _vInitializeUart: [wreg]
+  2241  041F  1683               	bsf	3,5	;RP0=1, select bank1
+  2242  0420  1707               	bsf	7,6	;volatile
+  2243                           
+  2244                           ;uart.c: 55: (TRISCbits.TRISC7) = 1;
+  2245  0421  1787               	bsf	7,7	;volatile
+  2246                           
+  2247                           ;uart.c: 64: {
+  2248                           ;uart.c: 65: BRGH = 0;
+  2249                           
+  2250                           ;uart.c: 63: else if( cBaudTemp == ( 2 ) )
+  2251  0422  1118               	bcf	24,2
+  2252                           
+  2253                           ;uart.c: 66: BRG16 = 1;
+  2254  0423  1703               	bsf	3,6	;RP1=1, select bank3
+  2255  0424  3033               	movlw	51
+  2256  0425  1587               	bsf	7,3
+  2257                           
+  2258                           ;uart.c: 67: SPBRG = 51;
+  2259  0426  1303               	bcf	3,6	;RP1=0, select bank1
+  2260  0427  0099               	movwf	25	;volatile
+  2261                           
+  2262                           ;uart.c: 80: }
+  2263                           ;uart.c: 82: SYNC = 0;
+  2264                           
+  2265                           ;uart.c: 68: }
+  2266  0428  1218               	bcf	24,4
+  2267                           
+  2268                           ;uart.c: 83: SPEN = 1;
+  2269  0429  1283               	bcf	3,5	;RP0=0, select bank0
+  2270  042A  1798               	bsf	24,7
+  2271                           
+  2272                           ;uart.c: 84: CREN = 1;
+  2273  042B  1618               	bsf	24,4
+  2274                           
+  2275                           ;uart.c: 85: TXEN = 1;
+  2276  042C  1683               	bsf	3,5	;RP0=1, select bank1
+  2277  042D  1698               	bsf	24,5
+  2278                           
+  2279                           ;uart.c: 86: TX9 = 0;
+  2280  042E  1318               	bcf	24,6
+  2281                           
+  2282                           ;uart.c: 87: RX9 = 0;
+  2283  042F  1283               	bcf	3,5	;RP0=0, select bank0
+  2284  0430  1318               	bcf	24,6
+  2285                           
+  2286                           ;uart.c: 88: ADDEN = 0;
+  2287  0431  1198               	bcf	24,3
+  2288                           
+  2289                           ;uart.c: 89: RCIE = 1;
+  2290  0432  1683               	bsf	3,5	;RP0=1, select bank1
+  2291  0433  168C               	bsf	12,5
+  2292                           
+  2293                           ;uart.c: 90: TXIE = 0;
+  2294  0434  120C               	bcf	12,4
+  2295  0435  0008               	return
+  2296  0436                     __end_of_vInitializeUart:	
+  2297                           
+  2298                           	psect	text471
+  2299  03A4                     __ptext471:	
+  2300 ;; =============== function _vInitializeUart ends ============
+  2301                           
+  2302                           
+  2303 ;; *************** function _vInitializeBoard *****************
+  2304 ;; Defined at:
+  2305 ;;		line 290 in file "../src/main.c"
+  2306 ;; Parameters:    Size  Location     Type
+  2307 ;;		None
+  2308 ;; Auto vars:     Size  Location     Type
+  2309 ;;		None
+  2310 ;; Return value:  Size  Location     Type
+  2311 ;;		None               void
+  2312 ;; Registers used:
+  2313 ;;		wreg, status,2
+  2314 ;; Tracked objects:
+  2315 ;;		On entry : 17F/0
+  2316 ;;		On exit  : 17F/0
+  2317 ;;		Unchanged: FFE80/0
+  2318 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2319 ;;      Params:         0       0       0       0       0
+  2320 ;;      Locals:         0       0       0       0       0
+  2321 ;;      Temps:          0       0       0       0       0
+  2322 ;;      Totals:         0       0       0       0       0
+  2323 ;;Total ram usage:        0 bytes
+  2324 ;; Hardware stack levels used:    1
+  2325 ;; Hardware stack levels required when called:    3
+  2326 ;; This function calls:
+  2327 ;;		Nothing
+  2328 ;; This function is called by:
+  2329 ;;		_main
+  2330 ;; This function uses a non-reentrant model
+  2331 ;;
+  2332  03A4                     _vInitializeBoard:	
+  2333                           
+  2334                           ;main.c: 291: PORTA = 0;
+  2335                           
+  2336                           ; Regs used in _vInitializeBoard: [wreg+status,2]
+  2337  03A4  0185               	clrf	5	;volatile
+  2338                           
+  2339                           ;main.c: 292: PORTB = 0;
+  2340  03A5  0186               	clrf	6	;volatile
+  2341                           
+  2342                           ;main.c: 293: PORTC = 0;
+  2343  03A6  0187               	clrf	7	;volatile
+  2344                           
+  2345                           ;main.c: 294: PORTD = 0;
+  2346  03A7  0188               	clrf	8	;volatile
+  2347                           
+  2348                           ;main.c: 295: PORTE = 0;
+  2349  03A8  0189               	clrf	9	;volatile
+  2350                           
+  2351                           ;main.c: 297: OSCCON = 0b01110101;
+  2352  03A9  3075               	movlw	117
+  2353  03AA  1683               	bsf	3,5	;RP0=1, select bank1
+  2354  03AB  008F               	movwf	15	;volatile
+  2355                           
+  2356                           ;main.c: 299: CM1CON0 = 0;
+  2357  03AC  1283               	bcf	3,5	;RP0=0, select bank2
+  2358  03AD  1703               	bsf	3,6	;RP1=1, select bank2
+  2359  03AE  0187               	clrf	7	;volatile
+  2360                           
+  2361                           ;main.c: 300: CM2CON0 = 0;
+  2362  03AF  0188               	clrf	8	;volatile
+  2363  03B0  3016               	movlw	22
+  2364                           
+  2365                           ;main.c: 301: C1ON = 0;
+  2366  03B1  1387               	bcf	7,7
+  2367                           
+  2368                           ;main.c: 302: C2ON = 0;
+  2369  03B2  1388               	bcf	8,7
+  2370                           
+  2371                           ;main.c: 304: WDTCON = 0b00010110;
+  2372  03B3  0085               	movwf	5	;volatile
+  2373                           
+  2374                           ;main.c: 305: OPTION_REG = 0b10000111;
+  2375  03B4  3087               	movlw	135
+  2376  03B5  1683               	bsf	3,5	;RP0=1, select bank1
+  2377  03B6  1303               	bcf	3,6	;RP1=0, select bank1
+  2378  03B7  0081               	movwf	1	;volatile
+  2379                           
+  2380                           ;main.c: 306: INTCON = 0;
+  2381  03B8  018B               	clrf	11	;volatile
+  2382                           
+  2383                           ;main.c: 307: PIE1 = 0;
+  2384  03B9  018C               	clrf	12	;volatile
+  2385                           
+  2386                           ;main.c: 308: PIE2 = 0;
+  2387  03BA  018D               	clrf	13	;volatile
+  2388                           
+  2389                           ;main.c: 310: ANSELH = 0;
+  2390  03BB  1703               	bsf	3,6	;RP1=1, select bank3
+  2391  03BC  0189               	clrf	9	;volatile
+  2392                           
+  2393                           ;main.c: 311: ANSEL = 0;
+  2394  03BD  0188               	clrf	8	;volatile
+  2395                           
+  2396                           ;main.c: 312: WPUB = 0;
+  2397  03BE  1303               	bcf	3,6	;RP1=0, select bank1
+  2398  03BF  0195               	clrf	21	;volatile
+  2399                           
+  2400                           ;main.c: 314: T0IF = 0;
+  2401  03C0  110B               	bcf	11,2
+  2402                           
+  2403                           ;main.c: 315: T0IE = 1;
+  2404  03C1  168B               	bsf	11,5
+  2405                           
+  2406                           ;main.c: 317: TRISA = 0b00000000;
+  2407  03C2  0185               	clrf	5	;volatile
+  2408                           
+  2409                           ;main.c: 318: TRISB = 0b00110111;
+  2410  03C3  3037               	movlw	55
+  2411  03C4  0086               	movwf	6	;volatile
+  2412                           
+  2413                           ;main.c: 319: TRISC = 0b11000000;
+  2414  03C5  30C0               	movlw	192
+  2415  03C6  0087               	movwf	7	;volatile
+  2416                           
+  2417                           ;main.c: 320: TRISD = 0b00000000;
+  2418  03C7  0188               	clrf	8	;volatile
+  2419                           
+  2420                           ;main.c: 321: TRISE = 0b00000000;
+  2421  03C8  0189               	clrf	9	;volatile
+  2422                           
+  2423                           ;main.c: 322: (TRISCbits.TRISC3) = 0;
+  2424  03C9  1187               	bcf	7,3	;volatile
+  2425                           
+  2426                           ;main.c: 323: (PORTCbits.RC3) = 0;
+  2427  03CA  1283               	bcf	3,5	;RP0=0, select bank0
+  2428  03CB  1187               	bcf	7,3	;volatile
+  2429                           
+  2430                           ;main.c: 325: PORTA = 0;
+  2431  03CC  0185               	clrf	5	;volatile
+  2432                           
+  2433                           ;main.c: 326: PORTB = 0;
+  2434  03CD  0186               	clrf	6	;volatile
+  2435                           
+  2436                           ;main.c: 327: PORTC = 0;
+  2437  03CE  0187               	clrf	7	;volatile
+  2438                           
+  2439                           ;main.c: 328: PORTD = 0;
+  2440  03CF  0188               	clrf	8	;volatile
+  2441                           
+  2442                           ;main.c: 329: PORTE = 0;
+  2443  03D0  0189               	clrf	9	;volatile
+  2444                           
+  2445                           ;main.c: 331: tim10Hz = 5;
+  2446  03D1  3005               	movlw	5
+  2447  03D2  00CD               	movwf	_tim10Hz	;volatile
+  2448                           
+  2449                           ;main.c: 332: tim2Hz = 5;
+  2450  03D3  00CF               	movwf	_tim2Hz	;volatile
+  2451                           
+  2452                           ;main.c: 333: tim1sec = 2;
+  2453  03D4  3002               	movlw	2
+  2454  03D5  00CE               	movwf	_tim1sec	;volatile
+  2455  03D6  0008               	return
+  2456  03D7                     __end_of_vInitializeBoard:	
+  2457                           
+  2458                           	psect	text472
+  2459  028C                     __ptext472:	
+  2460 ;; =============== function _vInitializeBoard ends ============
+  2461                           
+  2462                           
+  2463 ;; *************** function _erdem *****************
+  2464 ;; Defined at:
+  2465 ;;		line 114 in file "../src/main.c"
+  2466 ;; Parameters:    Size  Location     Type
+  2467 ;;		None
+  2468 ;; Auto vars:     Size  Location     Type
+  2469 ;;  temp            1    7[COMMON] unsigned char 
+  2470 ;; Return value:  Size  Location     Type
+  2471 ;;		None               void
+  2472 ;; Registers used:
+  2473 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  2474 ;; Tracked objects:
+  2475 ;;		On entry : 0/0
+  2476 ;;		On exit  : 40/0
+  2477 ;;		Unchanged: 0/0
+  2478 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2479 ;;      Params:         0       0       0       0       0
+  2480 ;;      Locals:         1       0       0       0       0
+  2481 ;;      Temps:          3       0       0       0       0
+  2482 ;;      Totals:         4       0       0       0       0
+  2483 ;;Total ram usage:        4 bytes
+  2484 ;; Hardware stack levels used:    1
+  2485 ;; Hardware stack levels required when called:    2
+  2486 ;; This function calls:
+  2487 ;;		_restartUSR_K2
+  2488 ;;		_vCheckError
+  2489 ;;		_vAddToUartReceiveBuffer
+  2490 ;;		_cGetFromTxBuffer
+  2491 ;; This function is called by:
+  2492 ;;		Interrupt level 1
+  2493 ;; This function uses a non-reentrant model
+  2494 ;;
+  2495  028C                     _erdem:	
+  2496                           
+  2497                           ;main.c: 115: unsigned char temp;
+  2498                           ;main.c: 118: if (T0IE && T0IF) {
+  2499  028C  1A8B               	btfsc	11,5
+  2500  028D  1D0B               	btfss	11,2
+  2501  028E  2AFC               	goto	i1l1101
+  2502                           
+  2503                           ;main.c: 119: TMR0 = 190;
+  2504  028F  30BE               	movlw	190
+  2505  0290  1283               	bcf	3,5	;RP0=0, select bank0
+  2506  0291  1303               	bcf	3,6	;RP1=0, select bank0
+  2507  0292  0081               	movwf	1	;volatile
+  2508                           
+  2509                           ;main.c: 121: if ((--debounceTimer == 0) && debounceTimerEnable) {
+  2510  0293  0BF9               	decfsz	_debounceTimer,f	;volatile
+  2511  0294  2A99               	goto	i1l1102
+  2512  0295  1F70               	btfss	_debounceTimerEnable/(0+8),_debounceTimerEnable& (0+7)
+  2513  0296  2A99               	goto	i1l1102
+  2514                           
+  2515                           ;main.c: 122: debounceTimerTimeoutFlag = 1;
+  2516  0297  17F0               	bsf	_debounceTimerTimeoutFlag/(0+8),_debounceTimerTimeoutFlag& (0+7)
+  2517                           
+  2518                           ;main.c: 123: debounceTimerEnable = 0;
+  2519  0298  1370               	bcf	_debounceTimerEnable/(0+8),_debounceTimerEnable& (0+7)
+  2520  0299                     i1l1102:	
+  2521                           
+  2522                           ;main.c: 124: }
+  2523                           ;main.c: 126: if (--tim10Hz == 0)
+  2524  0299  0BCD               	decfsz	_tim10Hz,f	;volatile
+  2525  029A  2AFA               	goto	i1l5499
+  2526                           
+  2527                           ;main.c: 127: {
+  2528                           ;main.c: 128: tim10Hz = 12;
+  2529  029B  300C               	movlw	12
+  2530  029C  00CD               	movwf	_tim10Hz	;volatile
+  2531                           
+  2532                           ;main.c: 130: if ((--RELAY_1_Timer == 0) && RELAY_1_Timer_En) {
+  2533  029D  3001               	movlw	1
+  2534  029E  02A5               	subwf	_RELAY_1_Timer,f	;volatile
+  2535  029F  3000               	movlw	0
+  2536  02A0  1C03               	skipc
+  2537  02A1  03A6               	decf	_RELAY_1_Timer+1,f	;volatile
+  2538  02A2  02A6               	subwf	_RELAY_1_Timer+1,f	;volatile
+  2539  02A3  0826               	movf	_RELAY_1_Timer+1,w	;volatile
+  2540  02A4  0425               	iorwf	_RELAY_1_Timer,w	;volatile
+  2541  02A5  1903               	btfsc	3,2
+  2542  02A6  1C70               	btfss	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  2543  02A7  2AAA               	goto	i1l5459
+  2544                           
+  2545                           ;main.c: 131: (PORTDbits.RD1) = 0;
+  2546  02A8  1088               	bcf	8,1	;volatile
+  2547                           
+  2548                           ;main.c: 132: RELAY_1_Timer_En = 0;
+  2549  02A9  1070               	bcf	_RELAY_1_Timer_En/(0+8),_RELAY_1_Timer_En& (0+7)
+  2550  02AA                     i1l5459:	
+  2551                           
+  2552                           ;main.c: 133: }
+  2553                           ;main.c: 134: if ((--RELAY_2_Timer == 0) && RELAY_2_Timer_En) {
+  2554  02AA  3001               	movlw	1
+  2555  02AB  02A7               	subwf	_RELAY_2_Timer,f	;volatile
+  2556  02AC  3000               	movlw	0
+  2557  02AD  1C03               	skipc
+  2558  02AE  03A8               	decf	_RELAY_2_Timer+1,f	;volatile
+  2559  02AF  02A8               	subwf	_RELAY_2_Timer+1,f	;volatile
+  2560  02B0  0828               	movf	_RELAY_2_Timer+1,w	;volatile
+  2561  02B1  0427               	iorwf	_RELAY_2_Timer,w	;volatile
+  2562  02B2  1903               	btfsc	3,2
+  2563  02B3  1CF0               	btfss	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  2564  02B4  2AB7               	goto	i1l5465
+  2565                           
+  2566                           ;main.c: 135: (PORTDbits.RD2) = 0;
+  2567  02B5  1108               	bcf	8,2	;volatile
+  2568                           
+  2569                           ;main.c: 136: RELAY_2_Timer_En = 0;
+  2570  02B6  10F0               	bcf	_RELAY_2_Timer_En/(0+8),_RELAY_2_Timer_En& (0+7)
+  2571  02B7                     i1l5465:	
+  2572                           
+  2573                           ;main.c: 137: }
+  2574                           ;main.c: 138: if ((--RELAY_3_Timer == 0) && RELAY_3_Timer_En) {
+  2575  02B7  3001               	movlw	1
+  2576  02B8  02A9               	subwf	_RELAY_3_Timer,f	;volatile
+  2577  02B9  3000               	movlw	0
+  2578  02BA  1C03               	skipc
+  2579  02BB  03AA               	decf	_RELAY_3_Timer+1,f	;volatile
+  2580  02BC  02AA               	subwf	_RELAY_3_Timer+1,f	;volatile
+  2581  02BD  082A               	movf	_RELAY_3_Timer+1,w	;volatile
+  2582  02BE  0429               	iorwf	_RELAY_3_Timer,w	;volatile
+  2583  02BF  1903               	btfsc	3,2
+  2584  02C0  1D70               	btfss	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  2585  02C1  2AC4               	goto	i1l5471
+  2586                           
+  2587                           ;main.c: 139: (PORTDbits.RD3) = 0;
+  2588  02C2  1188               	bcf	8,3	;volatile
+  2589                           
+  2590                           ;main.c: 140: RELAY_3_Timer_En = 0;
+  2591  02C3  1170               	bcf	_RELAY_3_Timer_En/(0+8),_RELAY_3_Timer_En& (0+7)
+  2592  02C4                     i1l5471:	
+  2593                           
+  2594                           ;main.c: 141: }
+  2595                           ;main.c: 142: if ((--RELAY_4_Timer == 0) && RELAY_4_Timer_En) {
+  2596  02C4  3001               	movlw	1
+  2597  02C5  02AB               	subwf	_RELAY_4_Timer,f	;volatile
+  2598  02C6  3000               	movlw	0
+  2599  02C7  1C03               	skipc
+  2600  02C8  03AC               	decf	_RELAY_4_Timer+1,f	;volatile
+  2601  02C9  02AC               	subwf	_RELAY_4_Timer+1,f	;volatile
+  2602  02CA  082C               	movf	_RELAY_4_Timer+1,w	;volatile
+  2603  02CB  042B               	iorwf	_RELAY_4_Timer,w	;volatile
+  2604  02CC  1903               	btfsc	3,2
+  2605  02CD  1DF0               	btfss	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  2606  02CE  2AD1               	goto	i1l5477
+  2607                           
+  2608                           ;main.c: 143: (PORTCbits.RC4) = 0;
+  2609  02CF  1207               	bcf	7,4	;volatile
+  2610                           
+  2611                           ;main.c: 144: RELAY_4_Timer_En = 0;
+  2612  02D0  11F0               	bcf	_RELAY_4_Timer_En/(0+8),_RELAY_4_Timer_En& (0+7)
+  2613  02D1                     i1l5477:	
+  2614                           
+  2615                           ;main.c: 145: }
+  2616                           ;main.c: 146: if ((--RELAY_5_Timer == 0) && RELAY_5_Timer_En) {
+  2617  02D1  3001               	movlw	1
+  2618  02D2  02AD               	subwf	_RELAY_5_Timer,f	;volatile
+  2619  02D3  3000               	movlw	0
+  2620  02D4  1C03               	skipc
+  2621  02D5  03AE               	decf	_RELAY_5_Timer+1,f	;volatile
+  2622  02D6  02AE               	subwf	_RELAY_5_Timer+1,f	;volatile
+  2623  02D7  082E               	movf	_RELAY_5_Timer+1,w	;volatile
+  2624  02D8  042D               	iorwf	_RELAY_5_Timer,w	;volatile
+  2625  02D9  1903               	btfsc	3,2
+  2626  02DA  1E70               	btfss	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  2627  02DB  2ADE               	goto	i1l5483
+  2628                           
+  2629                           ;main.c: 147: (PORTCbits.RC5) = 0;
+  2630  02DC  1287               	bcf	7,5	;volatile
+  2631                           
+  2632                           ;main.c: 148: RELAY_5_Timer_En = 0;
+  2633  02DD  1270               	bcf	_RELAY_5_Timer_En/(0+8),_RELAY_5_Timer_En& (0+7)
+  2634  02DE                     i1l5483:	
+  2635                           
+  2636                           ;main.c: 149: }
+  2637                           ;main.c: 150: if ((--communicationControlTimer == 0) && communicationControlTimer_En) {
+  2638  02DE  3001               	movlw	1
+  2639  02DF  02AF               	subwf	_communicationControlTimer,f	;volatile
+  2640  02E0  3000               	movlw	0
+  2641  02E1  1C03               	skipc
+  2642  02E2  03B0               	decf	_communicationControlTimer+1,f	;volatile
+  2643  02E3  02B0               	subwf	_communicationControlTimer+1,f	;volatile
+  2644  02E4  0830               	movf	_communicationControlTimer+1,w	;volatile
+  2645  02E5  042F               	iorwf	_communicationControlTimer,w	;volatile
+  2646  02E6  1903               	btfsc	3,2
+  2647  02E7  1EF0               	btfss	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  2648  02E8  2AF0               	goto	i1l5491
+  2649                           
+  2650                           ;main.c: 151: restartUSR_K2();
+  2651  02E9  2355  120A  118A   	fcall	_restartUSR_K2
+  2652                           
+  2653                           ;main.c: 152: communicationControlTimer = 3000;
+  2654  02EC  30B8               	movlw	184
+  2655  02ED  00AF               	movwf	_communicationControlTimer	;volatile
+  2656  02EE  300B               	movlw	11
+  2657  02EF  00B0               	movwf	_communicationControlTimer+1	;volatile
+  2658  02F0                     i1l5491:	
+  2659                           
+  2660                           ;main.c: 153: }
+  2661                           ;main.c: 155: if (--tim2Hz == 0)
+  2662  02F0  0BCF               	decfsz	_tim2Hz,f	;volatile
+  2663  02F1  2AFA               	goto	i1l5499
+  2664                           
+  2665                           ;main.c: 156: {
+  2666                           ;main.c: 157: tim2Hz = 5;
+  2667  02F2  3005               	movlw	5
+  2668  02F3  00CF               	movwf	_tim2Hz	;volatile
+  2669                           
+  2670                           ;main.c: 158: if (--tim1sec == 0)
+  2671  02F4  0BCE               	decfsz	_tim1sec,f	;volatile
+  2672  02F5  2AFA               	goto	i1l5499
+  2673                           
+  2674                           ;main.c: 159: {
+  2675                           ;main.c: 160: tim1sec = 2;
+  2676  02F6  3002               	movlw	2
+  2677  02F7  00CE               	movwf	_tim1sec	;volatile
+  2678                           
+  2679                           ;main.c: 161: (PORTDbits.RD0) ^= 1;
+  2680  02F8  3001               	movlw	1
+  2681  02F9  0688               	xorwf	8,f	;volatile
+  2682  02FA                     i1l5499:	
+  2683                           
+  2684                           ;main.c: 163: }
+  2685                           ;main.c: 164: }
+  2686                           ;main.c: 165: }
+  2687                           ;main.c: 167: T0IF = 0;
+  2688  02FA  110B               	bcf	11,2
+  2689  02FB  2B29               	goto	i1l1112
+  2690  02FC                     i1l1101:	
+  2691                           
+  2692                           ;main.c: 169: }
+  2693                           ;main.c: 171: if (RCIE && RCIF) {
+  2694  02FC  1683               	bsf	3,5	;RP0=1, select bank1
+  2695  02FD  1303               	bcf	3,6	;RP1=0, select bank1
+  2696  02FE  1E8C               	btfss	12,5
+  2697  02FF  2B15               	goto	i1l1113
+  2698  0300  1283               	bcf	3,5	;RP0=0, select bank0
+  2699  0301  1E8C               	btfss	12,5
+  2700  0302  2B15               	goto	i1l1113
+  2701                           
+  2702                           ;main.c: 172: if (OERR) {
+  2703  0303  1C98               	btfss	24,1
+  2704  0304  2B07               	goto	i1l1114
+  2705                           
+  2706                           ;main.c: 173: CREN = 0;
+  2707  0305  1218               	bcf	24,4
+  2708                           
+  2709                           ;main.c: 174: CREN = 1;
+  2710  0306  1618               	bsf	24,4
+  2711  0307                     i1l1114:	
+  2712                           
+  2713                           ;main.c: 175: }
+  2714                           ;main.c: 176: if (FERR) {
+  2715  0307  1918               	btfsc	24,2
+  2716  0308  081A               	movf	26,w	;volatile
+  2717  0309                     i1l5513:	
+  2718  0309  1A8C               	btfsc	12,5
+  2719  030A  2B0F               	goto	i1l5515
+  2720                           
+  2721                           ;main.c: 180: vCheckError();
+  2722  030B  2332  120A  118A   	fcall	_vCheckError
+  2723  030E  2B09               	goto	i1l5513
+  2724  030F                     i1l5515:	
+  2725                           
+  2726                           ;main.c: 181: }
+  2727                           ;main.c: 183: temp = RCREG;
+  2728  030F  081A               	movf	26,w	;volatile
+  2729  0310  00F8               	movwf	erdem@temp
+  2730                           
+  2731                           ;main.c: 184: vAddToUartReceiveBuffer(temp);
+  2732  0311  233B  120A  118A   	fcall	_vAddToUartReceiveBuffer
+  2733  0314  2B29               	goto	i1l1112
+  2734  0315                     i1l1113:	
+  2735                           
+  2736                           ;main.c: 186: }
+  2737                           ;main.c: 188: if (TXIE && TXIF) {
+  2738  0315  1683               	bsf	3,5	;RP0=1, select bank1
+  2739  0316  1E0C               	btfss	12,4
+  2740  0317  2B29               	goto	i1l1112
+  2741  0318  1283               	bcf	3,5	;RP0=0, select bank0
+  2742  0319  1E0C               	btfss	12,4
+  2743  031A  2B29               	goto	i1l1112
+  2744                           
+  2745                           ;main.c: 189: if (uartTransmitBufferR != uartTransmitBufferW) {
+  2746  031B  087B               	movf	_uartTransmitBufferR,w	;volatile
+  2747  031C  067C               	xorwf	_uartTransmitBufferW,w	;volatile
+  2748  031D  1903               	skipnz
+  2749  031E  2B25               	goto	i1l1120
+  2750                           
+  2751                           ;main.c: 190: temp = cGetFromTxBuffer();
+  2752  031F  2348  120A  118A   	fcall	_cGetFromTxBuffer
+  2753  0322  00F8               	movwf	erdem@temp
+  2754                           
+  2755                           ;main.c: 191: TXREG = temp;
+  2756  0323  0099               	movwf	25	;volatile
+  2757                           
+  2758                           ;main.c: 192: } else {
+  2759  0324  2B29               	goto	i1l1112
+  2760  0325                     i1l1120:	
+  2761                           
+  2762                           ;main.c: 193: TXIE = 0;
+  2763  0325  1683               	bsf	3,5	;RP0=1, select bank1
+  2764  0326  120C               	bcf	12,4
+  2765                           
+  2766                           ;main.c: 194: TXIF = 0;
+  2767  0327  1283               	bcf	3,5	;RP0=0, select bank0
+  2768  0328  120C               	bcf	12,4
+  2769  0329                     i1l1112:	
+  2770  0329  0877               	movf	??_erdem+2,w
+  2771  032A  008A               	movwf	10
+  2772  032B  0876               	movf	??_erdem+1,w
+  2773  032C  0084               	movwf	4
+  2774  032D  0E75               	swapf	??_erdem^(0+-128),w
+  2775  032E  0083               	movwf	3
+  2776  032F  0EFE               	swapf	126,f
+  2777  0330  0E7E               	swapf	126,w
+  2778  0331  0009               	retfie
+  2779  0332                     __end_of_erdem:	
+  2780  0332                     __ptext477:	
+  2781 ;; =============== function _vAddToUartReceiveBuffer ends ============
+  2782                           
+  2783                           
+  2784 ;; *************** function _vCheckError *****************
+  2785 ;; Defined at:
+  2786 ;;		line 105 in file "../src/uart.c"
+  2787 ;; Parameters:    Size  Location     Type
+  2788 ;;		None
+  2789 ;; Auto vars:     Size  Location     Type
+  2790 ;;  a               1    0        unsigned char 
+  2791 ;; Return value:  Size  Location     Type
+  2792 ;;		None               void
+  2793 ;; Registers used:
+  2794 ;;		wreg
+  2795 ;; Tracked objects:
+  2796 ;;		On entry : 0/0
+  2797 ;;		On exit  : 60/0
+  2798 ;;		Unchanged: FFF9F/0
+  2799 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2800 ;;      Params:         0       0       0       0       0
+  2801 ;;      Locals:         0       0       0       0       0
+  2802 ;;      Temps:          0       0       0       0       0
+  2803 ;;      Totals:         0       0       0       0       0
+  2804 ;;Total ram usage:        0 bytes
+  2805 ;; Hardware stack levels used:    1
+  2806 ;; This function calls:
+  2807 ;;		Nothing
+  2808 ;; This function is called by:
+  2809 ;;		_erdem
+  2810 ;; This function uses a non-reentrant model
+  2811 ;;
+  2812  0332                     _vCheckError:	
+  2813                           
+  2814                           ;uart.c: 107: if ( OERR )
+  2815                           
+  2816                           ; Regs used in _vCheckError: [wreg]
+  2817  0332  1283               	bcf	3,5	;RP0=0, select bank0
+  2818  0333  1303               	bcf	3,6	;RP1=0, select bank0
+  2819  0334  1C98               	btfss	24,1
+  2820  0335  2B38               	goto	i1l2203
+  2821                           
+  2822                           ;uart.c: 108: {
+  2823                           ;uart.c: 109: CREN = 0;
+  2824  0336  1218               	bcf	24,4
+  2825                           
+  2826                           ;uart.c: 110: CREN = 1;
+  2827  0337  1618               	bsf	24,4
+  2828  0338                     i1l2203:	
+  2829                           
+  2830                           ;uart.c: 111: }
+  2831                           ;uart.c: 112: if( FERR )
+  2832  0338  1918               	btfsc	24,2
+  2833                           
+  2834                           ;uart.c: 113: {
+  2835                           ;uart.c: 114: a = RCREG;
+  2836  0339  081A               	movf	26,w	;volatile
+  2837  033A  0008               	return
+  2838  033B                     __end_of_vCheckError:	
+  2839  033B                     __ptext476:	
+  2840 ;; =============== function _cGetFromTxBuffer ends ============
+  2841                           
+  2842                           
+  2843 ;; *************** function _vAddToUartReceiveBuffer *****************
+  2844 ;; Defined at:
+  2845 ;;		line 90 in file "../src/StringSerialProtocol.c"
+  2846 ;; Parameters:    Size  Location     Type
+  2847 ;;  data            1    wreg     unsigned char 
+  2848 ;; Auto vars:     Size  Location     Type
+  2849 ;;  data            1    0[COMMON] unsigned char 
+  2850 ;; Return value:  Size  Location     Type
+  2851 ;;		None               void
+  2852 ;; Registers used:
+  2853 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  2854 ;; Tracked objects:
+  2855 ;;		On entry : 60/0
+  2856 ;;		On exit  : 160/0
+  2857 ;;		Unchanged: FFE9F/0
+  2858 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2859 ;;      Params:         0       0       0       0       0
+  2860 ;;      Locals:         1       0       0       0       0
+  2861 ;;      Temps:          0       0       0       0       0
+  2862 ;;      Totals:         1       0       0       0       0
+  2863 ;;Total ram usage:        1 bytes
+  2864 ;; Hardware stack levels used:    1
+  2865 ;; This function calls:
+  2866 ;;		Nothing
+  2867 ;; This function is called by:
+  2868 ;;		_erdem
+  2869 ;; This function uses a non-reentrant model
+  2870 ;;
+  2871  033B                     _vAddToUartReceiveBuffer:	
+  2872                           
+  2873                           ; Regs used in _vAddToUartReceiveBuffer: [wreg-fsr0h+status,2+status,0]
+  2874                           ;vAddToUartReceiveBuffer@data stored from wreg
+  2875  033B  00F1               	movwf	vAddToUartReceiveBuffer@data
+  2876                           
+  2877                           ;StringSerialProtocol.c: 91: uartReceiveBuffer[ uartReceiveBufferW ] = data;
+  2878  033C  0837               	movf	_uartReceiveBufferW,w
+  2879  033D  3EA0               	addlw	_uartReceiveBuffer& (0+255)
+  2880  033E  0084               	movwf	4
+  2881  033F  0871               	movf	vAddToUartReceiveBuffer@data,w
+  2882  0340  1383               	bcf	3,7	;select IRP bank1
+  2883  0341  0080               	movwf	0
+  2884                           
+  2885                           ;StringSerialProtocol.c: 92: uartReceiveBufferW++;
+  2886  0342  0AB7               	incf	_uartReceiveBufferW,f	;volatile
+  2887                           
+  2888                           ;StringSerialProtocol.c: 93: if (uartReceiveBufferW == 60) {
+  2889  0343  0837               	movf	_uartReceiveBufferW,w	;volatile
+  2890  0344  3A3C               	xorlw	60
+  2891  0345  1903               	btfsc	3,2
+  2892                           
+  2893                           ;StringSerialProtocol.c: 94: uartReceiveBufferW = 0;
+  2894  0346  01B7               	clrf	_uartReceiveBufferW	;volatile
+  2895  0347  0008               	return
+  2896  0348                     __end_of_vAddToUartReceiveBuffer:	
+  2897  0348                     __ptext475:	
+  2898 ;; =============== function i1_setCommunicationTimeOut ends ============
+  2899                           
+  2900                           
+  2901 ;; *************** function _cGetFromTxBuffer *****************
+  2902 ;; Defined at:
+  2903 ;;		line 128 in file "../src/StringSerialProtocol.c"
+  2904 ;; Parameters:    Size  Location     Type
+  2905 ;;		None
+  2906 ;; Auto vars:     Size  Location     Type
+  2907 ;;  value           1    0[COMMON] unsigned char 
+  2908 ;; Return value:  Size  Location     Type
+  2909 ;;                  1    wreg      unsigned char 
+  2910 ;; Registers used:
+  2911 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  2912 ;; Tracked objects:
+  2913 ;;		On entry : 60/0
+  2914 ;;		On exit  : 160/100
+  2915 ;;		Unchanged: FFE9F/0
+  2916 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2917 ;;      Params:         0       0       0       0       0
+  2918 ;;      Locals:         1       0       0       0       0
+  2919 ;;      Temps:          0       0       0       0       0
+  2920 ;;      Totals:         1       0       0       0       0
+  2921 ;;Total ram usage:        1 bytes
+  2922 ;; Hardware stack levels used:    1
+  2923 ;; This function calls:
+  2924 ;;		Nothing
+  2925 ;; This function is called by:
+  2926 ;;		_erdem
+  2927 ;; This function uses a non-reentrant model
+  2928 ;;
+  2929  0348                     _cGetFromTxBuffer:	
+  2930                           
+  2931                           ;StringSerialProtocol.c: 129: unsigned char value;
+  2932                           ;StringSerialProtocol.c: 131: value = uartTransmitBuffer[uartTransmitBufferR];
+  2933                           
+  2934                           ; Regs used in _cGetFromTxBuffer: [wreg-fsr0h+status,2+status,0]
+  2935  0348  087B               	movf	_uartTransmitBufferR,w
+  2936  0349  3E90               	addlw	_uartTransmitBuffer& (0+255)
+  2937  034A  0084               	movwf	4
+  2938  034B  1783               	bsf	3,7	;select IRP bank3
+  2939  034C  0800               	movf	0,w
+  2940  034D  00F1               	movwf	cGetFromTxBuffer@value
+  2941                           
+  2942                           ;StringSerialProtocol.c: 132: uartTransmitBufferR++;
+  2943  034E  0AFB               	incf	_uartTransmitBufferR,f	;volatile
+  2944                           
+  2945                           ;StringSerialProtocol.c: 133: if (uartTransmitBufferR == 60) {
+  2946  034F  087B               	movf	_uartTransmitBufferR,w	;volatile
+  2947  0350  3A3C               	xorlw	60
+  2948  0351  1903               	btfsc	3,2
+  2949                           
+  2950                           ;StringSerialProtocol.c: 134: uartTransmitBufferR = 0;
+  2951  0352  01FB               	clrf	_uartTransmitBufferR	;volatile
+  2952                           
+  2953                           ;StringSerialProtocol.c: 135: }
+  2954                           ;StringSerialProtocol.c: 136: return value;
+  2955  0353  0871               	movf	cGetFromTxBuffer@value,w
+  2956  0354  0008               	return
+  2957  0355                     __end_of_cGetFromTxBuffer:	
+  2958  0355                     __ptext473:	
+  2959 ;; =============== function _erdem ends ============
+  2960                           
+  2961                           
+  2962 ;; *************** function _restartUSR_K2 *****************
+  2963 ;; Defined at:
+  2964 ;;		line 348 in file "../src/main.c"
+  2965 ;; Parameters:    Size  Location     Type
+  2966 ;;		None
+  2967 ;; Auto vars:     Size  Location     Type
+  2968 ;;		None
+  2969 ;; Return value:  Size  Location     Type
+  2970 ;;		None               void
+  2971 ;; Registers used:
+  2972 ;;		wreg, status,2, status,0, pclath, cstack
+  2973 ;; Tracked objects:
+  2974 ;;		On entry : 60/0
+  2975 ;;		On exit  : 60/0
+  2976 ;;		Unchanged: 0/0
+  2977 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2978 ;;      Params:         0       0       0       0       0
+  2979 ;;      Locals:         0       0       0       0       0
+  2980 ;;      Temps:          2       0       0       0       0
+  2981 ;;      Totals:         2       0       0       0       0
+  2982 ;;Total ram usage:        2 bytes
+  2983 ;; Hardware stack levels used:    1
+  2984 ;; Hardware stack levels required when called:    1
+  2985 ;; This function calls:
+  2986 ;;		i1_setCommunicationTimeOut
+  2987 ;; This function is called by:
+  2988 ;;		_erdem
+  2989 ;; This function uses a non-reentrant model
+  2990 ;;
+  2991  0355                     _restartUSR_K2:	
+  2992                           
+  2993                           ;main.c: 349: (PORTCbits.RC3) = 1;
+  2994                           
+  2995                           ; Regs used in _restartUSR_K2: [wreg+status,2+status,0+pclath+cstack]
+  2996  0355  1587               	bsf	7,3	;volatile
+  2997                           
+  2998                           ;main.c: 353: _delay((unsigned long)((40)*(8000000/4000.0)));
+  2999  0356  3068               	movlw	104
+  3000  0357  00F4               	movwf	??_restartUSR_K2+1
+  3001  0358  30E4               	movlw	228
+  3002  0359  00F3               	movwf	??_restartUSR_K2
+  3003  035A                     u129_27:	
+  3004  035A  0BF3               	decfsz	??_restartUSR_K2,f
+  3005  035B  2B5A               	goto	u129_27
+  3006  035C  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3007  035D  2B5A               	goto	u129_27
+  3008  035E  0064               	clrwdt
+  3009                           
+  3010                           ;main.c: 354: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3011  035F  3068               	movlw	104
+  3012  0360  00F4               	movwf	??_restartUSR_K2+1
+  3013  0361  30E4               	movlw	228
+  3014  0362  00F3               	movwf	??_restartUSR_K2
+  3015  0363                     u130_27:	
+  3016  0363  0BF3               	decfsz	??_restartUSR_K2,f
+  3017  0364  2B63               	goto	u130_27
+  3018  0365  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3019  0366  2B63               	goto	u130_27
+  3020  0367  0064               	clrwdt
+  3021                           
+  3022                           ;main.c: 355: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3023  0368  3068               	movlw	104
+  3024  0369  00F4               	movwf	??_restartUSR_K2+1
+  3025  036A  30E4               	movlw	228
+  3026  036B  00F3               	movwf	??_restartUSR_K2
+  3027  036C                     u131_27:	
+  3028  036C  0BF3               	decfsz	??_restartUSR_K2,f
+  3029  036D  2B6C               	goto	u131_27
+  3030  036E  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3031  036F  2B6C               	goto	u131_27
+  3032  0370  0064               	clrwdt
+  3033                           
+  3034                           ;main.c: 356: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3035  0371  3068               	movlw	104
+  3036  0372  00F4               	movwf	??_restartUSR_K2+1
+  3037  0373  30E4               	movlw	228
+  3038  0374  00F3               	movwf	??_restartUSR_K2
+  3039  0375                     u132_27:	
+  3040  0375  0BF3               	decfsz	??_restartUSR_K2,f
+  3041  0376  2B75               	goto	u132_27
+  3042  0377  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3043  0378  2B75               	goto	u132_27
+  3044  0379  0064               	clrwdt
+  3045                           
+  3046                           ;main.c: 357: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3047  037A  3068               	movlw	104
+  3048  037B  00F4               	movwf	??_restartUSR_K2+1
+  3049  037C  30E4               	movlw	228
+  3050  037D  00F3               	movwf	??_restartUSR_K2
+  3051  037E                     u133_27:	
+  3052  037E  0BF3               	decfsz	??_restartUSR_K2,f
+  3053  037F  2B7E               	goto	u133_27
+  3054  0380  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3055  0381  2B7E               	goto	u133_27
+  3056  0382  0064               	clrwdt
+  3057                           
+  3058                           ;main.c: 358: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3059  0383  3068               	movlw	104
+  3060  0384  00F4               	movwf	??_restartUSR_K2+1
+  3061  0385  30E4               	movlw	228
+  3062  0386  00F3               	movwf	??_restartUSR_K2
+  3063  0387                     u134_27:	
+  3064  0387  0BF3               	decfsz	??_restartUSR_K2,f
+  3065  0388  2B87               	goto	u134_27
+  3066  0389  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3067  038A  2B87               	goto	u134_27
+  3068  038B  0064               	clrwdt
+  3069                           
+  3070                           ;main.c: 359: _delay((unsigned long)((40)*(8000000/4000.0)));
+  3071  038C  3068               	movlw	104
+  3072  038D  00F4               	movwf	??_restartUSR_K2+1
+  3073  038E  30E4               	movlw	228
+  3074  038F  00F3               	movwf	??_restartUSR_K2
+  3075  0390                     u135_27:	
+  3076  0390  0BF3               	decfsz	??_restartUSR_K2,f
+  3077  0391  2B90               	goto	u135_27
+  3078  0392  0BF4               	decfsz	??_restartUSR_K2+1,f
+  3079  0393  2B90               	goto	u135_27
+  3080  0394  0064               	clrwdt
+  3081                           
+  3082                           ;main.c: 360: (PORTCbits.RC3) = 0;
+  3083  0395  1283               	bcf	3,5	;RP0=0, select bank0
+  3084  0396  1303               	bcf	3,6	;RP1=0, select bank0
+  3085  0397  1187               	bcf	7,3	;volatile
+  3086                           
+  3087                           ;main.c: 365: setCommunicationTimeOut(3000);
+  3088  0398  30B8               	movlw	184
+  3089  0399  00F1               	movwf	?i1_setCommunicationTimeOut
+  3090  039A  300B               	movlw	11
+  3091  039B  00F2               	movwf	?i1_setCommunicationTimeOut+1
+  3092  039C  239E               	fcall	i1_setCommunicationTimeOut
+  3093  039D  0008               	return
+  3094  039E                     __end_of_restartUSR_K2:	
+  3095  039E                     __ptext474:	
+  3096 ;; =============== function _restartUSR_K2 ends ============
+  3097                           
+  3098                           
+  3099 ;; *************** function i1_setCommunicationTimeOut *****************
+  3100 ;; Defined at:
+  3101 ;;		line 336 in file "../src/main.c"
+  3102 ;; Parameters:    Size  Location     Type
+  3103 ;;  setCommunica    2    0[COMMON] unsigned int 
+  3104 ;; Auto vars:     Size  Location     Type
+  3105 ;;		None
+  3106 ;; Return value:  Size  Location     Type
+  3107 ;;		None               void
+  3108 ;; Registers used:
+  3109 ;;		wreg
+  3110 ;; Tracked objects:
+  3111 ;;		On entry : 60/0
+  3112 ;;		On exit  : 60/0
+  3113 ;;		Unchanged: FFF9F/0
+  3114 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  3115 ;;      Params:         2       0       0       0       0
+  3116 ;;      Locals:         0       0       0       0       0
+  3117 ;;      Temps:          0       0       0       0       0
+  3118 ;;      Totals:         2       0       0       0       0
+  3119 ;;Total ram usage:        2 bytes
+  3120 ;; Hardware stack levels used:    1
+  3121 ;; This function calls:
+  3122 ;;		Nothing
+  3123 ;; This function is called by:
+  3124 ;;		_restartUSR_K2
+  3125 ;; This function uses a non-reentrant model
+  3126 ;;
+  3127  039E                     i1_setCommunicationTimeOut:	
+  3128                           
+  3129                           ;main.c: 337: communicationControlTimer = value;
+  3130                           
+  3131                           ; Regs used in i1_setCommunicationTimeOut: [wreg]
+  3132  039E  0872               	movf	i1setCommunicationTimeOut@value+1,w
+  3133  039F  00B0               	movwf	_communicationControlTimer+1	;volatile
+  3134  03A0  0871               	movf	i1setCommunicationTimeOut@value,w
+  3135  03A1  00AF               	movwf	_communicationControlTimer	;volatile
+  3136                           
+  3137                           ;main.c: 338: communicationControlTimer_En = 1;
+  3138  03A2  16F0               	bsf	_communicationControlTimer_En/(0+8),_communicationControlTimer_En& (0+7)
+  3139  03A3  0008               	return
+  3140  03A4                     __end_ofi1_setCommunicationTimeOut:	
+  3141                           
+  3142                           	psect	intentry
+  3143  0004                     __pintentry:	
+  3144                           ; Regs used in _erdem: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  3145                           
+  3146  0004                     interrupt_function:	
+  3147  007E                     saved_w	set	btemp
+  3148  0004  00FE               	movwf	btemp
+  3149  0005  0E03               	swapf	3,w
+  3150  0006  00F5               	movwf	??_erdem
+  3151  0007  0804               	movf	4,w
+  3152  0008  00F6               	movwf	??_erdem+1
+  3153  0009  080A               	movf	10,w
+  3154  000A  00F7               	movwf	??_erdem+2
+  3155  000B  120A  118A  2A8C   	ljmp	_erdem
+  3156                           
+  3157                           	psect	text478
+  3158  0000                     __ptext478:	
+  3159 ;; =============== function _vCheckError ends ============
+  3160                           
+  3161  007E                     btemp	set	126	;btemp
+  3162  007E                     wtemp0	set	126
+
+
+HI-TECH Software PICC Macro Assembler V9.83 build 10920 
+Symbol Table                                                                                   Thu Jun 07 21:23:27 2018
+
+                                          pc 0002                               ___bmul@product 003F  
+                                         fsr 0004                          ___wmul@multiplicand 0040  
+                        CheckCommand@command 003F                    ??_vAddToUartReceiveBuffer 0071  
+                                        _GIE 005F                                          _RX9 00C6  
+                                        _TX9 04C6                              _vInitializeUart 041F  
+                                        fsr0 0004                                          indf 0000  
+                    ??_cGetFromReceiveBuffer 003E                                         l1130 01B5  
+                                       l1132 01CD                                         l1125 0199  
+                                       l1127 01A0                                         l1143 01FF  
+                                       l2200 0000                                         l1128 01A7  
+                                       l1152 0000                                         l1129 01AE  
+                                       l1146 0000                                         l1149 0000  
+                                       l1158 0000                                         l2214 0000  
+                                       _C1ON 083F                                         l3322 0000  
+                                       _C2ON 0847                                         l3338 0000  
+                                       l4330 0000                                         l4324 0000  
+                                       l5331 0000                                         l5341 0000  
+                                       l5333 0000                                         l5325 0000  
+                                       l5421 0000                                         l5413 0000  
+                                       l5351 0000                                         l5343 0000  
+                                       l5335 0000                                         l5327 0000  
+                                       l5423 0000                                         l5415 0000  
+                                       l5431 0000                                         l5361 0000  
+                                       l5353 0000                                         l5345 0000  
+                                       l5337 0000                                         l5329 0000  
+                                       l5425 0000                                         l5417 0000  
+                                       l5433 0000                                         l5371 0000  
+                                       l5363 0000                                         l5355 0000  
+                                       l5347 0000                                         l5339 0000  
+                                       l5427 0000                                         l5419 0000  
+                                       l5435 0000                                         l5603 01EE  
+                                       l5611 0000                                         l5381 0000  
+                                       l5373 0000                                         l5365 0000  
+                                       l5357 0000                                         l5349 0000  
+                                       l5429 0000                                         l5437 0000  
+                                       l5605 0000                                         l5613 0000  
+                                       l5621 0000                                         l5375 0000  
+                                       l5367 0000                                         l5359 0000  
+                                       l5383 0000                                         l5607 0000  
+                                       l5615 0000                                         l5623 0000  
+                                       l5377 0000                                         l5369 0000  
+                                       l5393 0000                                         l5385 0000  
+                                       l5609 0000                                         l5625 0000  
+                                       l5633 0000                                         l5721 0000  
+                                       l5713 0000                                         l5379 0000  
+                                       l5395 0000                                         l5387 0000  
+                                       l5571 0000                                         l5563 0000  
+                                       l5619 0000                                         l5651 0000  
+                                       l5643 0219                                         l5635 0000  
+                                       l5731 0000                                         l5715 0124  
+                                       l5707 0000                                         l5397 0000  
+                                       l5581 0000                                         l5573 0000  
+                                       l5565 0000                                         l5645 021B  
+                                       l5637 0205                                         l5741 0000  
+                                       l5733 0000                                         l5725 0000  
+                                       l5717 0000                                         l5821 007F  
+                                       l5813 0067                                         l5583 0000  
+                                       l5575 0000                                         l5567 0000  
+                                       l5591 01D0                                         l5647 0208  
+                                       l5639 0000                                         l5671 0000  
+                                       l5751 0000                                         l5743 0000  
+                                       l5735 0000                                         l5727 0000  
+                                       l5831 00BA                                         l5577 0000  
+                                       l5569 0000                                         l5593 01D6  
+                                       l5649 021D                                         l5665 0233  
+                                       l5681 0000                                         l5673 018B  
+                                       l5753 0000                                         l5745 0000  
+                                       l5737 0000                                         l5729 0000  
+                                       l5817 0074                                         l5809 0058  
+                                       l5761 0000                                         l5579 0000  
+                                       l5587 01BC                                         l5595 01DC  
+                                       l5659 0220                                         l5667 023B  
+                                       l5755 0000                                         l5747 0000  
+                                       l5739 0000                                         l5851 0000  
+                                       l5843 0000                                         l5835 0000  
+                                       l5827 00B3                                         l5771 0022  
+                                       l5597 01E2                                         l5589 0000  
+                                       l5693 0258                                         l5749 0000  
+                                       l5757 0179                                         l5845 0000  
+                                       l5829 0000                                         l5837 00C4  
+                                       l5781 0000                                         l5773 0000  
+                                       l5765 0000                                         l5599 01E8  
+                                       l5679 0000                                         l5695 0000  
+                                       l5687 0000                                         l5847 0000  
+                                       l5863 0113                                         l5791 0042  
+                                       l5783 0035                                         l5759 0000  
+                                       l5871 0000                                         l5697 0000  
+                                       l5689 0250                                         l5849 0000  
+                                       l5857 00F2                                         l5777 002A  
+                                       l5785 0037                                         l5769 0000  
+                                       l5873 03F2                                         l5865 0000  
+                                       l5795 0000                                         l5875 0000  
+                                       l5867 0000                                         l5877 0000  
+                                       l5869 0000                                         l5799 004C  
+                                       _BRGH 04C2                                         _T0IE 005D  
+                                       _T0IF 005A                                         _CREN 00C4  
+                                       _FERR 00C2                                         u1245 0089  
+                                       u1255 0096                                         _PIE1 008C  
+                                       _PIE2 008D                     ?_setCommunicationTimeOut 003E  
+                                       _PEIE 005E                                         _RCIE 0465  
+                                       _RCIF 0065                                         _OERR 00C1  
+                                       _TMR0 0001                                         _ROLE 0442  
+                                       _SPEN 00C7                                         _TXIE 0464  
+                                       _TXEN 04C5                                         _TXIF 0064  
+                                       _SYNC 04C4                                         _WPUB 0095  
+                           _vInitializeBoard 03A4                                         _main 03D7  
+                                       btemp 007E                                         start 000E  
+                          ___bmul@multiplier 0040                     __end_of_setDebounceTimer 0272  
+                                _CheckInputs 0115                                        _ADDEN 00C3  
+                                      ?_main 0071                                        _BRG16 0C3B  
+                                      _ANSEL 0188                               vSetRelay@relay 003F  
+                             vSetRelay@value 003E                                        _RCREG 001A  
+                                      _SPBRG 0099                                        _PORTA 0005  
+                                      _PORTB 0006                                        _PORTC 0007  
+                                      _PORTD 0008                                        _PORTE 0009  
+                                      _PULSE 043C                                        _TRISA 0085  
+                                      _TRISB 0086                                        _TRISC 0087  
+                                      _TRISD 0088                                        _TRISE 0089  
+                                      _TXREG 0019                        __size_of_CheckCommand 003D  
+                          ??_vSendDataToUart 003E                        cGetFromTxBuffer@value 0071  
+                               ?_vPulseRelay 0044                                        _erdem 028C  
+                   _vAddToUartTransmitBuffer 017C                          _uartTransmitBufferR 007B  
+                        _uartTransmitBufferW 007C                                        _state 0034  
+                             __pbitbssCOMMON 0380                                        pclath 000A  
+            __end_of_vAddToUartReceiveBuffer 0348                            _uartReceiveBuffer 00A0  
+                       __size_of_vCheckError 0009                                        status 0003  
+                                      wtemp0 007E                     _debounceTimerTimeoutFlag 0387  
+                               __end_of_main 03FE                      __end_of_vInitializeUart 0436  
+                  __size_of_InitializeInputs 0006                                 _CheckCommand 0200  
+                      vPulseRelay@timerValue 0044                  vAddToUartReceiveBuffer@data 0071  
+                                     ??_main 004D                             CheckInputs@state 0031  
+                                     ?_erdem 0071                                       _ANSELH 0189  
+                                     i1l1101 02FC                                       i1l1102 0299  
+                                     i1l1120 0325                                       i1l1112 0329  
+                                     i1l1113 0315                                       i1l1114 0307  
+                                     i1l2203 0338                                       i1l1155 0000  
+                                     i1l1149 0000                                       i1l3286 0000  
+                                     u130_27 0363                                       u131_27 036C  
+                                     i1l5513 0309                                       i1l5531 0000  
+                                     i1l5515 030F                                       i1l5451 0000  
+                                     i1l5533 0000                                       i1l5517 0000  
+                                     i1l5453 0000                                       i1l5445 0000  
+                                     i1l5543 0000                                       i1l5551 0000  
+                                     i1l5703 0000                                       i1l5535 0000  
+                                     u132_27 0375                                       i1l5527 0000  
+                                     i1l5471 02C4                                       i1l5447 0000  
+                                     i1l5439 0000                                       i1l5537 0000  
+                                     i1l5545 0000                                       i1l5553 0000  
+                                     i1l5705 0000                                       i1l5529 0000  
+                                     i1l5465 02B7                                       i1l5547 0000  
+                                     i1l5555 0000                                       i1l5491 02F0  
+                                     i1l5483 02DE                                       i1l5459 02AA  
+                                     i1l5493 0000                                       i1l5477 02D1  
+                                     u133_27 037E                                       i1l5495 0000  
+                                     i1l5497 0000                                       i1l5489 0000  
+                                     i1l5499 02FA                                       u134_27 0387  
+                                     u135_27 0390                                       _INTCON 000B  
+                                     u129_27 035A                                       _OSCCON 008F  
+                                     _WDTCON 0105                   ?i1_setCommunicationTimeOut 0071  
+                                     ___bmul 0189                                       ___wmul 024E  
+                  __size_of_cGetFromTxBuffer 000D                                       _tim2Hz 004F  
+                                     clrloop 0448                                       saved_w 007E  
+                         _uartReceiveBufferR 0036                           _uartReceiveBufferW 0037  
+          __end_ofi1_setCommunicationTimeOut 03A4                          ___bmul@multiplicand 003E  
+                             __pcstackCOMMON 0071                 _communicationControlTimer_En 0385  
+                              __end_of_erdem 0332                             ?_vInitializeUart 0071  
+                   __end_of_vInitializeBoard 03D7                                      ??_erdem 0075  
+                                 _dataBuffer 0038                                   __pbssBANK0 0020  
+                                 __pbssBANK1 00A0                                   __pbssBANK3 0190  
+                       __size_of_vPulseRelay 0037                           __size_of_vSetRelay 0032  
+             __size_of_cGetFromReceiveBuffer 000D                __end_of_cGetFromReceiveBuffer 024E  
+                              _RELAY_1_Timer 0025                                _RELAY_2_Timer 0027  
+                              _RELAY_3_Timer 0029                                _RELAY_4_Timer 002B  
+                              _RELAY_5_Timer 002D                        __end_of_restartUSR_K2 039E  
+                                 __pmaintext 03D7                                      ?___bmul 003E  
+                          ?_setDebounceTimer 0071                                      ?___wmul 003E  
+           __size_of_setCommunicationTimeOut 0006                                   __pintentry 0004  
+                               ?_CheckInputs 0071                                      _CM1CON0 0107  
+                                    _CM2CON0 0108                             _InitializeInputs 044F  
+                         ??_setDebounceTimer 003E                              _vSendDataToUart 023D  
+                 ??_vAddToUartTransmitBuffer 003E                     ?_vAddToUartReceiveBuffer 0071  
+                            __size_of___bmul 000E                             _cGetFromTxBuffer 0348  
+                            __size_of___wmul 0019                            __end_of_vSetRelay 0200  
+                                    _tim10Hz 004D                                      _tim1min 0035  
+                                    _tim1sec 004E                                ??_vCheckError 0071  
+                       end_of_initialization 041B                  ??i1_setCommunicationTimeOut 0073  
+                    __end_of_vSendDataToUart 0241                                    _PORTBbits 0006  
+                                  _PORTCbits 0007                                    _PORTDbits 0008  
+                                  _TRISCbits 0087                           CheckCommand@result 0040  
+StringSerialProtocolService@lastReceivedChar 004B                          __end_of_vCheckError 033B  
+                    _setCommunicationTimeOut 0267                               __end_of___bmul 0197  
+                             __end_of___wmul 0267             __end_of_vAddToUartTransmitBuffer 0189  
+                          ?_vInitializeBoard 0071                         __size_of_CheckInputs 0067  
+                         _uartTransmitBuffer 0190                             _RELAY_1_Timer_En 0380  
+                  i1_setCommunicationTimeOut 039E                           ??_vInitializeBoard 003E  
+                        start_initialization 03FE                             _RELAY_2_Timer_En 0381  
+               vAddToUartTransmitBuffer@data 003E        StringSerialProtocolService@pulseDelay 004A  
+                           _RELAY_3_Timer_En 0382                     __end_of_InitializeInputs 0455  
+                      setDebounceTimer@value 003E                             _RELAY_4_Timer_En 0383  
+                              _debounceTimer 0079                             _RELAY_5_Timer_En 0384  
+                           ?_vSendDataToUart 0071                                     ??___bmul 003F  
+                                   ??___wmul 0042                                  _dataCounter 0033  
+                                __pbssCOMMON 0079                     __size_of_vInitializeUart 0017  
+                              __pcstackBANK0 003E                                ??_vPulseRelay 0046  
+                  __size_of_setDebounceTimer 0005                     __end_of_cGetFromTxBuffer 0355  
+             i1setCommunicationTimeOut@value 0071                                  _vCheckError 0332  
+                  ??_setCommunicationTimeOut 0040                                    __pnvBANK0 004D  
+                      _cGetFromReceiveBuffer 0241         __size_of_StringSerialProtocolService 0104  
+                                  __ptext460 0189                                    __ptext461 0200  
+                                  __ptext470 041F                                    __ptext462 0241  
+                                  __ptext471 03A4                                    __ptext463 023D  
+                                  __ptext472 028C                                    __ptext464 017C  
+                                  __ptext473 0355                                    __ptext465 026D  
+                                  __ptext457 0011                                    __ptext474 039E  
+                                  __ptext466 01CE                                    __ptext458 0115  
+                                  __ptext475 0348                                    __ptext467 0197  
+                                  __ptext459 024E                                    __ptext476 033B  
+                                  __ptext468 0267                                    __ptext477 0332  
+                                  __ptext469 044F                                    __ptext478 0000  
+                              ?_CheckCommand 0071                                    __pstrings 0436  
+                                  _vSetRelay 01CE                       __size_of_restartUSR_K2 0049  
+           __size_of_vAddToUartReceiveBuffer 000D                               __size_of_erdem 00A6  
+                                  _inputPort 007A                            interrupt_function 0004  
+          __size_of_vAddToUartTransmitBuffer 000D                               ___wmul@product 0042  
+                        __end_of_vPulseRelay 01CE                    ?_vAddToUartTransmitBuffer 0071  
+                             ??_CheckCommand 003E                          _debounceTimerEnable 0386  
+                                __stringbase 043B                            ___wmul@multiplier 003E  
+            __end_of_setCommunicationTimeOut 026D                                    erdem@temp 0078  
+                                 ?_vSetRelay 003E           __size_ofi1_setCommunicationTimeOut 0006  
+                          ??_vInitializeUart 003E                       ?_cGetFromReceiveBuffer 0071  
+               StringSerialProtocolService@i 004C                                _restartUSR_K2 0355  
+                           vPulseRelay@relay 0046                           _commandCharCounter 0032  
+                           _setDebounceTimer 026D                                  _vPulseRelay 0197  
+                 cGetFromReceiveBuffer@value 003E                    __size_of_vInitializeBoard 0033  
+                          ?_InitializeInputs 0071                                __size_of_main 0027  
+                             ?_restartUSR_K2 0071                           ??_InitializeInputs 003E  
+                              CheckCommand@i 0042                                     clear_ram 0447  
+               setCommunicationTimeOut@value 003E                    _communicationControlTimer 002F  
+                              ??_CheckInputs 003F                             CheckCommand@size 0041  
+                    _vAddToUartReceiveBuffer 033B                                  ??_vSetRelay 003F  
+                               ?_vCheckError 0071                            ?_cGetFromTxBuffer 0071  
+                                   intlevel1 0000                         __end_of_CheckCommand 023D  
+               ?_StringSerialProtocolService 0071                           ??_cGetFromTxBuffer 0071  
+                                  stringcode 0436                                _commandBuffer 0020  
+                   __size_of_vSendDataToUart 0004                                   _OPTION_REG 0081  
+                        __end_of_CheckInputs 017C                                     stringdir 0436  
+                                   stringtab 0436          __end_of_StringSerialProtocolService 0115  
+                _StringSerialProtocolService 0011                              ??_restartUSR_K2 0073  
+              ??_StringSerialProtocolService 0047  

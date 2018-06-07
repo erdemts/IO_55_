@@ -83,6 +83,14 @@
 #define LED_BLUE_TRIS		     (TRISDbits.TRISD0) //RED LED
 
 
+/*****************************************************************************
+ *	TEMPERATURE SENSORS
+ *****************************************************************************/
+#define LM94022_TEMP_SENS            (PORTBbits.RB5)
+#define LM94022_TEMP_SENS_TRIS     (TRISBbits.TRISB5)
+
+//Analog channels
+#define LM9402                      (13)
 
 
 

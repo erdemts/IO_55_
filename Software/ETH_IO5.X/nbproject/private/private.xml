@@ -3,6 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/ElektronikProjeler/SVN/ETH_IO_/Software/include/main.h</file>
+            <file>file:/D:/ElektronikProjeler/SVN/ETH_IO_/Software/src/main.c</file>
+            <file>file:/D:/ElektronikProjeler/SVN/ETH_IO_/Software/src/StringSerialProtocol.c</file>
+            <file>file:/D:/ElektronikProjeler/SVN/ETH_IO_/Software/src/uart.c</file>
+            <file>file:/D:/ElektronikProjeler/SVN/ETH_IO_/Software/include/uart.h</file>
+        </group>
     </open-files>
 </project-private>

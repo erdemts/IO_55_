@@ -16,9 +16,17 @@
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 1.0        Erdem Tayfun Salman       11/14/2014       Initial Version
  ******************************************************************************/
-#include "includes.h"
+
+#include <htc.h>
+#include "../../Software/include/HardwareProfile.h"
 
 /* DEFINE LOCAL CONSTANTS HERE -----------------------------------------------*/
+// UART Baud Rate Definitions
+#define	BAUD_2400				( 1 )
+#define	BAUD_9600				( 2 )
+#define	BAUD_19200				( 3 )
+#define	BAUD_57600				( 4 )
+
 /* DEFINE LOCAL TYPES HERE ---------------------------------------------------*/
 /* DEFINE LOCAL MACROS HERE --------------------------------------------------*/
 /* DEFINE LOCAL VARIABLES HERE -----------------------------------------------*/
@@ -98,7 +106,7 @@ void vCheckError( void )
     unsigned char a = 0;
     if ( OERR )
     {
-        CREN  =0;
+        CREN = 0;
         CREN = 1;
     }
     if( FERR )
@@ -125,6 +133,21 @@ void putch( unsigned char c )
     TXREG = c;
 }
 
+/*******************************************************************************
+ *
+ * Function     : void void vSendData(void)
+ * PreCondition : None
+ * Input        : None
+ * Output       : None
+ * Side Effects : None
+ * Overview     :
+ * Note         : None
+ *
+ ******************************************************************************/
+void vSendDataToUart(void) {
+    TXIF = 0;
+    TXIE = 1;
+}
 
 
 /* DEFINE LOCAL FUNCTIONS HERE -----------------------------------------------*/
